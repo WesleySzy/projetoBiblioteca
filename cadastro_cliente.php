@@ -14,7 +14,7 @@
                     <label> Telefone:</label><input type="text" placeholder="Digite o Telefone..." name="telefone_cliente"><br>
                     <label>   Cidade:</label><input type="text" placeholder="Digite a Cidade..." name="cidade_cliente"><br>
                     <label>   Estado:</label><input type="text" placeholder="Digite o Estado..." name="estado_cliente"><br>
-                    <label> Endereço:</label><input type="text" placeholder="Digite o Endereço..." name="end_rua_cliente ">
+                    <label> Endereço:</label><input type="text" placeholder="Digite o Endereço..." name="end_rua_cliente">
                     <label>   Número:</label><input type="text" placeholder="Digite o Número..." name="end_num_cliente"><br>
                     <label>   Bairro:</label><input type="text" placeholder="Digite o Bairro..." name="end_bairro_cliente"><br>
                     <label>   Pedido:</label><input type="text" placeholder="Digite o Pedido..." name="num_pedido"><br>
