@@ -15,5 +15,5 @@ $sql=mysqli_query($conexao, "INSERT INTO clientes (nome_cliente, sobrenome_clien
 
 echo"<script>window.location='cadastro_clientes.php';
 alert('Gravado com Sucesso!');
-</script>";
+</script>"; 
 ?>
