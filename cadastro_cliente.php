@@ -7,7 +7,7 @@
         <form name="cadastro_cliente" method="post" action="cds_cliente.php">
             <fieldset>
                 <legend>Cadastro</legend>
-                <div class="cadastro" >
+                <div class="cadastro" >    
                     <label>     Nome:</label><input type="text" placeholder="Digite o Nome..." name="nome_cliente"><br>
                     <label>Sobrenome:</label><input type="text" placeholder="Digite o Sobrenome..." name="sobrenome_cliente"><br>
                     <label>      CPF:</label><input type="text" placeholder="Digite o Cpf..." name="cpf_cliente"><br>
@@ -20,8 +20,8 @@
                     <label>   Pedido:</label><input type="text" placeholder="Digite o Pedido..." name="num_pedido"><br>
                     <input type="submit" value="Cadastrar" >
                     <input type="reset" value="Limpar" >
-                </div> 
-            </fieldset>
+                </div>
+            </fieldset>    
         </form>
     </body>
 </html>
