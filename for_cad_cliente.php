@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Tables</title>
+  <title>Cadastro de Clientes</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">System<sup>1</sup></div>
       </a>
 
       <!-- Divider -->
@@ -44,7 +44,7 @@
       <li class="nav-item">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Inicio</span></a>
       </li>
 
       <!-- Divider -->
@@ -52,7 +52,7 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Interface
+        Menu
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
@@ -323,7 +323,6 @@
                 </a>
               </div>
             </li>
-
           </ul>
 
         </nav>
@@ -331,85 +330,84 @@
 			<form name="cadastro_cliente" method="post" action="cds_cliente.php">
 
 			 	<div class="form-row">
-			   		<div class="form-group col-md-4">
-			      		<label for="inputName">Nome</label>
-			      		<input type="text" class="form-control" name="nome_cliente">
-			    	</div>
-			    	<div class="form-group col-md-4">
-			      		<label for="inputSobrenome">Sobrenome</label>
-			      		<input type="text" class="form-control" name="sobrenome_cliente">
-			    	</div>
-			  		<div class="form-group col-md-4">
-			    		<label for="inputAddress">CPF</label>
-			    		<input type="text" class="form-control" name="cpf_cliente">
-			  		</div>
-			  	</div>
-
-			  	<div class="form-row">
-			   		<div class="form-group col-md-4">
-			      		<label for="inputTel">Telefone</label>
-			      		<input type="text" class="form-control" name="telefone_cliente">
-			    	</div>
+			   	<div class="form-group col-md-4">
+			     		<label for="inputName">Nome</label>
+			     		<input type="text" class="form-control" name="nome_cliente">
 			    </div>
+			    <div class="form-group col-md-4">
+			      	<label for="inputSobrenome">Sobrenome</label>
+			      	<input type="text" class="form-control" name="sobrenome_cliente">
+			    </div>
+			  </div>
 
-			  	<div class="form-row">
-			  		<div class="form-group col-md-6">
-			    		<label for="inputAddress2">Endereço</label>
-			    		<input type="text" class="form-control" name="end_rua_cliente" placeholder="Rua...">
-			  		</div>
-			  		<div class="form-group col-md-1">
-			    		<label for="inputAddress2">Número</label>
-			    		<input type="text" class="form-control" name="end_num_cliente" placeholder="Nº">
-			  		</div>
-			  	</div>
+			  <div class="form-row">
+          <div class="form-group col-md-4">
+              <label for="inputAddress">CPF</label>
+              <input type="text" class="form-control" name="cpf_cliente">
+          </div>
+			   	<div class="form-group col-md-4">
+			     	  <label for="inputTel">Telefone</label>
+			     		<input type="text" class="form-control" name="telefone_cliente">
+			    </div>	  
+        </div>
 
-			  	<div class="form-row">
-			  		<div class="form-group col-md-3">
-			     		<label for="inputCity">CEP</label>
-			      		<input type="text" class="form-control" name="cep_cliente">
-			      	</div>
-			      	<div class="form-group col-md-3">
-			     		<label for="inputEstado">Estado</label>
-			      		<select id="inputEstado" class="form-control">
-			        		<option> </option>
-						    <option value="ac">Acre</option> 
-						    <option value="al">Alagoas</option> 
-						    <option value="am">Amazonas</option> 
-						    <option value="ap">Amapá</option> 
-						    <option value="ba">Bahia</option> 
-						    <option value="ce">Ceará</option> 
-						    <option value="df">Distrito Federal</option> 
-						    <option value="es">Espírito Santo</option> 
-						    <option value="go">Goiás</option> 
-						    <option value="ma">Maranhão</option> 
-						    <option value="mt">Mato Grosso</option> 
-						    <option value="ms">Mato Grosso do Sul</option> 
-						    <option value="mg">Minas Gerais</option> 
-						    <option value="pa">Pará</option> 
-						    <option value="pb">Paraíba</option> 
-						    <option value="pr"selected>Paraná</option> 
-						    <option value="pe">Pernambuco</option> 
-						    <option value="pi">Piauí</option> 
-						    <option value="rj">Rio de Janeiro</option> 
-						    <option value="rn">Rio Grande do Norte</option> 
-						    <option value="ro">Rondônia</option> 
-						    <option value="rs">Rio Grande do Sul</option> 
-						    <option value="rr">Roraima</option> 
-						    <option value="sc">Santa Catarina</option> 
-						    <option value="se">Sergipe</option> 
-						    <option value="sp">São Paulo</option> 
-						    <option value="to">Tocantins</option> 
+			  <div class="form-row">
+			  	<div class="form-group col-md-7">
+			    	<label for="inputAddress2">Endereço</label>
+			    	<input type="text" class="form-control" name="end_rua_cliente" placeholder="Rua...">
+			  </div>
+			  	<div class="form-group col-md-1">
+			   		<label for="inputAddress2">Número</label>
+			   		<input type="text" class="form-control" name="end_num_cliente" placeholder="Nº">
+			    </div>
+			  </div>
+
+			  <div class="form-row">
+			  	<div class="form-group col-md-2">
+			     	<label for="inputCity">CEP</label>
+			      <input type="text" class="form-control" name="cep_cliente">
+			    </div>
+			    <div class="form-group col-md-3">
+			     	<label for="inputEstado">Estado</label>
+			      <select id="inputEstado" class="form-control">
+						  <option value="ac">Acre</option> 
+						  <option value="al">Alagoas</option> 
+						  <option value="am">Amazonas</option> 
+						  <option value="ap">Amapá</option> 
+						  <option value="ba">Bahia</option> 
+						  <option value="ce">Ceará</option> 
+						  <option value="df">Distrito Federal</option> 
+						  <option value="es">Espírito Santo</option> 
+						  <option value="go">Goiás</option> 
+						  <option value="ma">Maranhão</option> 
+						  <option value="mt">Mato Grosso</option> 
+						  <option value="ms">Mato Grosso do Sul</option> 
+						  <option value="mg">Minas Gerais</option> 
+						  <option value="pa">Pará</option> 
+						  <option value="pb">Paraíba</option> 
+						  <option value="pr"selected>Paraná</option> 
+						  <option value="pe">Pernambuco</option> 
+						  <option value="pi">Piauí</option> 
+						  <option value="rj">Rio de Janeiro</option> 
+						  <option value="rn">Rio Grande do Norte</option> 
+						  <option value="ro">Rondônia</option> 
+						  <option value="rs">Rio Grande do Sul</option> 
+						  <option value="rr">Roraima</option> 
+						  <option value="sc">Santa Catarina</option> 
+						  <option value="se">Sergipe</option> 
+						  <option value="sp">São Paulo</option> 
+						  <option value="to">Tocantins</option> 
 						</select>
-			    	</div>
-			    	<div class="form-group col-md-3">
-			     		<label for="inputCity">Cidade</label>
-			      		<input type="text" class="form-control" id="inputCity">
-			      	</div>
-			  	</div>
-			  	<div class="form-group">
+			    </div>
+			    <div class="form-group col-md-3">
+			     	<label for="inputCity">Cidade</label>
+			      <input type="text" class="form-control" id="inputCity">
+			    </div>
+			  </div>
+          <div class="form-group">
 			    	<div class="form-check">
-			      		<input class="form-check-input" type="checkbox" id="gridCheck">
-			      		<label class="form-check-label" for="gridCheck">Clique em mim</label>
+			      	<input class="form-check-input" type="checkbox" id="gridCheck">
+			      	<label class="form-check-label" for="gridCheck">Clique em mim</label>
 			    	</div>
 			  	</div>
 			  	<button type="submit" class="btn btn-primary">Entrar</button>
