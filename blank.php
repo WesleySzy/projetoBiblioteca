@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 
   <meta charset="utf-8">
@@ -7,21 +9,18 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Cadastro de Clientes</title>
+  <title>SB Admin 2 - Blank</title>
 
-  <!-- Custom fonts for this template -->
+  <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
+  <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this page -->
-  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
-    <body id="page-top">
+<body id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -34,7 +33,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">System<sup>1</sup></div>
+        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
       </a>
 
       <!-- Divider -->
@@ -44,7 +43,7 @@
       <li class="nav-item">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Inicio</span></a>
+          <span>Dashboard</span></a>
       </li>
 
       <!-- Divider -->
@@ -52,20 +51,20 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Menu
+        Interface
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item  active">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Cadastro</span>
+          <span>Components</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Clientes</a>
-            <a class="collapse-item" href="cards.html">Produtos</a>
+            <a class="collapse-item" href="buttons.html">Buttons</a>
+            <a class="collapse-item" href="cards.html">Cards</a>
           </div>
         </div>
       </li>
@@ -96,12 +95,12 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
           <span>Pages</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="login.html">Login</a>
@@ -110,7 +109,7 @@
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <a class="collapse-item active" href="blank.html">Blank Page</a>
           </div>
         </div>
       </li>
@@ -126,7 +125,7 @@
       <li class="nav-item">
         <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
-          <span>Produtos</span></a>
+          <span>Tables</span></a>
       </li>
 
       <!-- Divider -->
@@ -299,7 +298,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Tavin do Sódorante</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -323,102 +322,29 @@
                 </a>
               </div>
             </li>
+
           </ul>
 
         </nav>
-		<div class="container">
-			<form name="cadastro_cliente" method="post" action="cds_cliente.php">
+        <!-- End of Topbar -->
 
-			 	<div class="form-row">
-			   	<div class="form-group col-md-4">
-			     		<label for="inputName">Nome</label>
-			     		<input type="text" class="form-control" name="nome_cliente">
-			    </div>
-			    <div class="form-group col-md-4">
-			      	<label for="inputSobrenome">Sobrenome</label>
-			      	<input type="text" class="form-control" name="sobrenome_cliente">
-			    </div>
-			  </div>
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
 
-			  <div class="form-row">
-          <div class="form-group col-md-4">
-              <label for="inputAddress">CPF</label>
-              <input type="text" class="form-control" name="cpf_cliente">
-          </div>
-			   	<div class="form-group col-md-4">
-			     	  <label for="inputTel">Telefone</label>
-			     		<input type="text" class="form-control" name="telefone_cliente">
-			    </div>	  
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+
         </div>
+        <!-- /.container-fluid -->
 
-			  <div class="form-row">
-			  	<div class="form-group col-md-7">
-			    	<label for="inputAddress2">Endereço</label>
-			    	<input type="text" class="form-control" name="end_rua_cliente" placeholder="Rua...">
-			  </div>
-			  	<div class="form-group col-md-1">
-			   		<label for="inputAddress2">Número</label>
-			   		<input type="text" class="form-control" name="end_num_cliente" placeholder="Nº">
-			    </div>
-			  </div>
+      </div>
+      <!-- End of Main Content -->
 
-			  <div class="form-row">
-			  	<div class="form-group col-md-2">
-			     	<label for="inputCity">CEP</label>
-			      <input type="text" class="form-control" name="cep_cliente">
-			    </div>
-			    <div class="form-group col-md-3">
-			     	<label for="inputEstado">Estado</label>
-			      <select id="inputEstado" class="form-control">
-						  <option value="ac">Acre</option> 
-						  <option value="al">Alagoas</option> 
-						  <option value="am">Amazonas</option> 
-						  <option value="ap">Amapá</option> 
-						  <option value="ba">Bahia</option> 
-						  <option value="ce">Ceará</option> 
-						  <option value="df">Distrito Federal</option> 
-						  <option value="es">Espírito Santo</option> 
-						  <option value="go">Goiás</option> 
-						  <option value="ma">Maranhão</option> 
-						  <option value="mt">Mato Grosso</option> 
-						  <option value="ms">Mato Grosso do Sul</option> 
-						  <option value="mg">Minas Gerais</option> 
-						  <option value="pa">Pará</option> 
-						  <option value="pb">Paraíba</option> 
-						  <option value="pr"selected>Paraná</option> 
-						  <option value="pe">Pernambuco</option> 
-						  <option value="pi">Piauí</option> 
-						  <option value="rj">Rio de Janeiro</option> 
-						  <option value="rn">Rio Grande do Norte</option> 
-						  <option value="ro">Rondônia</option> 
-						  <option value="rs">Rio Grande do Sul</option> 
-						  <option value="rr">Roraima</option> 
-						  <option value="sc">Santa Catarina</option> 
-						  <option value="se">Sergipe</option> 
-						  <option value="sp">São Paulo</option> 
-						  <option value="to">Tocantins</option> 
-						</select>
-			    </div>
-			    <div class="form-group col-md-3">
-			     	<label for="inputCity">Cidade</label>
-			      <input type="text" class="form-control" id="inputCity">
-			    </div>
-			  </div>
-          <div class="form-group">
-			    	<div class="form-check">
-			      	<input class="form-check-input" type="checkbox" id="gridCheck">
-			      	<label class="form-check-label" for="gridCheck">Clique em mim</label>
-			    	</div>
-			  	</div>
-			  	<button type="submit" class="btn btn-primary">Entrar</button>
-			</form>
-		</div>
-    
-	<!-- Footer -->
+      <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Pedro Corno</span>
+            <span>Copyright &copy; Your Website 2019</span>
           </div>
         </div>
       </footer>
@@ -464,12 +390,6 @@
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/datatables-demo.js"></script>
-  </div>
 </body>
+
 </html>
