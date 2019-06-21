@@ -278,6 +278,9 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
 
+  <!-- Table translation to portuguese -->
+  <script src="js/portuguese.js"></script>
+
 </body>
 
 </html>
