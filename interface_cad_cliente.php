@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Tables</title>
+  <title>Cadastro de Clientes</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -157,7 +157,7 @@
 
             <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Registro de Clientes</h6>
+              <h6 class="m-0 font-weight-bold" style="color: #56004a;">Registro de Clientes</h6>
             </div>
             <div class="card-body">
 
@@ -243,7 +243,7 @@
 			      	<label class="form-check-label" for="gridCheck">Clique em mim</label>
 			    	</div>
 			  	</div>
-			  	<button type="submit" class="btn btn-primary">Entrar</button>
+			  	<button type="submit" class="btn" style="background-color: #56004a; color: white;" >Cadastrar</button>
 			</form>
 
           </div>
