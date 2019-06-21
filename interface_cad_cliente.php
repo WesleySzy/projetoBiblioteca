@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 
   <meta charset="utf-8">
@@ -7,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Cadastro de Clientes</title>
+  <title>SB Admin 2 - Tables</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -21,7 +23,7 @@
 
 </head>
 
-    <body id="page-top">
+<body id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -56,15 +58,15 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item  active">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-edit"></i>
           <span>Cadastrar</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="for_cad_cliente.php">Clientes</a>
-            <a class="collapse-item" href="for_cad_produtos.php">Produtos</a>
+            <a class="collapse-item" href="interface_cad_cliente.php">Clientes</a>
+            <a class="collapse-item" href="interface_cad_produtos.php">Produtos</a>
           </div>
         </div>
       </li>
@@ -77,8 +79,8 @@
       </li>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="rel_produtos.php">
+      <li class="nav-item active">
+        <a class="nav-link" href="interface_rel_produtos.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Tabela Produtos</span></a>
       </li>
@@ -93,7 +95,7 @@
 
     </ul>
     <!-- End of Sidebar -->
-
+    
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -128,12 +130,26 @@
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-search fa-fw"></i>
               </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Tavin do Sódorante</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <img class="img-profile rounded-circle" src="https://scontent.fldb9-1.fna.fbcdn.net/v/t1.0-9/44982027_2245846905649682_1571072077367083008_n.jpg?_nc_cat=108&_nc_oc=AQnaAMwmWdKpjf5WawhSXLO1zX2fjk67I6jVF6VNa6smBT95RvGgVvvQQY7ZIk_dUzMy7zDQkTLlTrkF1KyOEmUY&_nc_ht=scontent.fldb9-1.fna&oh=1c617fa52c4c0efd096769420feb4cb0&oe=5D80EF21">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -156,12 +172,22 @@
                 </a>
               </div>
             </li>
+
           </ul>
 
         </nav>
-		<div class="container">
-			<form name="cadastro_cliente" method="post" action="cds_cliente.php">
+        <!-- End of Topbar -->
 
+        <!-- Begin Page Content -->
+		<div class="container-fluid">
+
+            <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Registro de Clientes</h6>
+            </div>
+            <div class="card-body">
+
+			<form name="cadastro_cliente" method="post" action="cds_cliente.php">
 			 	<div class="form-row">
 			   	<div class="form-group col-md-4">
 			     		<label for="inputName">Nome</label>
@@ -245,8 +271,12 @@
 			  	</div>
 			  	<button type="submit" class="btn btn-primary">Entrar</button>
 			</form>
-		</div>
-    </div>
+
+          </div>
+          </div>
+          </div>
+		      </div>
+
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">

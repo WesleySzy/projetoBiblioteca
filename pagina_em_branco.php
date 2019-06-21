@@ -62,8 +62,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="for_cad_cliente.php">Clientes</a>
-            <a class="collapse-item" href="for_cad_produtos.php">Produtos</a>
+            <a class="collapse-item" href="interface_cad_cliente.php">Clientes</a>
+            <a class="collapse-item" href="interface_cad_produtos.php">Produtos</a>
           </div>
         </div>
       </li>
@@ -77,7 +77,7 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="rel_produtos.php">
+        <a class="nav-link" href="interface_rel_produtos.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Tabela Produtos</span></a>
       </li>
@@ -92,6 +92,7 @@
 
     </ul>
     <!-- End of Sidebar -->
+
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">

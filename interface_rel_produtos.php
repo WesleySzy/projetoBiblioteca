@@ -59,15 +59,15 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item  active">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-edit"></i>
           <span>Cadastrar</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="for_cad_cliente.php">Clientes</a>
-            <a class="collapse-item" href="for_cad_produtos.php">Produtos</a>
+            <a class="collapse-item" href="interface_cad_cliente.php">Clientes</a>
+            <a class="collapse-item" href="interface_cad_produtos.php">Produtos</a>
           </div>
         </div>
       </li>
@@ -80,8 +80,8 @@
       </li>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="rel_produtos.php">
+      <li class="nav-item active">
+        <a class="nav-link" href="interface_rel_produtos.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Tabela Produtos</span></a>
       </li>
@@ -96,7 +96,7 @@
 
     </ul>
     <!-- End of Sidebar -->
-
+    
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -182,7 +182,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- DataTales Example -->
+          <!-- DataTables -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Produtos</h6>
