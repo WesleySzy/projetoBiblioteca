@@ -80,7 +80,7 @@
       </li>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="interface_rel_produtos.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Tabela Produtos</span></a>
@@ -165,7 +165,7 @@
           <!-- DataTables -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold" style="color: #56004a;">Produtos</h6>
+              <h6 class="m-0 font-weight-bold" style="color: #56004a;">Clientes</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
