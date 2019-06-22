@@ -9,17 +9,14 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Cadastro de Clientes</title>
+  <title>SB Admin 2 - Blank</title>
 
-  <!-- Custom fonts for this template -->
+  <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
+  <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this page -->
-  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -27,7 +24,7 @@
 
   <!-- Page Wrapper -->
   <div id="wrapper">
-    
+
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #56004a; background-image: linear-gradient(180deg, #56004a 10%, #030b23 100%)" >
 
@@ -159,103 +156,32 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-		<div class="container-fluid">
+        <div class="container-fluid">
 
-            <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold" style="color: #56004a;">Registro de Clientes</h6>
-            </div>
-            <div class="card-body">
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800">Relojio</h1>
 
-			<form name="cadastro_cliente" method="post" action="formulario_cad_cliente.php">
-			 	<div class="form-row">
-			   	<div class="form-group col-md-4">
-			     		<label for="inputName">Nome</label>
-			     		<input type="text" class="form-control" name="nome_cliente">
-			    </div>
-			    <div class="form-group col-md-4">
-			      	<label for="inputSobrenome">Sobrenome</label>
-			      	<input type="text" class="form-control" name="sobrenome_cliente">
-			    </div>
-			  </div>
+        <div id="demo">
+          <script type="text/javascript">
+                var myVar = setInterval(myTimer ,1000);
+                function myTimer() {
+                var d = new Date(), displayDate;
+               if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                displayDate = d.toLocaleTimeString('pt-BR');
+            } else {
+                displayDate = d.toLocaleTimeString('pt-BR', {timeZone: 'America/Belem'});
+             }
+                document.getElementById("demo").innerHTML = displayDate;
+             }
 
-			  <div class="form-row">
-          <div class="form-group col-md-4">
-              <label for="inputAddress">CPF</label>
-              <input type="text" class="form-control" name="cpf_cliente">
-          </div>
-			   	<div class="form-group col-md-4">
-			     	  <label for="inputTel">Telefone</label>
-			     		<input type="text" class="form-control" name="telefone_cliente">
-			    </div>	  
+          </script>
+        </div>         
+
         </div>
+        <!-- /.container-fluid -->
 
-			  <div class="form-row">
-			  	<div class="form-group col-md-7">
-			    	<label for="inputAddress2">Endereço</label>
-			    	<input type="text" class="form-control" name="end_rua_cliente" placeholder="Rua...">
-			  </div>
-			  	<div class="form-group col-md-1">
-			   		<label for="inputAddress2">Número</label>
-			   		<input type="text" class="form-control" name="end_num_cliente" placeholder="Nº">
-			    </div>
-			  </div>
-
-			  <div class="form-row">
-			  	<div class="form-group col-md-2">
-			     	<label for="inputCity">Bairro</label>
-			      <input type="text" class="form-control" name="end_bairro_cliente">
-			    </div>
-			    <div class="form-group col-md-3">
-			     	<label for="inputEstado">Estado</label>
-			      <select id="inputEstado" class="form-control" name="estado_cliente">
-						  <option value="ac">Acre</option> 
-						  <option value="al">Alagoas</option> 
-						  <option value="am">Amazonas</option> 
-						  <option value="ap">Amapá</option> 
-						  <option value="ba">Bahia</option> 
-						  <option value="ce">Ceará</option> 
-						  <option value="df">Distrito Federal</option> 
-						  <option value="es">Espírito Santo</option> 
-						  <option value="go">Goiás</option> 
-						  <option value="ma">Maranhão</option> 
-						  <option value="mt">Mato Grosso</option> 
-						  <option value="ms">Mato Grosso do Sul</option> 
-						  <option value="mg">Minas Gerais</option> 
-						  <option value="pa">Pará</option> 
-						  <option value="pb">Paraíba</option> 
-						  <option value="pr"selected>Paraná</option> 
-						  <option value="pe">Pernambuco</option> 
-						  <option value="pi">Piauí</option> 
-						  <option value="rj">Rio de Janeiro</option> 
-						  <option value="rn">Rio Grande do Norte</option> 
-						  <option value="ro">Rondônia</option> 
-						  <option value="rs">Rio Grande do Sul</option> 
-						  <option value="rr">Roraima</option> 
-						  <option value="sc">Santa Catarina</option> 
-						  <option value="se">Sergipe</option> 
-						  <option value="sp">São Paulo</option> 
-						  <option value="to">Tocantins</option> 
-						</select>
-			    </div>
-			    <div class="form-group col-md-3">
-			     	<label for="inputCity">Cidade</label>
-			      <input type="text" class="form-control" name="cidade_cliente">
-			    </div>
-			  </div>
-          <div class="form-group">
-			    	<div class="form-check">
-			      	<input class="form-check-input" type="checkbox" id="gridCheck">
-			      	<label class="form-check-label" for="gridCheck">Clique em mim</label>
-			    	</div>
-			  	</div>
-			  	<button type="submit" class="btn" style="background-color: #56004a; color: white;" >Cadastrar</button>
-			</form>
-
-          </div>
-          </div>
-          </div>
-		      </div>
+      </div>
+      <!-- End of Main Content -->
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
@@ -307,12 +233,6 @@
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/datatables-demo.js"></script>
-  </div>
 </body>
+
 </html>

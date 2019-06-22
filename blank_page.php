@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-home"></i>
           <span>Página Inicial</span></a>
       </li>
@@ -55,7 +55,7 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item  active">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-edit"></i>
           <span>Cadastrar</span>
@@ -76,10 +76,16 @@
       </li>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <li class="nav-item ">
         <a class="nav-link" href="interface_rel_produtos.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Tabela Produtos</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="interface_rel_clientes.php">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tabela Clientes</span></a>
       </li>
 
       <!-- Divider -->

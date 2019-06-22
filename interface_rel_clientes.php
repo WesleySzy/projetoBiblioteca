@@ -45,7 +45,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-home"></i>
           <span>Página Inicial</span></a>
       </li>
@@ -172,7 +172,6 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Id Cliente</th>
                       <th>Nome</th>
                       <th>Sobrenome</th>
                       <th>CPF</th>
@@ -190,7 +189,6 @@
                       while($row = mysqli_fetch_array($sql)){ ?>
                     
                     <tr>
-                      <td><?php echo $row['codigo_cliente'];?></td>
                       <td><?php echo $row['nome_cliente'];?></td>
                       <td><?php echo $row['sobrenome_cliente'];?></td>
                       <td><?php echo $row['cpf_cliente'];?></td>

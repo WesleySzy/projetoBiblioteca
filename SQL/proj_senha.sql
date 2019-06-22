@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 21-Jun-2019 às 05:40
--- Versão do servidor: 10.1.40-MariaDB
--- versão do PHP: 7.1.29
+-- Generation Time: 22-Jun-2019 às 22:01
+-- Versão do servidor: 10.1.36-MariaDB
+-- versão do PHP: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `proj_senha`
 --
-CREATE DATABASE IF NOT EXISTS `proj_senha` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `proj_senha`;
 
 -- --------------------------------------------------------
 
@@ -34,7 +32,7 @@ CREATE TABLE `clientes` (
   `codigo_cliente` int(9) NOT NULL,
   `nome_cliente` varchar(15) NOT NULL,
   `sobrenome_cliente` varchar(25) NOT NULL,
-  `cpf_cliente` int(11) NOT NULL,
+  `cpf_cliente` varchar(11) NOT NULL,
   `telefone_cliente` varchar(14) NOT NULL,
   `end_rua_cliente` varchar(20) NOT NULL,
   `end_num_cliente` int(5) NOT NULL,
@@ -48,8 +46,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`codigo_cliente`, `nome_cliente`, `sobrenome_cliente`, `cpf_cliente`, `telefone_cliente`, `end_rua_cliente`, `end_num_cliente`, `end_bairro_cliente`, `cidade_cliente`, `estado_cliente`) VALUES
-(1, 'fsdafasd', 'sdafsdaf', 544646556, '46456456', 'fdsfds', 4464, 'dsadsads', 'dsadsadasdsa', 'ds'),
-(2, '', '', 0, '', '', 0, '', '', '');
+(14, 'Pedro Leonardo', 'Dario Alcaraz', '11640643982', '43996351494', 'Rua Macaricao', 147, 'Vila Estrela', 'Arapongas', 'pr');
 
 -- --------------------------------------------------------
 
@@ -96,7 +93,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `codigo_cliente` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `codigo_cliente` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `produtos`
