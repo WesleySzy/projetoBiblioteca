@@ -86,7 +86,7 @@
           <span>Tabela Produtos</span></a>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="interface_rel_clientes.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Tabela Clientes</span></a>
