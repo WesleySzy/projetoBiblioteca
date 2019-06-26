@@ -171,40 +171,75 @@
 			 	<div class="form-row">
 			   	<div class="form-group col-md-4">
 			     		<label for="inputName">Nome</label>
-			     		<input type="text" class="form-control" name="nome_cliente">
+			     		<input type="text" class="form-control" name="nome_cliente" maxlength="15">
 			    </div>
 			    <div class="form-group col-md-4">
 			      	<label for="inputSobrenome">Sobrenome</label>
-			      	<input type="text" class="form-control" name="sobrenome_cliente">
+			      	<input type="text" class="form-control" name="sobrenome_cliente" maxlength="25">
 			    </div>
 			  </div>
 
-			  <div class="form-row">
+		 <div class="form-row">
+
           <div class="form-group col-md-4">
-              <label for="inputAddress">CPF</label>
-              <input type="text" class="form-control" name="cpf_cliente">
-          </div>
-			   	<div class="form-group col-md-4">
+                    <label for="inputAddress">CPF</label>
+           <script>
+				function formatarcpf(mascara, documento){
+			    var i = documento.value.length;
+			    var saida = mascara.substring(0,1);
+			    var texto = mascara.substring(i)
+  
+			  if (texto.substring(0,1) != saida){
+			   documento.value += texto.substring(0,1);
+			    }  
+			 }
+		    
+			</script>
+
+			  <input type="text" class="form-control" name="cpf_cliente" onkeypress="formatarcpf('###.###.###-##', this);" maxlength="14" />
+              </div>
+			    <div class="form-group col-1">
+			   		<label for="inputAddress2">DDD</label>
+			   		<input type="text" class="form-control" name="ddd_cliente" maxlength="2"/>
+			    </div>
+			   	<div class="form-group col-md-3">
 			     	  <label for="inputTel">Telefone</label>
-			     		<input type="text" class="form-control" name="telefone_cliente">
-			    </div>	  
-        </div>
+
+			<script>
+				function formatartell(mascara, documento){
+			    var i = documento.value.length;
+			    var saida = mascara.substring(0,1);
+			    var texto = mascara.substring(i)
+  
+			    if (texto.substring(0,1) != saida){
+			     documento.value += texto.substring(0,1);
+			    }  
+			 }
+		   </script>
+			  
+                 <input type="text" class="form-control" onkeypress="formatartell('#####-####', this);"  name="telefone_cliente" maxlength="10"/>
+			   </div>
+			   
+			  
+
+          </div>
+				
 
 			  <div class="form-row">
 			  	<div class="form-group col-md-7">
 			    	<label for="inputAddress2">Endereço</label>
-			    	<input type="text" class="form-control" name="end_rua_cliente" placeholder="Rua...">
+			    	<input type="text" class="form-control" name="end_rua_cliente" placeholder="Rua..." maxlength="20">
 			  </div>
 			  	<div class="form-group col-md-1">
 			   		<label for="inputAddress2">Número</label>
-			   		<input type="text" class="form-control" name="end_num_cliente" placeholder="Nº">
+			   		<input type="text" class="form-control" name="end_num_cliente" maxlength="5">
 			    </div>
 			  </div>
 
 			  <div class="form-row">
 			  	<div class="form-group col-md-2">
 			     	<label for="inputCity">Bairro</label>
-			      <input type="text" class="form-control" name="end_bairro_cliente">
+			      <input type="text" class="form-control" name="end_bairro_cliente" maxlength="20">
 			    </div>
 			    <div class="form-group col-md-3">
 			     	<label for="inputEstado">Estado</label>
@@ -240,15 +275,10 @@
 			    </div>
 			    <div class="form-group col-md-3">
 			     	<label for="inputCity">Cidade</label>
-			      <input type="text" class="form-control" name="cidade_cliente">
+			      <input type="text" class="form-control" name="cidade_cliente" maxlength="12">
 			    </div>
 			  </div>
-          <div class="form-group">
-			    	<div class="form-check">
-			      	<input class="form-check-input" type="checkbox" id="gridCheck">
-			      	<label class="form-check-label" for="gridCheck">Clique em mim</label>
-			    	</div>
-			  	</div>
+          
 			  	<button type="submit" class="btn" style="background-color: #56004a; color: white;" >Cadastrar</button>
 			</form>
 
