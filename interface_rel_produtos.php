@@ -240,6 +240,19 @@
       </div>
     </div>
   </div>
+  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel" class="alignMiddle">Cadastrar Livro</h3>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal well" action="home.php" method="POST" >
+            <input type="hidden" name="acao" value="insere_processa" />
+            <?php
+            require_once ('formulario_cadastro.php');
+            ?>
+        </form>
+  </div>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -260,7 +273,8 @@
 
   <!-- Table translation to portuguese -->
   <script src="js/portuguese.js"></script>
-
+  
+  
 </body>
 
 </html>
