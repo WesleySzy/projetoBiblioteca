@@ -1,4 +1,4 @@
-<?php include "conexao_banco.php"; ?>
+<<?php include "conexao_banco.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +36,7 @@
             style="background-color: #3578E5">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
@@ -343,3 +343,4 @@
   </div>
 </body>
 </html>
+
