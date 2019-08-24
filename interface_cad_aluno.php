@@ -36,7 +36,7 @@
             style="background-color: #3578E5">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
@@ -47,7 +47,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
@@ -62,7 +62,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-edit"></i>
@@ -122,6 +122,8 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
+
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -243,21 +245,141 @@
 
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
-                    document.write( day + myweekday + month + " de " + year + " - " );
-                    </script>  
+                    document.write( day + myweekday + month + " de " + year + " - ");
+                    </script> 
                     <div id="demo"></div>
                 </nav>
                 <!-- End of Topbar -->
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <!-- Page Heading -->
-				      
-        </div>
-        <!-- /.container-fluid -->
 
-      </div>
-      <!-- End of Main Content -->
+        <!-- Begin Page Content -->
+		<div class="container-fluid">
+
+            <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de Clientes</h6>
+            </div>
+            <div class="card-body">
+
+			<form name="cadastro_cliente" method="post" action="formulario_cad_cliente.php">
+			 	<div class="form-row">
+			   	<div class="form-group col-md-4">
+			     		<label for="inputName">Nome</label>
+			     		<input type="text" class="form-control" name="nome_cliente" maxlength="15">
+			    </div>
+			    <div class="form-group col-md-4">
+			      	<label for="inputSobrenome">Sobrenome</label>
+			      	<input type="text" class="form-control" name="sobrenome_cliente" maxlength="25">
+			    </div>
+			  </div>
+
+		 <div class="form-row">
+
+          <div class="form-group col-md-4">
+                    <label for="inputAddress">CPF</label>
+           <script>
+				function formatarcpf(mascara, documento){
+			    var i = documento.value.length;
+			    var saida = mascara.substring(0,1);
+			    var texto = mascara.substring(i)
+  
+			  if (texto.substring(0,1) != saida){
+			   documento.value += texto.substring(0,1);
+			    }  
+			 }
+		    
+			</script>
+
+			  <input type="text" class="form-control" name="cpf_cliente" onkeypress="formatarcpf('###.###.###-##', this);" maxlength="14" />
+              </div>
+			    <div class="form-group col-1">
+			   		<label for="inputAddress2">DDD</label>
+			   		<input type="text" class="form-control" name="ddd_cliente" maxlength="2"/>
+			    </div>
+			   	<div class="form-group col-md-3">
+			     	  <label for="inputTel">Telefone</label>
+
+			<script>
+				function formatartell(mascara, documento){
+			    var i = documento.value.length;
+			    var saida = mascara.substring(0,1);
+			    var texto = mascara.substring(i)
+  
+			    if (texto.substring(0,1) != saida){
+			     documento.value += texto.substring(0,1);
+			    }  
+			 }
+		   </script>
+			  
+                 <input type="text" class="form-control" onkeypress="formatartell('#####-####', this);"  name="telefone_cliente" maxlength="10"/>
+			   </div>
+			   
+			  
+
+          </div>
+				
+
+			  <div class="form-row">
+			  	<div class="form-group col-md-7">
+			    	<label for="inputAddress2">Endereço</label>
+			    	<input type="text" class="form-control" name="end_rua_cliente" placeholder="Rua..." maxlength="20">
+			  </div>
+			  	<div class="form-group col-md-1">
+			   		<label for="inputAddress2">Número</label>
+			   		<input type="text" class="form-control" name="end_num_cliente" maxlength="5">
+			    </div>
+			  </div>
+
+			  <div class="form-row">
+			  	<div class="form-group col-md-2">
+			     	<label for="inputCity">Bairro</label>
+			      <input type="text" class="form-control" name="end_bairro_cliente" maxlength="20">
+			    </div>
+			    <div class="form-group col-md-3">
+			     	<label for="inputEstado">Estado</label>
+			      <select id="inputEstado" class="form-control" name="estado_cliente">
+						  <option value="ac">Acre</option> 
+						  <option value="al">Alagoas</option> 
+						  <option value="am">Amazonas</option> 
+						  <option value="ap">Amapá</option> 
+						  <option value="ba">Bahia</option> 
+						  <option value="ce">Ceará</option> 
+						  <option value="df">Distrito Federal</option> 
+						  <option value="es">Espírito Santo</option> 
+						  <option value="go">Goiás</option> 
+						  <option value="ma">Maranhão</option> 
+						  <option value="mt">Mato Grosso</option> 
+						  <option value="ms">Mato Grosso do Sul</option> 
+						  <option value="mg">Minas Gerais</option> 
+						  <option value="pa">Pará</option> 
+						  <option value="pb">Paraíba</option> 
+						  <option value="pr"selected>Paraná</option> 
+						  <option value="pe">Pernambuco</option> 
+						  <option value="pi">Piauí</option> 
+						  <option value="rj">Rio de Janeiro</option> 
+						  <option value="rn">Rio Grande do Norte</option> 
+						  <option value="ro">Rondônia</option> 
+						  <option value="rs">Rio Grande do Sul</option> 
+						  <option value="rr">Roraima</option> 
+						  <option value="sc">Santa Catarina</option> 
+						  <option value="se">Sergipe</option> 
+						  <option value="sp">São Paulo</option> 
+						  <option value="to">Tocantins</option> 
+						</select>
+			    </div>
+			    <div class="form-group col-md-3">
+			     	<label for="inputCity">Cidade</label>
+			      <input type="text" class="form-control" name="cidade_cliente" maxlength="12">
+			    </div>
+			  </div>
+          
+			  	<button type="submit" class="btn" style="background-color: #3578E5; color: white;" >Cadastrar</button>
+			</form>
+
+          </div>
+          </div>
+          </div>
+		      </div>
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
@@ -309,6 +431,12 @@
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
-</body>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+  </div>
+</body>
 </html>

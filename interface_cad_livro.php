@@ -36,7 +36,7 @@
             style="background-color: #3578E5">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
@@ -47,7 +47,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
@@ -62,7 +62,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-edit"></i>
@@ -122,6 +122,8 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
+
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -243,21 +245,44 @@
 
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
-                    document.write( day + myweekday + month + " de " + year + " - " );
-                    </script>  
+                    document.write( day + myweekday + month + " de " + year + " - ");
+                    </script> 
                     <div id="demo"></div>
                 </nav>
                 <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <!-- Page Heading -->
-				      
-        </div>
-        <!-- /.container-fluid -->
+		<div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de Produtos</h6>
+            </div>
+            <div class="card-body">
 
-      </div>
-      <!-- End of Main Content -->
+			<form name="cadastro_produtos" method="post" action="formulario_cad_produtos.php">
+				<div class="form-row">
+			   		<div class="form-group col-md-4">
+			     		<label for="inputName">Nome do Produto</label>
+			     		<input type="text" class="form-control" name="nome_produto">
+			    	</div>
+			    	<div class="form-group col-md-4">
+			      		<label for="inputSobrenome">Valor</label>
+			      		<input type="text" class="form-control" name="valor_produto">
+			    	</div>
+			  </div>
+				<div class="form-row">
+        	  		<div class="form-group col-md-4">
+              			<label for="FormControlTextObs">Observações</label>
+              			<textarea class="form-control" id="FormControlTextObs"  name="obs_produto" rows="5"></textarea>
+          			</div>  
+        		</div>
+				<button type="submit" class="btn" style="background-color: #3578E5; color: white;" >Cadastrar</button>	
+			</div>
+			</div>
+			</div>		
+			</form>	
+		</div>
+		<!-- End of Page Content -->
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
@@ -309,6 +334,12 @@
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
-</body>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+  </div>
+</body>
 </html>

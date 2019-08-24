@@ -33,14 +33,14 @@
 
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"
-            style="background-color: #56004a; background-image: linear-gradient(180deg, #56004a 10%, #030b23 100%)">
+            style="background-color: #3578E5">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fab fa-buffer"></i>
+                    <i class="fas fa-book-open"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Szystem</div>
+                <div class="sidebar-brand-text mx-3">Biblioteca</div>
             </a>
 
             <!-- Divider -->
@@ -70,30 +70,31 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="interface_cad_cliente.php">Clientes</a>
-                        <a class="collapse-item" href="interface_cad_produtos.php">Produtos</a>
+                        <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
+                        <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
+                        <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="rel_pedidos.php">
-                    <i class="fas fa-hamburger"></i>
-                    <span>Pedidos</span></a>
-            </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="interface_rel_produtos.php">
+                <a class="nav-link" href="interface_rel_livro.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tabela Produtos</span></a>
+                    <span>Livros</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_clientes.php">
+                <a class="nav-link" href="interface_rel_aluno.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tabela Clientes</span></a>
+                    <span>Alunos</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="interface_rel_emprestimo.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Emprestimos</span></a>
             </li>
 
             <!-- Divider -->
@@ -122,51 +123,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
 
-                    <!-- Modal de edicao de informacoes inseridas nas tabelas-->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                        data-whatever="@getbootstrap">Tavin Dosodorante</button>
-
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Rexona</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">ISBN:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Autor:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Categoria:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="col-form-label">Quantidade
-                                                Disponivel:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                    <button type="button" class="btn btn-primary">Enviar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -197,7 +154,100 @@
 
 
                     </ul>
+                    <script type="text/javascript">
+                        var myVar = setInterval(myTimer ,1000);
+                            function myTimer() {
+                                var d = new Date(), displayDate;
+                               if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                                  displayDate = d.toLocaleTimeString('pt-BR');
+                               } else {
+                                  displayDate = d.toLocaleTimeString('pt-BR', {timeZone: 'America/Belem'});
+                               }
+                                  document.getElementById("demo").innerHTML = displayDate;
+                            } 
 
+                    // Função que monta Mês, Dia, e Ano para exibir no HTML
+                    // Declaração de Variaveis que receberam os valores:
+
+                    var now = new Date();
+
+                    //Tratamento quantidade de Digitos nos Minutos e exibi se é 
+                    // dia ou noite, PM, AM.
+
+                    mydate = new Date();
+                    myday = mydate.getDay();
+                    mymonth = mydate.getMonth();
+                    myweekday = mydate.getDate();
+                    weekday = myweekday;
+                    myyear = mydate.getFullYear();
+                    year = myyear;
+
+                    // Tratamento dos Dias da Semana
+
+                    if(myday == 0)
+                      day = " Domingo, "
+
+                    else if(myday == 1)
+                      day = " Segunda Feira, "
+
+                    else if(myday == 2)
+                      day = " Terça Feira, "
+
+                    else if(myday == 3)
+                      day = " Quarta Feira, "
+
+                    else if(myday == 4)
+                      day = " Quinta Feira, "
+
+                    else if(myday == 5)
+                      day = " Sexta Feira, "
+
+                    else if(myday == 6)
+                      day = " Sábado, "
+
+                    //Tratamento dos Meses
+
+                    if(mymonth == 0)
+                      month = " de Janeiro  "
+
+                    else if(mymonth ==1)
+                      month = " de Fevereiro  "
+
+                    else if(mymonth ==2)
+                      month = " de Março  "
+
+                    else if(mymonth ==3)
+                      month = " de April "
+
+                    else if(mymonth ==4)
+                      month = " de Maio "
+
+                    else if(mymonth ==5)
+                      month = " de Junho  "
+
+                    else if(mymonth ==6)
+                      month = " de Julho "
+
+                    else if(mymonth ==7)
+                      month = " de Agosto  "
+
+                    else if(mymonth ==8)
+                      month = " de Setembro  "
+
+                    else if(mymonth ==9)
+                      month = " de Outubro  "
+
+                    else if(mymonth ==10)
+                      month = " de Novembro "
+
+                    else if(mymonth ==11)
+                      month = " de Dezembro "
+
+                    //Exibe na Pagina o Resultado concatenando(+) os valores
+
+                    document.write( day + myweekday + month + " de " + year + " - ");
+                    </script> 
+                    <div id="demo"></div>
                 </nav>
                 <!-- End of Topbar -->
 
@@ -207,7 +257,7 @@
                     <!-- DataTables -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold" style="color: #56004a;">Produtos</h6>
+                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Produtos</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

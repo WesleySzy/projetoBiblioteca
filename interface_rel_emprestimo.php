@@ -36,7 +36,7 @@
             style="background-color: #3578E5">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
@@ -47,7 +47,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
@@ -91,7 +91,7 @@
                     <span>Alunos</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="interface_rel_emprestimo.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Emprestimos</span></a>
@@ -122,6 +122,8 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
+
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -243,19 +245,53 @@
 
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
-                    document.write( day + myweekday + month + " de " + year + " - " );
-                    </script>  
+                    document.write( day + myweekday + month + " de " + year + " - ");
+                    </script> 
                     <div id="demo"></div>
                 </nav>
                 <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <!-- Page Heading -->
-				      
+
+          <!-- DataTables -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Clientes</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ISBN</th>
+                      <th>Livro</th>
+                      <th>Aluno</th>
+                      <th>Retirada</th>
+                      <th>Devolução</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php 
+                      $sql=mysqli_query($conexao, "SELECT * FROM clientes WHERE codigo_cliente <> 0");
+                      while($row = mysqli_fetch_array($sql)){ ?>
+                    
+                    <tr>
+                      <td><?php echo $row['nome_cliente'];?></td>
+                      <td><?php echo $row['sobrenome_cliente'];?></td>
+                      <td><?php echo $row['cpf_cliente'];?></td>
+                      <td><?php echo $row['telefone_cliente'];?></td>
+                      <td><?php echo $row['end_rua_cliente'];?></td>
+                    </tr>
+                    
+                    <?php } ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- /.container-fluid -->
-
       </div>
       <!-- End of Main Content -->
 
@@ -308,6 +344,16 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+  <!-- Table translation to portuguese -->
+  <script src="js/portuguese.js"></script>
 
 </body>
 
