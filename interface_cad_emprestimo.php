@@ -283,7 +283,7 @@
 				<div class="form-row">
 					<div class="form-group col-md-2">
 						<label for="inputAddress2">Série Do aluno</label>
-						<input type="text" class="form-control" name="end_rua_cliente" placeholder="Inserir série do Aluno" maxlength="20">
+						<input type="text" class="form-control" name="end_rua_cliente" placeholder="Inserir série do aluno" maxlength="20">
 				</div>
 
 					<div class="form-group col-md-2">
@@ -294,6 +294,7 @@
 				<div class="form-group col-md-2">
 			<label for="inputEstado">Período</label>
 			<select id="inputEstado" class="form-control">
+				<option></option>
 				<option>Matutino</option>
 				<option>Vespertino</option>
 				<option>Noturno</option>

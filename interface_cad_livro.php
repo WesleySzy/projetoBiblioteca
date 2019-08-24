@@ -1,4 +1,4 @@
-<<?php include "conexao_banco.php"; ?>
+<?php include "conexao_banco.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Relação de Produtos</title>
+    <title>Bibliopar</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -255,7 +255,7 @@
 		<div class="container-fluid">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de Produtos</h6>
+              <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de livros</h6>
             </div>
             <div class="card-body">
 
