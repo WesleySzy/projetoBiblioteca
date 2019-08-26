@@ -12,30 +12,30 @@
 
     <title>Relação de Produtos</title>
 
-    <!-- Custom fonts for this template -->
+    <!-- Fontes para o template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Estilos customizados para o template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this page -->
+    <!-- Estilo customizado para a pagina-->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
+    <!-- Recorte Pagina -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
+        <!-- Barra Lateral -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"
             style="background-color: #3578E5">
 
-            <!-- Sidebar - Brand -->
+            <!-- Barra Lateral marca -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
@@ -43,25 +43,25 @@
                 <div class="sidebar-brand-text mx-3">Biblioteca</div>
             </a>
 
-            <!-- Divider -->
+            <!-- Divisor -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
+            <!-- Nav bar pagina inicial-->
             <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
             </li>
 
-            <!-- Divider -->
+            <!-- Divisor -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
+            <!-- Cabecalho -->
             <div class="sidebar-heading">
                 Menu
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Itens Navbar - juncao de paginas do menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -78,7 +78,7 @@
             </li>
 
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav bar item - Tabela -->
             <li class="nav-item active">
                 <a class="nav-link" href="interface_rel_livro.php">
                     <i class="fas fa-fw fa-table"></i>
@@ -97,44 +97,44 @@
                     <span>Emprestimos</span></a>
             </li>
 
-            <!-- Divider -->
+            <!-- Divisorr -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
+            <!-- Barra lateral ativador -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
         </ul>
-        <!-- End of Sidebar -->
+        <!-- fim barra lateral -->
 
 
-        <!-- Content Wrapper -->
+        <!-- Recorte de conteudo  -->
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Main Content -->
+            <!-- Conteudo Principal-->
             <div id="content">
 
-                <!-- Topbar -->
+                <!-- Barra do topo -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <!-- Sidebar Toggle (Topbar) -->
+                    <!-- Barra lateral ativador (topo) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
 
 
-                    <!-- Topbar Navbar -->
+                    <!-- barra de navegacao do topo -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <!-- barra de navegacao item - search dropdown -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                            <!-- Dropdown - Messages -->
+                            <!-- Dropdown mensagem -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
@@ -249,9 +249,9 @@
                     </script> 
                     <div id="demo"></div>
                 </nav>
-                <!-- End of Topbar -->
+                <!-- Fim da barra do topo -->
 
-                <!-- Begin Page Content -->
+                <!-- Comeco conteudo da pagina -->
                 <div class="container-fluid">
 
                     <!-- DataTables -->
@@ -293,7 +293,7 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
+            <!-- Rodape -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -301,38 +301,19 @@
                     </div>
                 </div>
             </footer>
-            <!-- End of Footer -->
+            <!-- Fim do Rodape -->
 
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- Fim do recorte do conteudo -->
 
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- Fim do recorte da pagina -->
 
-    <!-- Scroll to Top Button-->
+    <!-- Botao Voltar ao topo-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--script modal-->
     <script>
     $('#meuModal').on('shown.bs.modal', function() {

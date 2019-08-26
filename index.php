@@ -249,7 +249,7 @@
                 </nav>
                 <!-- Fim da barra do topo -->
 
-        <!-- comeco da pagina de conteudo -->
+        <!-- Comeco da pagina de conteudo -->
        <div class="container-fluid">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
