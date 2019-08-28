@@ -1,4 +1,4 @@
-
+<?php include "conexao_banco.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
