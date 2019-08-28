@@ -12,59 +12,56 @@
 
     <title>Relação de Produtos</title>
 
-    <!-- Fontes para o template -->
+    <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Estilos customizados para o template -->
+    <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Estilo customizado para a pagina-->
+    <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
 </head>
 
 <body id="page-top">
 
-    <!-- Recorte Pagina -->
+    <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Barra Lateral -->
+        <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"
             style="background-color: #3578E5">
 
-            <!-- Barra Lateral marca -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Biblioteca</div>
             </a>
 
-            <!-- Divisor -->
+            <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav bar pagina inicial-->
+            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
             </li>
 
-            <!-- Divisor -->
+            <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Cabecalho -->
+            <!-- Heading -->
             <div class="sidebar-heading">
                 Menu
             </div>
 
-            <!-- Itens Navbar - juncao de paginas do menu -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -81,7 +78,7 @@
             </li>
 
 
-            <!-- Nav bar item - Tabela -->
+            <!-- Nav Item - Tables -->
             <li class="nav-item active">
                 <a class="nav-link" href="interface_rel_livro.php">
                     <i class="fas fa-fw fa-table"></i>
@@ -100,44 +97,44 @@
                     <span>Emprestimos</span></a>
             </li>
 
-            <!-- Divisorr -->
+            <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Barra lateral ativador -->
+            <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
         </ul>
-        <!-- fim barra lateral -->
+        <!-- End of Sidebar -->
 
 
-        <!-- Recorte de conteudo  -->
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Conteudo Principal-->
+            <!-- Main Content -->
             <div id="content">
 
-                <!-- Barra do topo -->
+                <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <!-- Barra lateral ativador (topo) -->
+                    <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
 
 
-                    <!-- barra de navegacao do topo -->
+                    <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- barra de navegacao item - search dropdown -->
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                            <!-- Dropdown mensagem -->
+                            <!-- Dropdown - Messages -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
@@ -252,9 +249,9 @@
                     </script> 
                     <div id="demo"></div>
                 </nav>
-                <!-- Fim da barra do topo -->
+                <!-- End of Topbar -->
 
-                <!-- Comeco conteudo da pagina -->
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- DataTables -->
@@ -264,7 +261,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="myAdvancedTable" class="stripe" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>Id Produto</th>
@@ -296,7 +293,7 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Rodape -->
+            <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -304,15 +301,15 @@
                     </div>
                 </div>
             </footer>
-            <!-- Fim do Rodape -->
+            <!-- End of Footer -->
 
         </div>
-        <!-- Fim do recorte do conteudo -->
+        <!-- End of Content Wrapper -->
 
     </div>
-    <!-- Fim do recorte da pagina -->
+    <!-- End of Page Wrapper -->
 
-    <!-- Botao Voltar ao topo-->
+    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
@@ -342,12 +339,6 @@
 
     <!-- Table translation to portuguese -->
     <script src="js/portuguese.js"></script>
-
-    <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-<script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-<script src="js/dataTables.cellEdit.js"></script>
-<script src="advanced.js"></script>
 
 </body>
 
