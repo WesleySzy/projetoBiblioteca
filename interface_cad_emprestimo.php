@@ -264,7 +264,7 @@
                         </div>
                         <div class="card-body">
 
-                            <form name="cadastro_emprestimo" method="post" action="formulario_cad_emprestimo.php">
+                            <form name="emprestimo" method="post" action="formulario_cad_emprestimo.php">
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
 
