@@ -24,6 +24,9 @@
     <!-- Estilo customizado para a pagina-->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
 </head>
 
 <body id="page-top">
@@ -261,7 +264,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="myAdvancedTable" class="stripe" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>Id Produto</th>
@@ -339,6 +342,12 @@
 
     <!-- Table translation to portuguese -->
     <script src="js/portuguese.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.cellEdit.js"></script>
+<script src="advanced.js"></script>
 
 </body>
 

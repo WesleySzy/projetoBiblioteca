@@ -1,4 +1,4 @@
-<?php include "conexao_banco.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -264,88 +264,60 @@
                         </div>
                         <div class="card-body">
 
-                            <form name="cadastro_cliente" method="post" action="formulario_cad_cliente.php">
+                            <form name="cadastro_emprestimo" method="post" action="formulario_cad_emprestimo.php">
                                 <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                        <label for="inputName">ISBN</label>
-                                        <input type="text" class="form-control" name="nome_cliente"
-                                            placeholder="Inserir o ISBN" maxlength="15">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="inputAddress2">Nome do livro</label>
-                                        <input type="text" class="form-control" name="end_rua_cliente"
-                                            placeholder="Inserir o nome do livro" maxlength="20">
-                                    </div>
-                                </div>
+                                    <div class="form-group col-md-3">
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-6" <label for="inputNomeAluno">Nome do aluno</label>
-                                        <input type="text" class="form-control" name=" "
-                                            placeholder="Inserir o nome do aluno" maxlength="50">
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                        <label for="inputAddress2">Série Do aluno</label>
-                                        <input type="text" class="form-control" name="end_rua_cliente"
-                                            placeholder="Inserir série do aluno" maxlength="20">
-                                    </div>
-
-                                    <div class="form-group col-md-2">
-                                        <label for="inputAddress2">Turma Do aluno</label>
-                                        <input type="text" class="form-control" name="end_rua_cliente"
-                                            placeholder="Inserir turma do aluno" maxlength="20">
-                                    </div>
-
-                                    <div class="form-group col-md-2">
-                                        <label for="inputEstado">Período</label>
-                                        <select id="inputEstado" class="form-control">
-                                            <option></option>
-                                            <option>Matutino</option>
-                                            <option>Vespertino</option>
-                                            <option>Noturno</option>
+                                        <label for="inputState">Selecione o ID do Livro</label>
+                                        <select id="id_periodo" class="form-control">
+                                            <option selected>ID Livro</option>
+                                            <option>...</option>
                                         </select>
                                     </div>
-
+                                    <div class="form-group col-md-3">
+                                        <label for="inputState">Selecione o ID do Aluno</label>
+                                        <select id="id_aluno" class="form-control">
+                                            <option selected>ID Aluno</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
                                 </div>
-
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label for="inputAddress2">Retirada</label>
-                                        <input type="datetime-local" class="form-control" name="dt_hora_emprestimo" />
+                                        <input type="datetime-local" class="form-control" name="dt_retirada" />
                                     </div>
 
 
                                     <div class="form-group col-md-3">
                                         <label for="inputCity">Devolução</label>
-                                        <input type="datetime-local" class="form-control" name="dt_hora_emprestimo" />
+                                        <input type="datetime-local" class="form-control" name="dt_maxentrega" />
                                     </div>
                                 </div>
-
-
-                                <button type="submit" class="btn"
-                                    style="background-color: #3578E5; color: white;">Cadastrar</button>
-                            </form>
-
                         </div>
                     </div>
+                    <button type="submit" class="btn"
+                        style="background-color: #3578E5; color: white;">Cadastrar</button>
+                    </form>
+
                 </div>
             </div>
-            <!-- Fim do conteudo da Pagina-->
-
-            <!-- Rodape -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Todos os direitos &copy; Unopar Arapongas 2019</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- Fim do Rodape-->
-
         </div>
-        <!-- Fim do recorte do conteudo -->
+    </div>
+    <!-- Fim do conteudo da Pagina-->
+
+    <!-- Rodape -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Todos os direitos &copy; Unopar Arapongas 2019</span>
+            </div>
+        </div>
+    </footer>
+    <!-- Fim do Rodape-->
+
+    </div>
+    <!-- Fim do recorte do conteudo -->
 
     </div>
 
