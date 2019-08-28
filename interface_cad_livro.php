@@ -262,23 +262,34 @@
                         </div>
                         <div class="card-body">
 
-                            <form name="cadastro_produtos" method="post" action="formulario_cad_produtos.php">
+                            <form name="cadastro_livro" method="post" action="formulario_cad_livro.php">
                                 <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="inputName">Nome do Produto</label>
-                                        <input type="text" class="form-control" name="nome_produto">
+                                    <div class="form-group col-md-2">
+                                        <label for="inputName">ISBN</label>
+                                        <input type="text" class="form-control" name="cad_livro_isbn" maxlength="13">
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="inputSobrenome">Valor</label>
-                                        <input type="text" class="form-control" name="valor_produto">
+                                    <div class="form-group col-md-5">
+                                        <label for="inputSobrenome">Titulo</label>
+                                        <input type="text" class="form-control" name="cad_livro_titulo">
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="FormControlTextObs">Observações</label>
-                                        <textarea class="form-control" id="FormControlTextObs" name="obs_produto"
-                                            rows="5"></textarea>
+                                    <div class="form-group col-md-2">
+                                        <label for="FormControlTextObs">Autor</label>
+                                        <input class="form-control" id="form-control" name="cad_livro_autor">
                                     </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="FormControlTextObs">Editora</label>
+                                        <input class="form-control" id="form-control" name="cad_livro_editora">
+                                    </div> 
+                                    <div class="form-group col-md-2">
+                                        <label for="FormControlTextObs">Genero</label>
+                                        <input class="form-control" id="form-control" name="cad_livro_genero">
+                                    </div>   
+                                    <div class="form-group col-md-1">
+                                        <label for="FormControlTextObs">Estoque</label>
+                                        <input class="form-control" id="form-control" name="cad_livro_quantidade">
+                                    </div>                                                                                                            
                                 </div>
                                 <button type="submit" class="btn"
                                     style="background-color: #3578E5; color: white;">Cadastrar</button>
@@ -293,7 +304,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2019</span>
+                        <span>Todos os direitos &copy; Unopar Arapongas 2019</span>
                     </div>
                 </div>
             </footer>
