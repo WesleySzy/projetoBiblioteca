@@ -1,18 +1,13 @@
 <?php include "conexao_banco.php";
 
-$nome=$_POST['nome_cliente'];
-$sobrenome=$_POST['sobrenome_cliente'];
-$cpf=$_POST['cpf_cliente'];
-$telefone=$_POST['telefone_cliente'];
-$rua_cliente=$_POST['end_rua_cliente'];
-$num_cliente=$_POST['end_num_cliente'];
-$bairro_cliente=$_POST['end_bairro_cliente'];
-$estado=$_POST['estado_cliente'];
-$cidade=$_POST['cidade_cliente'];
+$nome=$_POST['nome_aluno'];
+$sala_a=$_POST['sala_aluno'];
+$a_letivo=$_POST['ano_letivo'];
 
-$sql=mysqli_query($conexao, "INSERT INTO clientes (nome_cliente, sobrenome_cliente, cpf_cliente, telefone_cliente, end_rua_cliente, end_num_cliente, end_bairro_cliente, estado_cliente, cidade_cliente) VALUES ('$nome', '$sobrenome', '$cpf', '$telefone', '$rua_cliente', '$num_cliente', '$bairro_cliente', '$estado', '$cidade')");
 
-echo"<script>window.location='interface_cad_cliente.php';
+$sql=mysqli_query($conexao, "INSERT INTO alunos (nome_aluno, sala_aluno, ano_letivo) VALUES ('$nome', '$sala_a', '$a_letivo')");
+
+echo"<script>window.location='interface_cad_aluno.php';
 alert('Gravado com Sucesso!');
 </script>"; 
 ?>
