@@ -15,8 +15,8 @@
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -33,24 +33,24 @@
 
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"
-            style="background-color: #3578E5">
+        style="background-color: #3578E5">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Biblioteca</div>
-            </a>
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">Biblioteca</div>
+        </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">
-                    <i class="fas fa-home"></i>
-                    <span>Página Inicial</span></a>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+            <a class="nav-link" href="index.php">
+                <i class="fas fa-home"></i>
+                <span>Página Inicial</span></a>
             </li>
 
             <!-- Divider -->
@@ -64,84 +64,84 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-edit"></i>
-                    <span>Cadastrar</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
-                        <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
-                        <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                    </div>
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-edit"></i>
+                <span>Cadastrar</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
+                    <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
+                    <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
                 </div>
-            </li>
+            </div>
+        </li>
 
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item active">
-                <a class="nav-link" href="interface_rel_livro.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Livros</span></a>
+        <!-- Nav Item - Tables -->
+        <li class="nav-item active">
+            <a class="nav-link" href="interface_rel_livro.php">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Livros</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="interface_rel_aluno.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Alunos</span></a>
-            </li>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="interface_rel_emprestimo.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Emprestimos</span></a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="interface_rel_emprestimo.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Emprestimos</span></a>
+                    </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+                    <!-- Divider -->
+                    <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+                    <!-- Sidebar Toggler (Sidebar) -->
+                    <div class="text-center d-none d-md-inline">
+                        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                    </div>
 
-        </ul>
-        <!-- End of Sidebar -->
-
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
+                </ul>
+                <!-- End of Sidebar -->
 
 
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <!-- Main Content -->
+                    <div id="content">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                        <!-- Topbar -->
+                        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                            <!-- Sidebar Toggle (Topbar) -->
+                            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+
+
+                            <!-- Topbar Navbar -->
+                            <ul class="navbar-nav ml-auto">
+
+                                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                                <li class="nav-item dropdown no-arrow d-sm-none">
+                                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Pesquise..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        placeholder="Pesquise..." aria-label="Search"
+                                        aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -156,15 +156,15 @@
                     </ul>
                     <script type="text/javascript">
                         var myVar = setInterval(myTimer ,1000);
-                            function myTimer() {
-                                var d = new Date(), displayDate;
-                               if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                                  displayDate = d.toLocaleTimeString('pt-BR');
-                               } else {
-                                  displayDate = d.toLocaleTimeString('pt-BR', {timeZone: 'America/Belem'});
-                               }
-                                  document.getElementById("demo").innerHTML = displayDate;
-                            } 
+                        function myTimer() {
+                            var d = new Date(), displayDate;
+                            if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                              displayDate = d.toLocaleTimeString('pt-BR');
+                          } else {
+                              displayDate = d.toLocaleTimeString('pt-BR', {timeZone: 'America/Belem'});
+                          }
+                          document.getElementById("demo").innerHTML = displayDate;
+                      } 
 
                     // Função que monta Mês, Dia, e Ano para exibir no HTML
                     // Declaração de Variaveis que receberam os valores:
@@ -187,22 +187,22 @@
                     if(myday == 0)
                       day = " Domingo, "
 
-                    else if(myday == 1)
+                  else if(myday == 1)
                       day = " Segunda Feira, "
 
-                    else if(myday == 2)
+                  else if(myday == 2)
                       day = " Terça Feira, "
 
-                    else if(myday == 3)
+                  else if(myday == 3)
                       day = " Quarta Feira, "
 
-                    else if(myday == 4)
+                  else if(myday == 4)
                       day = " Quinta Feira, "
 
-                    else if(myday == 5)
+                  else if(myday == 5)
                       day = " Sexta Feira, "
 
-                    else if(myday == 6)
+                  else if(myday == 6)
                       day = " Sábado, "
 
                     //Tratamento dos Meses
@@ -210,70 +210,70 @@
                     if(mymonth == 0)
                       month = " de Janeiro  "
 
-                    else if(mymonth ==1)
+                  else if(mymonth ==1)
                       month = " de Fevereiro  "
 
-                    else if(mymonth ==2)
+                  else if(mymonth ==2)
                       month = " de Março  "
 
-                    else if(mymonth ==3)
+                  else if(mymonth ==3)
                       month = " de April "
 
-                    else if(mymonth ==4)
+                  else if(mymonth ==4)
                       month = " de Maio "
 
-                    else if(mymonth ==5)
+                  else if(mymonth ==5)
                       month = " de Junho  "
 
-                    else if(mymonth ==6)
+                  else if(mymonth ==6)
                       month = " de Julho "
 
-                    else if(mymonth ==7)
+                  else if(mymonth ==7)
                       month = " de Agosto  "
 
-                    else if(mymonth ==8)
+                  else if(mymonth ==8)
                       month = " de Setembro  "
 
-                    else if(mymonth ==9)
+                  else if(mymonth ==9)
                       month = " de Outubro  "
 
-                    else if(mymonth ==10)
+                  else if(mymonth ==10)
                       month = " de Novembro "
 
-                    else if(mymonth ==11)
+                  else if(mymonth ==11)
                       month = " de Dezembro "
 
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
                     document.write( day + myweekday + month + " de " + year + " - ");
-                    </script> 
-                    <div id="demo"></div>
-                </nav>
-                <!-- End of Topbar -->
+                </script> 
+                <div id="demo"></div>
+            </nav>
+            <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-                    <!-- DataTables -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Produtos</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Id Produto</th>
-                                            <th>Nome</th>
-                                            <th>Valor</th>
-                                            <th>Obs</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php 
-                      $sql=mysqli_query($conexao, "SELECT * FROM produtos WHERE id_produto <> 0");
-                      while($row = mysqli_fetch_array($sql)){ ?>
+                <!-- DataTables -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Produtos</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Id Produto</th>
+                                        <th>Nome</th>
+                                        <th>Valor</th>
+                                        <th>Obs</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php 
+                                    $sql=mysqli_query($conexao, "SELECT * FROM produtos WHERE id_produto <> 0");
+                                    while($row = mysqli_fetch_array($sql)){ ?>
 
                                         <tr>
                                             <td><?php echo $row['id_produto'];?></td>
@@ -282,63 +282,63 @@
                                             <td><?php echo $row['obs_produto'];?></td>
                                         </tr>
 
-                                        <?php } ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <!-- /.container-fluid -->
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2019</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
+            <!-- /.container-fluid -->
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
 
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- End of Content Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+</div>
+<!-- End of Page Wrapper -->
 
-    <!--script modal-->
-    <script>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!--script modal-->
+<script>
     $('#meuModal').on('shown.bs.modal', function() {
         $('#meuInput').trigger('focus')
     })
-    </script>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- Page level plugins -->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+<!-- Page level custom scripts -->
+<script src="js/demo/datatables-demo.js"></script>
 
-    <!-- Table translation to portuguese -->
-    <script src="js/portuguese.js"></script>
+<!-- Table translation to portuguese -->
+<script src="js/portuguese.js"></script>
 
 </body>
 

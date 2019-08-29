@@ -15,8 +15,8 @@
     <!-- Fontes para o template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
     <!-- Estilos customizados para o template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -50,19 +50,19 @@
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
-            </li>
+                </li>
 
-            <!-- Divisor -->
-            <hr class="sidebar-divider">
+                <!-- Divisor -->
+                <hr class="sidebar-divider">
 
-            <!-- Cabecalho -->
-            <div class="sidebar-heading">
-                Menu
-            </div>
+                <!-- Cabecalho -->
+                <div class="sidebar-heading">
+                    Menu
+                </div>
 
-            <!-- Itens Navbar - juncao de paginas do menu -->
-            <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                <!-- Itens Navbar - juncao de paginas do menu -->
+                <li class="nav-item active">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-edit"></i>
                     <span>Cadastrar</span>
@@ -82,92 +82,92 @@
                 <a class="nav-link" href="interface_rel_livro.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Livros</span></a>
-            </li>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="interface_rel_aluno.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Alunos</span></a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="interface_rel_aluno.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Alunos</span></a>
+                    </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="interface_rel_emprestimo.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Emprestimos</span></a>
-            </li>
-
-            <!-- Divisor -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Barra lateral ativador -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- fim barra lateral -->
-
-
-        <!-- Recorte de conteudo -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Conteudo Principal -->
-            <div id="content">
-
-                <!-- Barra do topo -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Barra lateral ativador (topo) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-
-
-                    <!-- barra de navegacao do topo -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- barra de navegacao item - search dropdown -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown mensagem -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Pesquise..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="interface_rel_emprestimo.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Emprestimos</span></a>
                         </li>
 
+                        <!-- Divisor -->
+                        <hr class="sidebar-divider d-none d-md-block">
+
+                        <!-- Barra lateral ativador -->
+                        <div class="text-center d-none d-md-inline">
+                            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                        </div>
 
                     </ul>
-                    <script type="text/javascript">
-                    var myVar = setInterval(myTimer, 1000);
+                    <!-- fim barra lateral -->
 
-                    function myTimer() {
-                        var d = new Date(),
-                            displayDate;
-                        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                            displayDate = d.toLocaleTimeString('pt-BR');
-                        } else {
-                            displayDate = d.toLocaleTimeString('pt-BR', {
-                                timeZone: 'America/Belem'
-                            });
-                        }
-                        document.getElementById("demo").innerHTML = displayDate;
-                    }
+
+                    <!-- Recorte de conteudo -->
+                    <div id="content-wrapper" class="d-flex flex-column">
+
+                        <!-- Conteudo Principal -->
+                        <div id="content">
+
+                            <!-- Barra do topo -->
+                            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                                <!-- Barra lateral ativador (topo) -->
+                                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+
+
+
+                                <!-- barra de navegacao do topo -->
+                                <ul class="navbar-nav ml-auto">
+
+                                    <!-- barra de navegacao item - search dropdown -->
+                                    <li class="nav-item dropdown no-arrow d-sm-none">
+                                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-search fa-fw"></i>
+                                    </a>
+                                    <!-- Dropdown mensagem -->
+                                    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto w-100 navbar-search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Pesquise..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="button">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                        <script type="text/javascript">
+                            var myVar = setInterval(myTimer, 1000);
+
+                            function myTimer() {
+                                var d = new Date(),
+                                displayDate;
+                                if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                                    displayDate = d.toLocaleTimeString('pt-BR');
+                                } else {
+                                    displayDate = d.toLocaleTimeString('pt-BR', {
+                                        timeZone: 'America/Belem'
+                                    });
+                                }
+                                document.getElementById("demo").innerHTML = displayDate;
+                            }
 
                     // Função que monta Mês, Dia, e Ano para exibir no HTML
                     // Declaração de Variaveis que receberam os valores:
@@ -249,53 +249,64 @@
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
                     document.write(day + myweekday + month + " de " + year + " - ");
-                    </script>
-                    <div id="demo"></div>
-                </nav>
-                <!-- Fim da barra do topo -->
+                </script>
+                <div id="demo"></div>
+            </nav>
+            <!-- Fim da barra do topo -->
 
-                <!-- Comeco conteudo da pagina -->
-                <div class="container-fluid">
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de livros</h6>
-                        </div>
-                        <div class="card-body">
+            <!-- Comeco conteudo da pagina -->
+            <div class="container-fluid">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de livros</h6>
+                    </div>
+                    <div class="card-body">
 
-                            <form name="cadastro_livro" method="post" action="formulario_cad_livro.php">
-                                <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                        <label for="inputName">ISBN</label>
-                                        <input type="text" class="form-control" name="cad_livro_isbn" maxlength="13">
-                                    </div>
-                                    <div class="form-group col-md-5">
-                                        <label for="inputSobrenome">Titulo</label>
-                                        <input type="text" class="form-control" name="cad_livro_titulo">
-                                    </div>
+                        <form name="cadastro_livro" method="post" action="formulario_cad_livro.php">
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="inputName">ISBN</label>
+                                    <input placeholder="Insira o ISBN" type="text" class="form-control" name="isbn_livro" maxlength="13">
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                        <label for="FormControlTextObs">Autor</label>
-                                        <input class="form-control" id="form-control" name="cad_livro_autor">
+                                <div class="form-group col-md-6">
+                                    <label for="inputSobrenome">Titulo</label>
+                                    <input placeholder="Insira o titulo" type="text" class="form-control" name="titulo_livro">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="FormControlTextObs">Autor</label>
+                                    <input placeholder="Insira o autor" class="form-control" id="form-control" name="autor_livro">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="FormControlTextObs">Editora</label>
+                                    <input placeholder="Insira a editora" class="form-control" id="form-control" name="editora_livro">
+                                </div> 
+                                <div class="form-group col-md-3">
+                                    <label for="periodo">Genero</label>
+                                    <select class="form-control">
+                                        <option>Selecione uma opção...</option>
+                                        <?php
+                                        $result= "SELECT * FROM `genero`";
+                                        $resultado = mysqli_query($conexao, $result);
+                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                            <option value="<?php echo $row['id_genero']; ?>">
+                                                <?php echo $row['desc_genero']; ?></option> <?php
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="FormControlTextObs">Editora</label>
-                                        <input class="form-control" id="form-control" name="cad_livro_editora">
-                                    </div> 
-                                    <div class="form-group col-md-2">
-                                        <label for="FormControlTextObs">Genero</label>
-                                        <input class="form-control" id="form-control" name="cad_livro_genero">
-                                    </div>   
+
                                     <div class="form-group col-md-1">
                                         <label for="FormControlTextObs">Estoque</label>
-                                        <input class="form-control" id="form-control" name="cad_livro_quantidade">
-                                    </div>                                                                                                            
-                                </div>
+                                        <input class="form-control" id="form-control" name="estoque_livro">
+                                    </div> 
+                                </div>                                                                                         
                                 <button type="submit" class="btn"
-                                    style="background-color: #3578E5; color: white;">Cadastrar</button>
+                                style="background-color: #3578E5; color: white;">Cadastrar</button>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </form>
             </div>
             <!-- Fim do conteudo da Pagina-->
@@ -339,7 +350,7 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-    </div>
+</div>
 </body>
 
 </html>
