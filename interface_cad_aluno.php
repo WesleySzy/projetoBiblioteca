@@ -288,7 +288,7 @@
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="periodo">Periodo</label>
-                                    <select class="form-control">
+                                    <select class="form-control" name="periodo">
                                         <option>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `periodo`";
@@ -315,7 +315,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Todos os direitos &copy; Unopar Arapongas 2019</span>
+                        <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                     </div>
                 </div>
             </footer>

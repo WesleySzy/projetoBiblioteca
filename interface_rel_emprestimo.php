@@ -257,7 +257,7 @@
                   <!-- DataTables -->
                   <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                      <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Clientes</h6>
+                      <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Emprestimos</h6>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive">
@@ -273,15 +273,15 @@
                           </thead>
                           <tbody>
                             <?php 
-                            $sql=mysqli_query($conexao, "SELECT * FROM clientes WHERE codigo_cliente <> 0");
+                            $sql=mysqli_query($conexao, "SELECT * FROM emprestimo, livros WHERE id_emprestimo <> 0");
                             while($row = mysqli_fetch_array($sql)){ ?>
                               
                               <tr>
-                                <td><?php echo $row['nome_cliente'];?></td>
-                                <td><?php echo $row['sobrenome_cliente'];?></td>
-                                <td><?php echo $row['cpf_cliente'];?></td>
-                                <td><?php echo $row['telefone_cliente'];?></td>
-                                <td><?php echo $row['end_rua_cliente'];?></td>
+                                <td><?php echo $row['isbn'];?></td>
+                                <td><?php echo $row['id_livro'];?></td>
+                                <td><?php echo $row['id_aluno'];?></td>
+                                <td><?php echo $row['dt_retirada'];?></td>
+                                <td><?php echo $row['dt_entrega'];?></td>
                               </tr>
                               
                             <?php } ?>
@@ -299,7 +299,7 @@
               <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                   <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2019</span>
+                    <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                   </div>
                 </div>
               </footer>

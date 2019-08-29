@@ -270,6 +270,7 @@
                                         <th>Nome</th>
                                         <th>Sala</th>
                                         <th>Ano Letivo</th>
+                                        <th>Periodo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -281,6 +282,7 @@
                                             <td><?php echo $row['nome_aluno'];?></td>
                                             <td><?php echo $row['sala_aluno'];?></td>
                                             <td><?php echo $row['ano_letivo'];?></td>
+                                            <td><?php echo $row['id_periodo'];?></td>
                                         </tr>
 
                                     <?php } ?>
@@ -298,7 +300,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2019</span>
+                    <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                 </div>
             </div>
         </footer>

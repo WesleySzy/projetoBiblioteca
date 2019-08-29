@@ -315,7 +315,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Todos os direitos &copy; Unopar Arapongas 2019</span>
+                        <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                     </div>
                 </div>
             </footer>

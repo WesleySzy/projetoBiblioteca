@@ -257,29 +257,33 @@
                 <!-- DataTables -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Produtos</h6>
+                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Livros</h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Id Produto</th>
-                                        <th>Nome</th>
-                                        <th>Valor</th>
-                                        <th>Obs</th>
+                                        <th>ISBN</th>
+                                        <th>Titulo</th>
+                                        <th>Autor</th>
+                                        <th>Editora</th>
+                                        <th>Genero</th>
+                                        <th>Estoque</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php 
-                                    $sql=mysqli_query($conexao, "SELECT * FROM produtos WHERE id_produto <> 0");
+                                    $sql=mysqli_query($conexao, "SELECT * FROM livros WHERE id_livro <> 0");
                                     while($row = mysqli_fetch_array($sql)){ ?>
 
                                         <tr>
-                                            <td><?php echo $row['id_produto'];?></td>
-                                            <td><?php echo $row['nome_produto'];?></td>
-                                            <td><?php echo $row['valor_produto'];?></td>
-                                            <td><?php echo $row['obs_produto'];?></td>
+                                            <td><?php echo $row['isbn'];?></td>
+                                            <td><?php echo $row['titulo_livro'];?></td>
+                                            <td><?php echo $row['id_autor'];?></td>
+                                            <td><?php echo $row['id_editora'];?></td>
+                                            <td><?php echo $row['id_genero'];?></td>
+                                            <td><?php echo $row['qtd_disponivel'];?></td>
                                         </tr>
 
                                     <?php } ?>
@@ -297,7 +301,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2019</span>
+                    <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                 </div>
             </div>
         </footer>
