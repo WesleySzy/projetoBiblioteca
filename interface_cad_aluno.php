@@ -287,9 +287,9 @@
                                         <input type="text" class="form-control" name="ano_letivo" maxlength="4">
                                     </div>
                                     <div class="form-group col-md-5">
-                                        <label for="inputState">ID do Periodo</label>
-                                        <option>Selecione</option>
-                                        <select>
+                                        <div class="form-group col-md-5">
+                                         <option>Selecione</option>
+                                         <select class="form-control">
                                             <?php
 						                               $result= "SELECT * FROM `periodo`";
 						                               $resultado = mysqli_query($conexao, $result);
