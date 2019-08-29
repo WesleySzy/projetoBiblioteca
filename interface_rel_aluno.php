@@ -260,7 +260,7 @@
                     <!-- DataTables -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Clientes</h6>
+                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Alunos</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -268,31 +268,19 @@
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Sobrenome</th>
-                                            <th>CPF</th>
-                                            <th>Telefone</th>
-                                            <th>Rua</th>
-                                            <th>Numero</th>
-                                            <th>Bairro</th>
-                                            <th>Cidade</th>
-                                            <th>Estado</th>
+                                            <th>Sala</th>
+                                            <th>Ano Letivo</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php 
-                      $sql=mysqli_query($conexao, "SELECT * FROM clientes WHERE codigo_cliente <> 0");
+                      $sql=mysqli_query($conexao, "SELECT * FROM alunos WHERE id_aluno <> 0");
                       while($row = mysqli_fetch_array($sql)){ ?>
 
                                         <tr>
-                                            <td><?php echo $row['nome_cliente'];?></td>
-                                            <td><?php echo $row['sobrenome_cliente'];?></td>
-                                            <td><?php echo $row['cpf_cliente'];?></td>
-                                            <td><?php echo $row['telefone_cliente'];?></td>
-                                            <td><?php echo $row['end_rua_cliente'];?></td>
-                                            <td><?php echo $row['end_num_cliente'];?></td>
-                                            <td><?php echo $row['end_bairro_cliente'];?></td>
-                                            <td><?php echo $row['cidade_cliente'];?></td>
-                                            <td><?php echo $row['estado_cliente'];?></td>
+                                            <td><?php echo $row['nome_aluno'];?></td>
+                                            <td><?php echo $row['sala_aluno'];?></td>
+                                            <td><?php echo $row['ano_letivo'];?></td>
                                         </tr>
 
                                         <?php } ?>
