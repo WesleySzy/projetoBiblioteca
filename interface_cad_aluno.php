@@ -288,9 +288,16 @@
                                     </div>
                                     <div class="form-group col-md-5">
                                         <label for="inputState">ID do Periodo</label>
-                                        <select id="id_aluno" class="form-control">
-                                            <option selected>ID Aluno</option>
-                                            <option>...</option>
+                                        <option>Selecione</option>
+                                        <select>
+                                            <?php
+						                               $result= "SELECT * FROM `periodo`";
+						                               $resultado = mysqli_query($conexao, $result);
+						                               while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                            <option value="<?php echo $row['id_periodo']; ?>">
+                                                <?php echo $row['desc_periodo']; ?></option> <?php
+						                            }
+					                        ?>
                                         </select>
                                     </div>
                                 </div>
