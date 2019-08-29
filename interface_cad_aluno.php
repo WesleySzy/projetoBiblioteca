@@ -264,7 +264,7 @@
                         </div>
                         <div class="card-body">
 
-                            <form name="cadastro_aluno" method="post" action="interface_cad_aluno.php">
+                            <form name="formulario_cad_aluno" method="post" action="formulario_cad_aluno.php">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputName">Nome</label>
