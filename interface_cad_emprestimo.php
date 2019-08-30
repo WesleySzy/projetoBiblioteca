@@ -268,11 +268,18 @@
                             <div class="form-row">
                                 <div class="form-group col-md-3">
 
-                                    <label for="inputState">Selecione o ID do Livro</label>
-                                    <select id="id_periodo" class="form-control">
-                                        <option selected>ID Livro</option>
-                                        <option>...</option>
-                                    </select>
+                                    <label for="inputState">Selecione o ISBN do Livro</label>
+                                    <select class="form-control" name="isbn_livro">
+                                        <option>Selecione uma opção...</option>
+                                        <?php
+                                        $result= "SELECT * FROM `livros`";
+                                        $resultado = mysqli_query($conexao, $result);
+                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                            <option value="<?php echo $row['id_livro']; ?>">
+                                                <?php echo $row['titulo_livro']; ?></option> <?php
+                                            }
+                                            ?>
+                                        </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputState">Selecione o ID do Aluno</label>

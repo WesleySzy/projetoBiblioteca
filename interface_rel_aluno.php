@@ -268,8 +268,8 @@
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
-                                        <th>Sala</th>
                                         <th>Ano Letivo</th>
+                                        <th>Sala</th>
                                         <th>Periodo</th>
                                     </tr>
                                 </thead>
@@ -280,8 +280,8 @@
 
                                         <tr>
                                             <td><?php echo $row['nome_aluno'];?></td>
-                                            <td><?php echo $row['sala_aluno'];?></td>
                                             <td><?php echo $row['ano_letivo'];?></td>
+                                            <td><?php echo $row['sala_aluno'];?></td>
                                             <td><?php echo $row['id_periodo'];?></td>
                                         </tr>
 

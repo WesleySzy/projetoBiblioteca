@@ -270,23 +270,21 @@
                                     <label for="nome">Nome</label>
                                     <input placeholder="Insira o nome do aluno..." type="text" class="form-control" name="nome_aluno" maxlength="40">
                                 </div>
-                                <div class="form-group col-md-5">
-                                    <label for="sala_aluno">Sala do Aluno</label>
-                                    <input placeholder="Insira a sala do aluno..." type="text" class="form-control" name="sala_aluno" maxlength="20">
-                                </div>
-                                
+                                <div class="form-group col-md-3">
+                                    <label for="ano_letivo">Ano Letivo</label>
+                                    <input placeholder="Insira o ano letivo do aluno..." type="text" class="form-control" name="ano_letivo" maxlength="4">
+                                </div>                                
                             </div>
 
                             
 
 
-                            <div class="form-row">
-                                
-                                <div class="form-group col-md-4">
-                                    <label for="ano_letivo">Ano Letivo</label>
-                                    <input placeholder="Insira o ano letivo do aluno..." type="text" class="form-control" name="ano_letivo" maxlength="4">
-                                </div>
+                            <div class="form-row">                               
                                 <div class="form-group col-md-3">
+                                    <label for="sala_aluno">Sala do Aluno</label>
+                                    <input placeholder="Insira a sala do aluno..." type="text" class="form-control" name="sala_aluno" maxlength="20">
+                                </div>
+                                <div class="form-group col-md-4">
                                     <label for="periodo">Periodo</label>
                                     <select class="form-control" name="periodo">
                                         <option>Selecione uma opção...</option>

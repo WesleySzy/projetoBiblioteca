@@ -265,22 +265,42 @@
                         <form name="cadastro_livro" method="post" action="formulario_cad_livro.php">
                             <div class="form-row">
                                 <div class="form-group col-md-2">
-                                    <label for="inputName">ISBN</label>
+                                    <label for="isbn">ISBN</label>
                                     <input placeholder="Insira o ISBN" type="text" class="form-control" name="isbn_livro" maxlength="13">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="inputSobrenome">Titulo</label>
+                                    <label for="titulo">Titulo</label>
                                     <input placeholder="Insira o titulo" type="text" class="form-control" name="titulo_livro">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-2">
-                                    <label for="FormControlTextObs">Autor</label>
-                                    <input placeholder="Insira o autor" class="form-control" id="form-control" name="autor_livro">
+                                    <label for="autor">Autor</label>
+                                    <select class="form-control">
+                                        <option>Selecione uma opção...</option>
+                                        <?php
+                                        $result= "SELECT * FROM `autor`";
+                                        $resultado = mysqli_query($conexao, $result);
+                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                            <option value="<?php echo $row['id_autor']; ?>">
+                                                <?php echo $row['nome_autor']; ?></option> <?php
+                                            }
+                                            ?>
+                                        </select>
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <label for="FormControlTextObs">Editora</label>
-                                    <input placeholder="Insira a editora" class="form-control" id="form-control" name="editora_livro">
+                                    <label for="editora">Editora</label>
+                                    <select class="form-control">
+                                        <option>Selecione uma opção...</option>
+                                        <?php
+                                        $result= "SELECT * FROM `editora`";
+                                        $resultado = mysqli_query($conexao, $result);
+                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                            <option value="<?php echo $row['id_editora']; ?>">
+                                                <?php echo $row['nome_editora']; ?></option> <?php
+                                            }
+                                            ?>
+                                        </select>
                                 </div> 
                                 <div class="form-group col-md-3">
                                     <label for="periodo">Genero</label>
