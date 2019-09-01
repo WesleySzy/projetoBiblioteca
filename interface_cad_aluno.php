@@ -266,7 +266,7 @@
 
                         <form name="formulario_cad_aluno" method="post" action="formulario_cad_aluno.php">
                             <div class="form-row">
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-6">
                                     <label for="nome">Nome</label>
                                     <input placeholder="Insira o nome do aluno..." type="text" class="form-control" name="nome_aluno" maxlength="40">
                                 </div>
@@ -284,7 +284,11 @@
                                     <label for="sala_aluno">Sala do Aluno</label>
                                     <input placeholder="Insira a sala do aluno..." type="text" class="form-control" name="sala_aluno" maxlength="20">
                                 </div>
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-3">
+                                    <label for="sala_aluno">Turma do Aluno</label>
+                                    <input placeholder="Insira a turma do aluno..." type="text" class="form-control" name="turma_aluno" maxlength="1">
+                                </div>                                
+                                <div class="form-group col-md-3">
                                     <label for="periodo">Periodo</label>
                                     <select class="form-control" name="periodo">
                                         <option>Selecione uma opção...</option>

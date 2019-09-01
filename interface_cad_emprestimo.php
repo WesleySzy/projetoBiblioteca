@@ -268,9 +268,9 @@
                             <div class="form-row">
                                 <div class="form-group col-md-3">
 
-                                    <label for="inputState">Selecione o ISBN do Livro</label>
-                                    <select class="form-control" name="isbn_livro">
-                                        <option>Selecione uma opção...</option>
+                                    <label for="inputState">Selecione o livro</label>
+                                    <select class="form-control" name="livro">
+                                        <option disabled selected value>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `livros`";
                                         $resultado = mysqli_query($conexao, $result);
@@ -282,23 +282,30 @@
                                         </select>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <label for="inputState">Selecione o ID do Aluno</label>
-                                    <select id="id_aluno" class="form-control">
-                                        <option selected>ID Aluno</option>
-                                        <option>...</option>
+                                    <label for="inputState">Selecione o aluno</label>
+                                    <select class="form-control" name="aluno">
+                                        <option disabled selected value>ID Aluno</option>
+                                        <?php
+                                        $result= "SELECT * FROM `alunos`";
+                                        $resultado = mysqli_query($conexao, $result);
+                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                            <option value="<?php echo $row['id_aluno']; ?>">
+                                                <?php echo $row['nome_aluno']," ", $row['sala_aluno'], "º ", $row['turma_aluno'] ; ?></option> <?php
+                                            }
+                                            ?>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="inputAddress2">Retirada</label>
-                                    <input type="datetime-local" class="form-control" name="dt_retirada" />
+                                    <input type="date" class="form-control" name="dt_retirada">
                                 </div>
 
 
                                 <div class="form-group col-md-3">
                                     <label for="inputCity">Devolução</label>
-                                    <input type="datetime-local" class="form-control" name="dt_maxentrega" />
+                                    <input type="date" class="form-control" name="dt_entrega" />
                                 </div>
                             </div>
                             <button type="submit" class="btn"

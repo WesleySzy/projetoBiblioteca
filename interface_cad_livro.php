@@ -266,18 +266,18 @@
                             <div class="form-row">
                                 <div class="form-group col-md-2">
                                     <label for="isbn">ISBN</label>
-                                    <input placeholder="Insira o ISBN" type="text" class="form-control" name="isbn_livro" maxlength="13">
+                                    <input placeholder="Insira o ISBN" type="text" class="form-control" name="isbn_livro" maxlength="13" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="titulo">Titulo</label>
-                                    <input placeholder="Insira o titulo" type="text" class="form-control" name="titulo_livro">
+                                    <input placeholder="Insira o titulo" type="text" class="form-control" name="titulo_livro" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-2">
                                     <label for="autor">Autor</label>
-                                    <select class="form-control" name="autor">
-                                        <option>Selecione uma opção...</option>
+                                    <select class="form-control" name="autor" required>
+                                        <option disabled selected value>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `autor`";
                                         $resultado = mysqli_query($conexao, $result);
@@ -290,8 +290,8 @@
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="editora">Editora</label>
-                                    <select class="form-control" name="editora">
-                                        <option>Selecione uma opção...</option>
+                                    <select class="form-control" name="editora" required>
+                                        <option disabled selected value>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `editora`";
                                         $resultado = mysqli_query($conexao, $result);
@@ -304,8 +304,8 @@
                                 </div> 
                                 <div class="form-group col-md-3">
                                     <label for="periodo">Genero</label>
-                                    <select class="form-control" name="genero">
-                                        <option>Selecione uma opção...</option>
+                                    <select class="form-control" name="genero" required>
+                                        <option disabled selected value>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `genero`";
                                         $resultado = mysqli_query($conexao, $result);
@@ -319,7 +319,7 @@
 
                                     <div class="form-group col-md-1">
                                         <label for="FormControlTextObs">Estoque</label>
-                                        <input class="form-control" id="form-control" name="estoque_livro">
+                                        <input class="form-control" id="form-control" name="estoque_livro" required>
                                     </div> 
                                 </div>                                                                                         
                                 <button type="submit" class="btn"
