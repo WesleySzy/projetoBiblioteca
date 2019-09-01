@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 28-Ago-2019 às 04:22
--- Versão do servidor: 10.1.40-MariaDB
--- versão do PHP: 7.1.29
+-- Tempo de geração: 30-Ago-2019 às 01:19
+-- Versão do servidor: 10.4.6-MariaDB
+-- versão do PHP: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `revolib`
+-- Banco de dados: `revolib`
 --
 CREATE DATABASE IF NOT EXISTS `revolib` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `revolib`;
@@ -37,6 +37,13 @@ CREATE TABLE `alunos` (
   `ano_letivo` varchar(4) NOT NULL,
   `id_periodo` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `alunos`
+--
+
+INSERT INTO `alunos` (`id_aluno`, `nome_aluno`, `sala_aluno`, `ano_letivo`, `id_periodo`) VALUES
+(1, 'BRUCE', '3 A', '2019', 1);
 
 -- --------------------------------------------------------
 
@@ -86,6 +93,25 @@ CREATE TABLE `genero` (
   `desc_genero` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `genero`
+--
+
+INSERT INTO `genero` (`id_genero`, `desc_genero`) VALUES
+(2, 'Infantil'),
+(3, 'Cientifico'),
+(4, 'Conto'),
+(5, 'Cronica'),
+(6, 'Didatico'),
+(7, 'Fantasia'),
+(8, 'Ficcao Cientifica'),
+(9, 'Ficcao Historica'),
+(10, 'Terror'),
+(11, 'Drama'),
+(12, 'Poesia'),
+(13, 'Politica'),
+(14, 'Romance');
+
 -- --------------------------------------------------------
 
 --
@@ -114,96 +140,134 @@ CREATE TABLE `periodo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- Extraindo dados da tabela `periodo`
+--
+
+INSERT INTO `periodo` (`id_periodo`, `desc_periodo`) VALUES
+(1, 'MATUTINO');
+
+--
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `alunos`
+-- Índices para tabela `alunos`
 --
 ALTER TABLE `alunos`
-  ADD PRIMARY KEY (`id_aluno`);
+  ADD PRIMARY KEY (`id_aluno`),
+  ADD KEY `id_periodo` (`id_periodo`);
 
 --
--- Indexes for table `autor`
+-- Índices para tabela `autor`
 --
 ALTER TABLE `autor`
   ADD PRIMARY KEY (`id_autor`);
 
 --
--- Indexes for table `editora`
+-- Índices para tabela `editora`
 --
 ALTER TABLE `editora`
   ADD PRIMARY KEY (`id_editora`);
 
 --
--- Indexes for table `emprestimo`
+-- Índices para tabela `emprestimo`
 --
 ALTER TABLE `emprestimo`
-  ADD PRIMARY KEY (`id_emprestimo`);
+  ADD PRIMARY KEY (`id_emprestimo`),
+  ADD KEY `id_aluno` (`id_aluno`),
+  ADD KEY `id_livro` (`id_livro`);
 
 --
--- Indexes for table `genero`
+-- Índices para tabela `genero`
 --
 ALTER TABLE `genero`
   ADD PRIMARY KEY (`id_genero`);
 
 --
--- Indexes for table `livros`
+-- Índices para tabela `livros`
 --
 ALTER TABLE `livros`
-  ADD PRIMARY KEY (`id_livro`);
+  ADD PRIMARY KEY (`id_livro`),
+  ADD KEY `id_autor` (`id_autor`),
+  ADD KEY `id_editora` (`id_editora`),
+  ADD KEY `id_genero` (`id_genero`);
 
 --
--- Indexes for table `periodo`
+-- Índices para tabela `periodo`
 --
 ALTER TABLE `periodo`
   ADD PRIMARY KEY (`id_periodo`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `alunos`
+-- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id_aluno` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_aluno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `autor`
+-- AUTO_INCREMENT de tabela `autor`
 --
 ALTER TABLE `autor`
   MODIFY `id_autor` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `editora`
+-- AUTO_INCREMENT de tabela `editora`
 --
 ALTER TABLE `editora`
   MODIFY `id_editora` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `emprestimo`
+-- AUTO_INCREMENT de tabela `emprestimo`
 --
 ALTER TABLE `emprestimo`
   MODIFY `id_emprestimo` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `genero`
+-- AUTO_INCREMENT de tabela `genero`
 --
 ALTER TABLE `genero`
-  MODIFY `id_genero` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_genero` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `livros`
+-- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id_livro` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_livro` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `periodo`
+-- AUTO_INCREMENT de tabela `periodo`
 --
 ALTER TABLE `periodo`
-  MODIFY `id_periodo` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_periodo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `alunos`
+--
+ALTER TABLE `alunos`
+  ADD CONSTRAINT `alunos_ibfk_1` FOREIGN KEY (`id_periodo`) REFERENCES `periodo` (`id_periodo`);
+
+--
+-- Limitadores para a tabela `emprestimo`
+--
+ALTER TABLE `emprestimo`
+  ADD CONSTRAINT `emprestimo_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `alunos` (`id_aluno`),
+  ADD CONSTRAINT `emprestimo_ibfk_2` FOREIGN KEY (`id_livro`) REFERENCES `livros` (`id_livro`);
+
+--
+-- Limitadores para a tabela `livros`
+--
+ALTER TABLE `livros`
+  ADD CONSTRAINT `livros_ibfk_1` FOREIGN KEY (`id_autor`) REFERENCES `autor` (`id_autor`),
+  ADD CONSTRAINT `livros_ibfk_2` FOREIGN KEY (`id_editora`) REFERENCES `editora` (`id_editora`),
+  ADD CONSTRAINT `livros_ibfk_3` FOREIGN KEY (`id_genero`) REFERENCES `genero` (`id_genero`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
