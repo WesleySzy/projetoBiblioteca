@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Set-2019 às 23:25
+-- Tempo de geração: 02-Set-2019 às 01:32
 -- Versão do servidor: 10.3.15-MariaDB
 -- versão do PHP: 7.3.6
 
@@ -34,6 +34,7 @@ CREATE TABLE `alunos` (
   `id_aluno` int(5) NOT NULL,
   `nome_aluno` varchar(40) NOT NULL,
   `sala_aluno` varchar(5) NOT NULL,
+  `turma_aluno` varchar(5) NOT NULL,
   `ano_letivo` varchar(4) NOT NULL,
   `id_periodo` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -42,8 +43,8 @@ CREATE TABLE `alunos` (
 -- Extraindo dados da tabela `alunos`
 --
 
-INSERT INTO `alunos` (`id_aluno`, `nome_aluno`, `sala_aluno`, `ano_letivo`, `id_periodo`) VALUES
-(1, 'BRUCE', '3 A', '2019', 1);
+INSERT INTO `alunos` (`id_aluno`, `nome_aluno`, `sala_aluno`, `turma_aluno`, `ano_letivo`, `id_periodo`) VALUES
+(1, 'BRUCE', '3 A', '', '2019', 1);
 
 -- --------------------------------------------------------
 
@@ -78,8 +79,7 @@ CREATE TABLE `emprestimo` (
   `id_livro` int(5) NOT NULL,
   `id_aluno` int(5) NOT NULL,
   `dt_retirada` date NOT NULL,
-  `dt_entrega` date NOT NULL,
-  `dt_maxentrega` date NOT NULL
+  `dt_entrega` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -144,7 +144,9 @@ CREATE TABLE `periodo` (
 --
 
 INSERT INTO `periodo` (`id_periodo`, `desc_periodo`) VALUES
-(1, 'MATUTINO');
+(1, 'Matutino'),
+(2, 'Vespertino'),
+(3, 'Noturno');
 
 --
 -- Índices para tabelas despejadas
@@ -206,7 +208,7 @@ ALTER TABLE `periodo`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id_aluno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_aluno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `autor`
@@ -242,7 +244,7 @@ ALTER TABLE `livros`
 -- AUTO_INCREMENT de tabela `periodo`
 --
 ALTER TABLE `periodo`
-  MODIFY `id_periodo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_periodo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restrições para despejos de tabelas
