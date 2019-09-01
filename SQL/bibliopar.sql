@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Ago-2019 às 01:19
--- Versão do servidor: 10.4.6-MariaDB
--- versão do PHP: 7.3.8
+-- Tempo de geração: 01-Set-2019 às 23:25
+-- Versão do servidor: 10.3.15-MariaDB
+-- versão do PHP: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,10 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `revolib`
+-- Banco de dados: `bibliopar`
 --
-CREATE DATABASE IF NOT EXISTS `revolib` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `revolib`;
+CREATE DATABASE IF NOT EXISTS `bibliopar` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `bibliopar`;
 
 -- --------------------------------------------------------
 
