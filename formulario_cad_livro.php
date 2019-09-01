@@ -2,9 +2,9 @@
 
 $isbn=$_POST['isbn_livro'];
 $titulo=$_POST['titulo_livro'];
-$autor=$_POST['autor_livro'];
-$editora=$_POST['editora_livro'];
-$genero=$_POST['genero_livro'];
+$autor=$_POST['autor'];
+$editora=$_POST['editora'];
+$genero=$_POST['genero'];
 $estoque=$_POST['estoque_livro'];
 
 $sql=mysqli_query($conexao, "INSERT INTO livros (isbn, titulo_livro, id_autor, id_editora, id_genero, qtd_disponivel) VALUES ('$isbn', '$titulo', '$autor', '$editora', '$genero', '$estoque')");

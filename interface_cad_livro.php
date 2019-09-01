@@ -276,7 +276,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-2">
                                     <label for="autor">Autor</label>
-                                    <select class="form-control">
+                                    <select class="form-control" name="autor">
                                         <option>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `autor`";
@@ -290,7 +290,7 @@
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="editora">Editora</label>
-                                    <select class="form-control">
+                                    <select class="form-control" name="editora">
                                         <option>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `editora`";
@@ -304,7 +304,7 @@
                                 </div> 
                                 <div class="form-group col-md-3">
                                     <label for="periodo">Genero</label>
-                                    <select class="form-control">
+                                    <select class="form-control" name="genero">
                                         <option>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `genero`";
