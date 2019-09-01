@@ -268,11 +268,11 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="nome">Nome</label>
-                                    <input placeholder="Insira o nome do aluno..." type="text" class="form-control" name="nome_aluno" maxlength="40">
+                                    <input placeholder="Insira o nome do aluno..." type="text" class="form-control" name="nome_aluno" maxlength="40" required>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="ano_letivo">Ano Letivo</label>
-                                    <input placeholder="Insira o ano letivo do aluno..." type="text" class="form-control" name="ano_letivo" maxlength="4">
+                                    <input placeholder="Insira o ano letivo do aluno..." type="text" class="form-control" name="ano_letivo" maxlength="4" required>
                                 </div>                                
                             </div>
 
@@ -282,12 +282,12 @@
                             <div class="form-row">                               
                                 <div class="form-group col-md-3">
                                     <label for="sala_aluno">Sala do Aluno</label>
-                                    <input placeholder="Insira a sala do aluno..." type="text" class="form-control" name="sala_aluno" maxlength="20">
+                                    <input placeholder="Insira a sala do aluno..." type="text" class="form-control" name="sala_aluno" maxlength="20" required>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="periodo">Periodo</label>
-                                    <select class="form-control" name="periodo">
-                                        <option>Selecione uma opção...</option>
+                                    <select class="form-control" name="periodo" required>
+                                        <option disabled selected value>Selecione uma opção...</option>
                                         <?php
                                         $result= "SELECT * FROM `periodo`";
                                         $resultado = mysqli_query($conexao, $result);
