@@ -269,8 +269,8 @@
                                 <div class="form-group col-md-3">
 
                                     <label for="inputState">Selecione o livro</label>
-                                    <select class="form-control" name="livro">
-                                        <option disabled selected value>Selecione uma opção...</option>
+                                    <select class="form-control" name="livro" required>
+                                        <option disabled selected value>Nome do livro</option>
                                         <?php
                                         $result= "SELECT * FROM `livros`";
                                         $resultado = mysqli_query($conexao, $result);
@@ -283,8 +283,8 @@
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="inputState">Selecione o aluno</label>
-                                    <select class="form-control" name="aluno">
-                                        <option disabled selected value>ID Aluno</option>
+                                    <select class="form-control" name="aluno" required>
+                                        <option disabled selected value>Nome do aluno</option>
                                         <?php
                                         $result= "SELECT * FROM `alunos`";
                                         $resultado = mysqli_query($conexao, $result);
@@ -299,13 +299,13 @@
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="inputAddress2">Retirada</label>
-                                    <input type="date" class="form-control" name="dt_retirada">
+                                    <input type="date" class="form-control" name="dt_retirada" required>
                                 </div>
 
 
                                 <div class="form-group col-md-3">
                                     <label for="inputCity">Devolução</label>
-                                    <input type="date" class="form-control" name="dt_entrega" />
+                                    <input type="date" class="form-control" name="dt_entrega" required>
                                 </div>
                             </div>
                             <button type="submit" class="btn"

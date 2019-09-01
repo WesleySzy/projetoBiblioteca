@@ -270,6 +270,7 @@
                                         <th>Nome</th>
                                         <th>Ano Letivo</th>
                                         <th>Sala</th>
+                                        <th>Turma</th>
                                         <th>Periodo</th>
                                     </tr>
                                 </thead>
@@ -282,6 +283,7 @@
                                             <td><?php echo $row['nome_aluno'];?></td>
                                             <td><?php echo $row['ano_letivo'];?></td>
                                             <td><?php echo $row['sala_aluno'];?></td>
+                                            <td><?php echo $row['turma_aluno'];?></td>
                                             <td><?php echo $row['id_periodo'];?></td>
                                         </tr>
 
