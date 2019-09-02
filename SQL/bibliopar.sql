@@ -39,12 +39,6 @@ CREATE TABLE `alunos` (
   `id_periodo` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `alunos`
---
-
-INSERT INTO `alunos` (`id_aluno`, `nome_aluno`, `sala_aluno`, `turma_aluno`, `ano_letivo`, `id_periodo`) VALUES
-(1, 'BRUCE', '3 A', '', '2019', 1);
 
 -- --------------------------------------------------------
 
