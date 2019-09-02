@@ -72,6 +72,7 @@
                         <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
                         <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
                         <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
+                        <a class="collapse-item" href="interface_cad_outros.php">Outros</a>
                     </div>
                 </div>
             </li>

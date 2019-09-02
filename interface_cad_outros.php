@@ -72,6 +72,7 @@
                         <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
                         <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
                         <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
+                        <a class="collapse-item" href="interface_cad_outros.php">Outros</a>
                     </div>
                 </div>
             </li>
@@ -270,7 +271,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn"
-                                style="background-color: #3578E5; color: white;">Cadastrar</button>
+                            style="background-color: #3578E5; color: white;">Cadastrar</button>
                         </div>
                     </div>
                 </form>
@@ -290,7 +291,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn"
-                                style="background-color: #3578E5; color: white;">Cadastrar</button>
+                            style="background-color: #3578E5; color: white;">Cadastrar</button>
                         </div>
                     </div>
                 </form>

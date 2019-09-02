@@ -72,6 +72,7 @@
                         <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
                         <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
                         <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
+                        <a class="collapse-item" href="interface_cad_outros.php">Outros</a>
                     </div>
                 </div>
             </li>
@@ -280,83 +281,83 @@
                                             }
                                             ?>
                                         </select>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="inputState">Selecione o aluno</label>
-                                    <select class="form-control" name="aluno" required>
-                                        <option disabled selected value>Nome do aluno</option>
-                                        <?php
-                                        $result= "SELECT * FROM `alunos`";
-                                        $resultado = mysqli_query($conexao, $result);
-                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_aluno']; ?>">
-                                                <?php echo $row['nome_aluno']," ", $row['sala_aluno'], "º ", $row['turma_aluno'] ; ?></option> <?php
-                                            }
-                                            ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <label for="inputAddress2">Retirada</label>
-                                    <input type="date" class="form-control" name="dt_retirada" required>
-                                </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputState">Selecione o aluno</label>
+                                        <select class="form-control" name="aluno" required>
+                                            <option disabled selected value>Nome do aluno</option>
+                                            <?php
+                                            $result= "SELECT * FROM `alunos`";
+                                            $resultado = mysqli_query($conexao, $result);
+                                            while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                                <option value="<?php echo $row['id_aluno']; ?>">
+                                                    <?php echo $row['nome_aluno']," ", $row['sala_aluno'], "º ", $row['turma_aluno'] ; ?></option> <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-3">
+                                            <label for="inputAddress2">Retirada</label>
+                                            <input type="date" class="form-control" name="dt_retirada" required>
+                                        </div>
 
 
-                                <div class="form-group col-md-3">
-                                    <label for="inputCity">Devolução</label>
-                                    <input type="date" class="form-control" name="dt_entrega" required>
+                                        <div class="form-group col-md-3">
+                                            <label for="inputCity">Devolução</label>
+                                            <input type="date" class="form-control" name="dt_entrega" required>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn"
+                                    style="background-color: #3578E5; color: white;">Cadastrar</button> 
                                 </div>
                             </div>
-                            <button type="submit" class="btn"
-                            style="background-color: #3578E5; color: white;">Cadastrar</button> 
+                        </div>
+                    </form>    
+                </div>
+                <!-- Fim do conteudo da Pagina-->
+
+                <!-- Rodape -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                         </div>
                     </div>
-                </div>
-            </form>    
-        </div>
-        <!-- Fim do conteudo da Pagina-->
+                </footer>
+                <!-- Fim do Rodape-->
 
-        <!-- Rodape -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-                </div>
             </div>
-        </footer>
-        <!-- Fim do Rodape-->
+            <!-- Fim do recorte do conteudo -->
 
+        </div>
+
+
+        <!-- Botao Voltar ao topo-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+        <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="js/demo/datatables-demo.js"></script>
     </div>
-    <!-- Fim do recorte do conteudo -->
-
-</div>
-
-
-<!-- Botao Voltar ao topo-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-
-
-<!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-
-<!-- Page level plugins -->
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="js/demo/datatables-demo.js"></script>
-</div>
 </body>
 
 </html>

@@ -72,6 +72,7 @@
                         <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
                         <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
                         <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
+                        <a class="collapse-item" href="interface_cad_outros.php">Outros</a>
                     </div>
                 </div>
             </li>
@@ -287,90 +288,90 @@
                                             }
                                             ?>
                                         </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="editora">Editora</label>
-                                    <select class="form-control" name="editora" required>
-                                        <option disabled selected value>Selecione uma opção...</option>
-                                        <?php
-                                        $result= "SELECT * FROM `editora`";
-                                        $resultado = mysqli_query($conexao, $result);
-                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_editora']; ?>">
-                                                <?php echo $row['nome_editora']; ?></option> <?php
-                                            }
-                                            ?>
-                                        </select>
-                                </div> 
-                                <div class="form-group col-md-3">
-                                    <label for="periodo">Genero</label>
-                                    <select class="form-control" name="genero" required>
-                                        <option disabled selected value>Selecione uma opção...</option>
-                                        <?php
-                                        $result= "SELECT * FROM `genero`";
-                                        $resultado = mysqli_query($conexao, $result);
-                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_genero']; ?>">
-                                                <?php echo $row['desc_genero']; ?></option> <?php
-                                            }
-                                            ?>
-                                        </select>
                                     </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="editora">Editora</label>
+                                        <select class="form-control" name="editora" required>
+                                            <option disabled selected value>Selecione uma opção...</option>
+                                            <?php
+                                            $result= "SELECT * FROM `editora`";
+                                            $resultado = mysqli_query($conexao, $result);
+                                            while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                                <option value="<?php echo $row['id_editora']; ?>">
+                                                    <?php echo $row['nome_editora']; ?></option> <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div> 
+                                        <div class="form-group col-md-3">
+                                            <label for="periodo">Genero</label>
+                                            <select class="form-control" name="genero" required>
+                                                <option disabled selected value>Selecione uma opção...</option>
+                                                <?php
+                                                $result= "SELECT * FROM `genero`";
+                                                $resultado = mysqli_query($conexao, $result);
+                                                while($row = mysqli_fetch_assoc($resultado)){ ?>
+                                                    <option value="<?php echo $row['id_genero']; ?>">
+                                                        <?php echo $row['desc_genero']; ?></option> <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
 
-                                    <div class="form-group col-md-1">
-                                        <label for="FormControlTextObs">Estoque</label>
-                                        <input class="form-control" id="form-control" name="estoque_livro" required>
-                                    </div> 
-                                </div>                                                                                         
-                                <button type="submit" class="btn"
-                                style="background-color: #3578E5; color: white;">Cadastrar</button>
+                                            <div class="form-group col-md-1">
+                                                <label for="FormControlTextObs">Estoque</label>
+                                                <input class="form-control" id="form-control" name="estoque_livro" required>
+                                            </div> 
+                                        </div>                                                                                         
+                                        <button type="submit" class="btn"
+                                        style="background-color: #3578E5; color: white;">Cadastrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Fim do conteudo da Pagina-->
+
+                    <!-- Rodape -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                             </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <!-- Fim do conteudo da Pagina-->
+                    </footer>
+                    <!-- Fim do rodape-->
 
-            <!-- Rodape -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-                    </div>
                 </div>
-            </footer>
-            <!-- Fim do rodape-->
+                <!-- Fim do recorte do conteudo -->
 
+            </div>
+
+
+            <!-- Botao Voltar ao topo-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+
+
+            <!-- Bootstrap core JavaScript-->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Core plugin JavaScript-->
+            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+            <!-- Custom scripts for all pages-->
+            <script src="js/sb-admin-2.min.js"></script>
+
+            <!-- Page level plugins -->
+            <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+            <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+            <!-- Page level custom scripts -->
+            <script src="js/demo/datatables-demo.js"></script>
         </div>
-        <!-- Fim do recorte do conteudo -->
+    </body>
 
-    </div>
-
-
-    <!-- Botao Voltar ao topo-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
-</div>
-</body>
-
-</html>
+    </html>

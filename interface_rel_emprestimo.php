@@ -73,6 +73,7 @@
           <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
           <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
           <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
+          <a class="collapse-item" href="interface_cad_outros.php">Outros</a>
         </div>
       </div>
     </li>
@@ -274,7 +275,7 @@
                             <?php 
                             $sql=mysqli_query($conexao, "SELECT * FROM emprestimo WHERE id_emprestimo <> 0");
                             while($row = mysqli_fetch_array($sql)){ ?>
-                              
+
                               <tr>
                                 <td><?php echo $row['id_livro'];?></td>
                                 <td><?php echo $row['id_aluno'];?></td>
