@@ -267,7 +267,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="isbn">Editora</label>
-                                    <input placeholder="Insira o nome da Editora" type="text" class="form-control" name="editora" maxlength="13" required>
+                                    <input placeholder="Insira o nome da Editora" type="text" class="form-control" name="editora" required>
                                 </div>
                             </div>
                             <button type="submit" class="btn"
@@ -287,7 +287,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="isbn">Autor</label>
-                                    <input placeholder="Insira o nome do Autor" type="text" class="form-control" name="autor" maxlength="13" required>
+                                    <input placeholder="Insira o nome do Autor" type="text" class="form-control" name="autor" required>
                                 </div>
                             </div>
                             <button type="submit" class="btn"
