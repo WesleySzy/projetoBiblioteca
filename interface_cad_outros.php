@@ -262,8 +262,15 @@
                     </div>
                     <div class="card-body">
 
-                        <form name="cadastro_livro" method="post" action="formulario_cad_livro.php">
-
+                        <form name="cadastro_editora" method="post" action="formulario_cad_editora.php">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="isbn">Editora</label>
+                                    <input placeholder="Insira o nome da Editora" type="text" class="form-control" name="editora" maxlength="13" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn"
+                                style="background-color: #3578E5; color: white;">Cadastrar</button>
                         </div>
                     </div>
                 </form>
@@ -275,54 +282,61 @@
                     </div>
                     <div class="card-body">
 
-                        <form name="cadastro_livro" method="post" action="formulario_cad_livro.php">
-
+                        <form name="cadastro_autor" method="post" action="formulario_cad_autor.php">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="isbn">Autor</label>
+                                    <input placeholder="Insira o nome do Autor" type="text" class="form-control" name="autor" maxlength="13" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn"
+                                style="background-color: #3578E5; color: white;">Cadastrar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-            <!-- Fim do conteudo da Pagina-->
+        <!-- Fim do conteudo da Pagina-->
 
-            <!-- Rodape -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-                    </div>
+        <!-- Rodape -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                 </div>
-            </footer>
-            <!-- Fim do rodape-->
-
-        </div>
-        <!-- Fim do recorte do conteudo -->
+            </div>
+        </footer>
+        <!-- Fim do rodape-->
 
     </div>
+    <!-- Fim do recorte do conteudo -->
+
+</div>
 
 
-    <!-- Botao Voltar ao topo-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+<!-- Botao Voltar ao topo-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 
 
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- Page level plugins -->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+<!-- Page level custom scripts -->
+<script src="js/demo/datatables-demo.js"></script>
 </div>
 </body>
 
