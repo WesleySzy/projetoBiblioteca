@@ -277,7 +277,7 @@
                                 </thead>
                                 <tbody>
                                     <?php 
-                                    $sql=mysqli_query($conexao, "SELECT * FROM alunos WHERE id_aluno <> 0");
+                                    $sql=mysqli_query($conexao, "SELECT * FROM alunos JOIN periodo ON alunos.id_periodo = periodo.id_periodo WHERE id_aluno <> 0");
                                     while($row = mysqli_fetch_array($sql)){ ?>
 
                                         <tr>
@@ -285,7 +285,7 @@
                                             <td><?php echo $row['ano_letivo'];?></td>
                                             <td><?php echo $row['sala_aluno'];?></td>
                                             <td><?php echo $row['turma_aluno'];?></td>
-                                            <td><?php echo $row['id_periodo'];?></td>
+                                            <td><?php echo $row['desc_periodo'];?></td>
                                         </tr>
 
                                     <?php } ?>

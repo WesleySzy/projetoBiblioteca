@@ -273,12 +273,12 @@
                           </thead>
                           <tbody>
                             <?php 
-                            $sql=mysqli_query($conexao, "SELECT * FROM emprestimo WHERE id_emprestimo <> 0");
+                            $sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0");
                             while($row = mysqli_fetch_array($sql)){ ?>
 
                               <tr>
-                                <td><?php echo $row['id_livro'];?></td>
-                                <td><?php echo $row['id_aluno'];?></td>
+                                <td><?php echo $row['titulo_livro'];?></td>
+                                <td><?php echo $row['nome_aluno'];?></td>
                                 <td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
                                 <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
                               </tr>

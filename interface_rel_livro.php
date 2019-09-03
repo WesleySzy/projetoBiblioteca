@@ -275,15 +275,15 @@
                                 </thead>
                                 <tbody>
                                     <?php 
-                                    $sql=mysqli_query($conexao, "SELECT * FROM livros WHERE id_livro <> 0");
+                                    $sql=mysqli_query($conexao, "SELECT * FROM livros JOIN genero ON livros.id_genero = genero.id_genero JOIN editora ON livros.id_editora = editora.id_editora JOIN autor ON livros.id_autor = autor.id_autor WHERE livros.id_livro <> 0");
                                     while($row = mysqli_fetch_array($sql)){ ?>
 
                                         <tr>
                                             <td><?php echo $row['isbn'];?></td>
                                             <td><?php echo $row['titulo_livro'];?></td>
-                                            <td><?php echo $row['id_autor'];?></td>
-                                            <td><?php echo $row['id_editora'];?></td>
-                                            <td><?php echo $row['id_genero'];?></td>
+                                            <td><?php echo $row['nome_autor'];?></td>
+                                            <td><?php echo $row['nome_editora'];?></td>
+                                            <td><?php echo $row['desc_genero'];?></td>
                                             <td><?php echo $row['qtd_disponivel'];?></td>
                                         </tr>
 
