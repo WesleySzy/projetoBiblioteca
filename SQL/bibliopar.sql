@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Set-2019 às 03:59
+-- Tempo de geração: 12-Set-2019 às 04:28
 -- Versão do servidor: 10.3.15-MariaDB
 -- versão do PHP: 7.3.6
 
@@ -39,20 +39,6 @@ CREATE TABLE `alunos` (
   `id_periodo` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `alunos`
---
-
-INSERT INTO `alunos` (`id_aluno`, `nome_aluno`, `sala_aluno`, `turma_aluno`, `ano_letivo`, `id_periodo`) VALUES
-(1, 'BRUCE', '3 A', '', '2019', 1),
-(8, 'tavin', 'szytk', 'a', '2019', 1),
-(9, '321321', 'szytk', 'a', '3213', 2),
-(10, 'jao', 'gome', '3', '2019', 1),
-(11, '3321', '321', '3', '3213', 1),
-(12, 'pedro', '32132', '3', '2019', 1),
-(13, 'fjgdishf', 'dsad', 'a', 'dsad', 1),
-(14, 'sadasd', 'asd', 'a', 'dasd', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -64,13 +50,6 @@ CREATE TABLE `autor` (
   `nome_autor` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `autor`
---
-
-INSERT INTO `autor` (`id_autor`, `nome_autor`) VALUES
-(1, 'batata');
-
 -- --------------------------------------------------------
 
 --
@@ -81,13 +60,6 @@ CREATE TABLE `editora` (
   `id_editora` int(5) NOT NULL,
   `nome_editora` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `editora`
---
-
-INSERT INTO `editora` (`id_editora`, `nome_editora`) VALUES
-(1, 'batata');
 
 -- --------------------------------------------------------
 
@@ -148,14 +120,6 @@ CREATE TABLE `livros` (
   `id_genero` int(5) NOT NULL,
   `qtd_disponivel` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `livros`
---
-
-INSERT INTO `livros` (`id_livro`, `isbn`, `titulo_livro`, `id_autor`, `id_editora`, `id_genero`, `qtd_disponivel`) VALUES
-(3, '321321321321', 'batra', 1, 1, 11, 4),
-(4, '1111', 'Xadrez', 1, 1, 3, 3);
 
 -- --------------------------------------------------------
 
