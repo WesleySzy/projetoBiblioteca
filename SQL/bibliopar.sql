@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Set-2019 às 01:32
+-- Tempo de geração: 12-Set-2019 às 03:59
 -- Versão do servidor: 10.3.15-MariaDB
 -- versão do PHP: 7.3.6
 
@@ -39,6 +39,19 @@ CREATE TABLE `alunos` (
   `id_periodo` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `alunos`
+--
+
+INSERT INTO `alunos` (`id_aluno`, `nome_aluno`, `sala_aluno`, `turma_aluno`, `ano_letivo`, `id_periodo`) VALUES
+(1, 'BRUCE', '3 A', '', '2019', 1),
+(8, 'tavin', 'szytk', 'a', '2019', 1),
+(9, '321321', 'szytk', 'a', '3213', 2),
+(10, 'jao', 'gome', '3', '2019', 1),
+(11, '3321', '321', '3', '3213', 1),
+(12, 'pedro', '32132', '3', '2019', 1),
+(13, 'fjgdishf', 'dsad', 'a', 'dsad', 1),
+(14, 'sadasd', 'asd', 'a', 'dasd', 1);
 
 -- --------------------------------------------------------
 
@@ -51,6 +64,13 @@ CREATE TABLE `autor` (
   `nome_autor` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `autor`
+--
+
+INSERT INTO `autor` (`id_autor`, `nome_autor`) VALUES
+(1, 'batata');
+
 -- --------------------------------------------------------
 
 --
@@ -61,6 +81,13 @@ CREATE TABLE `editora` (
   `id_editora` int(5) NOT NULL,
   `nome_editora` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `editora`
+--
+
+INSERT INTO `editora` (`id_editora`, `nome_editora`) VALUES
+(1, 'batata');
 
 -- --------------------------------------------------------
 
@@ -122,6 +149,35 @@ CREATE TABLE `livros` (
   `qtd_disponivel` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `livros`
+--
+
+INSERT INTO `livros` (`id_livro`, `isbn`, `titulo_livro`, `id_autor`, `id_editora`, `id_genero`, `qtd_disponivel`) VALUES
+(3, '321321321321', 'batra', 1, 1, 11, 4),
+(4, '1111', 'Xadrez', 1, 1, 3, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `niveis_acessos`
+--
+
+CREATE TABLE `niveis_acessos` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `niveis_acessos`
+--
+
+INSERT INTO `niveis_acessos` (`id`, `nome`, `created`, `modified`) VALUES
+(1, 'Administrador', '2016-02-19 00:00:00', NULL),
+(2, 'Aluno', '2016-02-19 00:00:00', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -142,6 +198,31 @@ INSERT INTO `periodo` (`id_periodo`, `desc_periodo`) VALUES
 (2, 'Vespertino'),
 (3, 'Noturno');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(220) NOT NULL,
+  `email` varchar(520) NOT NULL,
+  `senha` varchar(50) NOT NULL,
+  `situacoe_id` int(11) NOT NULL DEFAULT 0,
+  `niveis_acesso_id` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `situacoe_id`, `niveis_acesso_id`, `created`, `modified`) VALUES
+(13, 'Jao', 'aluno@aluno', 'aluno', 0, 2, '2019-09-16 00:00:00', '2019-09-25 00:00:00'),
+(15, 'admin', 'admin@admin', 'admin', 0, 1, '2019-09-17 11:00:00', '2019-09-07 00:10:10');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -151,6 +232,7 @@ INSERT INTO `periodo` (`id_periodo`, `desc_periodo`) VALUES
 --
 ALTER TABLE `alunos`
   ADD PRIMARY KEY (`id_aluno`),
+  ADD UNIQUE KEY `nome_aluno` (`nome_aluno`),
   ADD KEY `id_periodo` (`id_periodo`);
 
 --
@@ -189,10 +271,22 @@ ALTER TABLE `livros`
   ADD KEY `id_genero` (`id_genero`);
 
 --
+-- Índices para tabela `niveis_acessos`
+--
+ALTER TABLE `niveis_acessos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `periodo`
 --
 ALTER TABLE `periodo`
   ADD PRIMARY KEY (`id_periodo`);
+
+--
+-- Índices para tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -202,19 +296,19 @@ ALTER TABLE `periodo`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id_aluno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_aluno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `autor`
 --
 ALTER TABLE `autor`
-  MODIFY `id_autor` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_autor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `editora`
 --
 ALTER TABLE `editora`
-  MODIFY `id_editora` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_editora` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `emprestimo`
@@ -232,13 +326,25 @@ ALTER TABLE `genero`
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id_livro` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_livro` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `niveis_acessos`
+--
+ALTER TABLE `niveis_acessos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `periodo`
 --
 ALTER TABLE `periodo`
   MODIFY `id_periodo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restrições para despejos de tabelas
