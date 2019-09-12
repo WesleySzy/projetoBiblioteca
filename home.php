@@ -35,7 +35,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3578E5">
 
             <!-- Barra Lateral marca -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
@@ -46,7 +46,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav bar pagina inicial -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="home.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
@@ -61,7 +61,7 @@
             </div>
 
             <!-- Itens Navbar - juncao de paginas do menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-edit"></i>
@@ -96,6 +96,7 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Emprestimos</span></a>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="sair.php">
                     <i class="fas fa-sign-out-alt"></i>
@@ -128,8 +129,6 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
-
 
                     <!-- barra de navegacao do topo -->
                     <ul class="navbar-nav ml-auto">
@@ -261,69 +260,43 @@
                 </nav>
                 <!-- Fim da barra do topo -->
 
-
-                <!-- Comeco conteudo da pagina -->
+                <!-- Comeco da pagina de conteudo -->
                 <div class="container-fluid">
-
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de Emprestimos</h6>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="img/..." alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img/..." alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img/..." alt="Third slide">
+                            </div>
                         </div>
-                        <div class="card-body">
-
-                            <form name="emprestimo" method="post" action="formulario_cad_emprestimo.php">
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-
-                                        <label for="inputState">Selecione o livro</label>
-                                        <select class="form-control" name="livro" required>
-                                            <option disabled selected value>Nome do livro</option>
-                                            <?php
-                                        $result= "SELECT * FROM `livros`";
-                                        $resultado = mysqli_query($conexao, $result);
-                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_livro']; ?>">
-                                                <?php echo $row['titulo_livro']; ?></option> <?php
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="inputState">Selecione o aluno</label>
-                                        <select class="form-control" name="aluno" required>
-                                            <option disabled selected value>Nome do aluno</option>
-                                            <?php
-                                            $result= "SELECT * FROM `alunos`";
-                                            $resultado = mysqli_query($conexao, $result);
-                                            while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_aluno']; ?>">
-                                                <?php echo $row['nome_aluno']," ", $row['sala_aluno'], "º ", $row['turma_aluno'] ; ?>
-                                            </option> <?php
-                                                }
-                                                ?>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <label for="inputAddress2">Retirada</label>
-                                        <input type="date" class="form-control" name="dt_retirada" required>
-                                    </div>
-
-
-                                    <div class="form-group col-md-3">
-                                        <label for="inputCity">Devolução</label>
-                                        <input type="date" class="form-control" name="dt_entrega" required>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn"
-                                    style="background-color: #3578E5; color: white;">Cadastrar</button>
-                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
+                    <!-- titulo da pagina -->
+
                 </div>
-                </form>
+                <!-- /.container-fluid -->
+
             </div>
-            <!-- Fim do conteudo da Pagina-->
+            <!-- Fim do conteudo -->
 
             <!-- Rodape -->
             <footer class="sticky-footer bg-white">
@@ -333,7 +306,7 @@
                     </div>
                 </div>
             </footer>
-            <!-- Fim do Rodape-->
+            <!-- Fim do rodape -->
 
         </div>
         <!-- Fim do recorte do conteudo -->
@@ -341,12 +314,10 @@
     </div>
 
 
-    <!-- Botao Voltar ao topo-->
+    <!-- Botao de voltar ao topo -->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
-
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -358,13 +329,6 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
-    </div>
 </body>
 
 </html>
