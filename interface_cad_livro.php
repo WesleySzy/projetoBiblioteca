@@ -285,9 +285,9 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="autor">Autor</label>
-                                        <input class="form-control" list="autor" name="autor">
+                                        <input class="form-control" list="autor" name="autor" autocomplete="off" placeholder="Insira o autor..." required>
                                         <datalist id="autor">
-                                            <select class="form-control" name="autor" required>
+                                            <select class="form-control" name="autor">
                                                 <option disabled selected value>Selecione uma opção...</option>
                                                 <?php
                                         $result= "SELECT * FROM `autor`";
@@ -302,9 +302,9 @@
                                     </div>
                                     <div class="form-group col-md-2">
                                         <label for="editora">Editora</label>
-                                        <input class="form-control" list="editora" name="editora">
+                                        <input class="form-control" list="editora" name="editora" autocomplete="off" placeholder="Insira a editora..." required>
                                         <datalist id="editora">
-                                            <select class="form-control" name="editora" required>
+                                            <select class="form-control" name="editora">
                                                 <option disabled selected value>Selecione uma opção...</option>
                                                 <?php
                                             $result= "SELECT * FROM `editora`";
@@ -319,9 +319,9 @@
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="genero">Selecione o Genero</label>
-                                        <input class="form-control" list="genero" name="genero">
+                                        <input class="form-control" list="genero" name="genero" autocomplete="off" placeholder="Insira o genero..." required>
                                         <datalist id="genero">
-                                            <select class="form-control" name="genero" required>
+                                            <select class="form-control" name="genero">
                                                 <option disabled selected value>Selecione uma opção...</option>
                                                 <?php
                                                 $result= "SELECT * FROM `genero`";
@@ -337,7 +337,7 @@
 
                                     <div class="form-group col-md-1">
                                         <label for="FormControlTextObs">Estoque</label>
-                                        <input class="form-control" id="form-control" name="estoque_livro" required>
+                                        <input class="form-control" id="form-control" name="estoque_livro" placeholder="Ex: 99" required>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn"
