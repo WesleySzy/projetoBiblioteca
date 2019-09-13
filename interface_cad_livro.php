@@ -285,45 +285,54 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="autor">Autor</label>
-                                        <select class="form-control" name="autor" required>
-                                            <option disabled selected value>Selecione uma opção...</option>
-                                            <?php
+                                        <input class="form-control" list="autor" name="autor">
+                                        <datalist id="autor">
+                                            <select class="form-control" name="autor" required>
+                                                <option disabled selected value>Selecione uma opção...</option>
+                                                <?php
                                         $result= "SELECT * FROM `autor`";
                                         $resultado = mysqli_query($conexao, $result);
                                         while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_autor']; ?>">
-                                                <?php echo $row['nome_autor']; ?></option> <?php
+                                                <option value="<?php echo $row['id_autor']; ?>">
+                                                    <?php echo $row['nome_autor']; ?></option> <?php
                                             }
                                             ?>
-                                        </select>
+                                            </select>
+                                        </datalist>
                                     </div>
                                     <div class="form-group col-md-2">
                                         <label for="editora">Editora</label>
-                                        <select class="form-control" name="editora" required>
-                                            <option disabled selected value>Selecione uma opção...</option>
-                                            <?php
+                                        <input class="form-control" list="editora" name="editora">
+                                        <datalist id="editora">
+                                            <select class="form-control" name="editora" required>
+                                                <option disabled selected value>Selecione uma opção...</option>
+                                                <?php
                                             $result= "SELECT * FROM `editora`";
                                             $resultado = mysqli_query($conexao, $result);
                                             while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_editora']; ?>">
-                                                <?php echo $row['nome_editora']; ?></option> <?php
+                                                <option value="<?php echo $row['id_editora']; ?>">
+                                                    <?php echo $row['nome_editora']; ?></option> <?php
                                                 }
                                                 ?>
-                                        </select>
+                                            </select>
+                                        </datalist>
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label for="periodo">Genero</label>
-                                        <select class="form-control" name="genero" required>
-                                            <option disabled selected value>Selecione uma opção...</option>
-                                            <?php
+                                        <label for="genero">Selecione o Genero</label>
+                                        <input class="form-control" list="genero" name="genero">
+                                        <datalist id="genero">
+                                            <select class="form-control" name="genero" required>
+                                                <option disabled selected value>Selecione uma opção...</option>
+                                                <?php
                                                 $result= "SELECT * FROM `genero`";
                                                 $resultado = mysqli_query($conexao, $result);
                                                 while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_genero']; ?>">
-                                                <?php echo $row['desc_genero']; ?></option> <?php
+                                                <option value="<?php echo $row['id_genero']; ?>">Genero:
+                                                    <?php echo $row['desc_genero']; ?> </option> <?php
                                                     }
                                                     ?>
-                                        </select>
+                                            </select>
+                                        </datalist>
                                     </div>
 
                                     <div class="form-group col-md-1">
