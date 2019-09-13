@@ -15,8 +15,8 @@
     <!-- Fontes para o template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
     <!-- Estilos customizados para o template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -50,113 +50,113 @@
                 <a class="nav-link" href="aluno_view.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
-            </li>
+                </li>
 
-            <!-- Divisor -->
-            <hr class="sidebar-divider">
+                <!-- Divisor -->
+                <hr class="sidebar-divider">
 
-            <!-- Cabecalho -->
-            <div class="sidebar-heading">
-                Menu
-            </div>
+                <!-- Cabecalho -->
+                <div class="sidebar-heading">
+                    Menu
+                </div>
 
-            <!-- Itens Navbar - juncao de paginas do menu -->
-
-
-
-            <!-- Nav bar item - Tabela -->
-            <li class="nav-item active">
-                <a class="nav-link" href="viewLivros.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Livros</span></a>
-            </li>
+                <!-- Itens Navbar - juncao de paginas do menu -->
 
 
 
-            <li class="nav-item">
-                <a class="nav-link" href="viewEmprestimos.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Emprestimos</span></a>
-            </li>
+                <!-- Nav bar item - Tabela -->
+                <li class="nav-item">
+                    <a class="nav-link" href="viewLivros.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Livros</span></a>
+                    </li>
 
 
-            <li class="nav-item">
-                <a class="nav-link" href="sair.php">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Sair</span></a>
-            </li>
 
-
-            <!-- Divisor -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Barra lateral ativador -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- fim barra lateral -->
-
-
-        <!-- Recorte de conteudo -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Conteudo Principal -->
-            <div id="content">
-
-                <!-- Barra do topo -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Barra lateral ativador (topo) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- barra de navegacao do topo -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- barra de navegacao item - search dropdown -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown mensagem -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Pesquise..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="viewEmprestimos.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Emprestimos</span></a>
                         </li>
 
 
-                    </ul>
-                    <script type="text/javascript">
-                    var myVar = setInterval(myTimer, 1000);
+                        <li class="nav-item">
+                            <a class="nav-link" href="sair.php">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Sair</span></a>
+                            </li>
 
-                    function myTimer() {
-                        var d = new Date(),
-                            displayDate;
-                        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                            displayDate = d.toLocaleTimeString('pt-BR');
-                        } else {
-                            displayDate = d.toLocaleTimeString('pt-BR', {
-                                timeZone: 'America/Belem'
-                            });
-                        }
-                        document.getElementById("demo").innerHTML = displayDate;
-                    }
+
+                            <!-- Divisor -->
+                            <hr class="sidebar-divider d-none d-md-block">
+
+                            <!-- Barra lateral ativador -->
+                            <div class="text-center d-none d-md-inline">
+                                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                            </div>
+
+                        </ul>
+                        <!-- fim barra lateral -->
+
+
+                        <!-- Recorte de conteudo -->
+                        <div id="content-wrapper" class="d-flex flex-column">
+
+                            <!-- Conteudo Principal -->
+                            <div id="content">
+
+                                <!-- Barra do topo -->
+                                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                                    <!-- Barra lateral ativador (topo) -->
+                                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+
+                                    <!-- barra de navegacao do topo -->
+                                    <ul class="navbar-nav ml-auto">
+
+                                        <!-- barra de navegacao item - search dropdown -->
+                                        <li class="nav-item dropdown no-arrow d-sm-none">
+                                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-search fa-fw"></i>
+                                        </a>
+                                        <!-- Dropdown mensagem -->
+                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                        aria-labelledby="searchDropdown">
+                                        <form class="form-inline mr-auto w-100 navbar-search">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control bg-light border-0 small"
+                                                placeholder="Pesquise..." aria-label="Search"
+                                                aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="button">
+                                                        <i class="fas fa-search fa-sm"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                            <script type="text/javascript">
+                                var myVar = setInterval(myTimer, 1000);
+
+                                function myTimer() {
+                                    var d = new Date(),
+                                    displayDate;
+                                    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                                        displayDate = d.toLocaleTimeString('pt-BR');
+                                    } else {
+                                        displayDate = d.toLocaleTimeString('pt-BR', {
+                                            timeZone: 'America/Belem'
+                                        });
+                                    }
+                                    document.getElementById("demo").innerHTML = displayDate;
+                                }
 
                     // Função que monta Mês, Dia, e Ano para exibir no HTML
                     // Declaração de Variaveis que receberam os valores:
@@ -238,79 +238,79 @@
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
                     document.write(day + myweekday + month + " de " + year + " - ");
-                    </script>
-                    <div id="demo"></div>
-                </nav>
-                <!-- Fim da barra do topo -->
+                </script>
+                <div id="demo"></div>
+            </nav>
+            <!-- Fim da barra do topo -->
 
-                <!-- Comeco da pagina de conteudo -->
-                <div class="container-fluid">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="img/..." alt="First slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="img/..." alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="img/..." alt="Third slide">
-                            </div>
+            <!-- Comeco da pagina de conteudo -->
+            <div class="container-fluid">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/..." alt="First slide">
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/..." alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/..." alt="Third slide">
+                        </div>
                     </div>
-                    <!-- titulo da pagina -->
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- Fim do conteudo -->
-
-            <!-- Rodape -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- Fim do rodape -->
-
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <!-- Fim do recorte do conteudo -->
+        <!-- titulo da pagina -->
 
     </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- Fim do conteudo -->
+
+<!-- Rodape -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+        </div>
+    </div>
+</footer>
+<!-- Fim do rodape -->
+
+</div>
+<!-- Fim do recorte do conteudo -->
+
+</div>
 
 
-    <!-- Botao de voltar ao topo -->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+<!-- Botao de voltar ao topo -->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
 
 </body>
 

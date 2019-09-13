@@ -15,8 +15,8 @@
     <!-- Fontes para o template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
     <!-- Estilos customizados para o template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -50,114 +50,114 @@
                 <a class="nav-link" href="aluno_view.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
-            </li>
+                </li>
 
-            <!-- Divisor -->
-            <hr class="sidebar-divider">
+                <!-- Divisor -->
+                <hr class="sidebar-divider">
 
-            <!-- Cabecalho -->
-            <div class="sidebar-heading">
-                Menu
-            </div>
+                <!-- Cabecalho -->
+                <div class="sidebar-heading">
+                    Menu
+                </div>
 
-            <!-- Itens Navbar - juncao de paginas do menu -->
-
-
-
-            <!-- Nav bar item - Tabela -->
-
-
-            <li class="nav-item active">
-                <a class="nav-link" href="viewLivros.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Livros</span></a>
-            </li>
+                <!-- Itens Navbar - juncao de paginas do menu -->
 
 
 
-            <li class="nav-item">
-                <a class="nav-link" href="viewEmprestimos.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Emprestimos</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="sair.php">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Sair</span></a>
-            </li>
-
-            <!-- Divisor -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Barra lateral ativador -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- fim barra lateral -->
+                <!-- Nav bar item - Tabela -->
 
 
-        <!-- Recorte de conteudo -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Conteudo Principal  -->
-            <div id="content">
-
-                <!-- Barra do topo -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- barra de navegacao do topo -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
+                <li class="nav-item">
+                    <a class="nav-link" href="viewLivros.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Livros</span></a>
+                    </li>
 
 
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Pesquise..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="viewEmprestimos.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Emprestimos</span></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sair.php">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Sair</span></a>
+                            </li>
+
+                            <!-- Divisor -->
+                            <hr class="sidebar-divider d-none d-md-block">
+
+                            <!-- Barra lateral ativador -->
+                            <div class="text-center d-none d-md-inline">
+                                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                            </div>
+
+                        </ul>
+                        <!-- fim barra lateral -->
 
 
-                    </ul>
-                    <script type="text/javascript">
-                    var myVar = setInterval(myTimer, 1000);
+                        <!-- Recorte de conteudo -->
+                        <div id="content-wrapper" class="d-flex flex-column">
 
-                    function myTimer() {
-                        var d = new Date(),
-                            displayDate;
-                        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                            displayDate = d.toLocaleTimeString('pt-BR');
-                        } else {
-                            displayDate = d.toLocaleTimeString('pt-BR', {
-                                timeZone: 'America/Belem'
-                            });
-                        }
-                        document.getElementById("demo").innerHTML = displayDate;
-                    }
+                            <!-- Conteudo Principal  -->
+                            <div id="content">
+
+                                <!-- Barra do topo -->
+                                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                                    <!-- barra de navegacao do topo -->
+                                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+
+
+
+                                    <!-- Topbar Navbar -->
+                                    <ul class="navbar-nav ml-auto">
+
+                                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                                        <li class="nav-item dropdown no-arrow d-sm-none">
+                                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-search fa-fw"></i>
+                                        </a>
+                                        <!-- Dropdown - Messages -->
+                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                        aria-labelledby="searchDropdown">
+                                        <form class="form-inline mr-auto w-100 navbar-search">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control bg-light border-0 small"
+                                                placeholder="Pesquise..." aria-label="Search"
+                                                aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="button">
+                                                        <i class="fas fa-search fa-sm"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                            <script type="text/javascript">
+                                var myVar = setInterval(myTimer, 1000);
+
+                                function myTimer() {
+                                    var d = new Date(),
+                                    displayDate;
+                                    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                                        displayDate = d.toLocaleTimeString('pt-BR');
+                                    } else {
+                                        displayDate = d.toLocaleTimeString('pt-BR', {
+                                            timeZone: 'America/Belem'
+                                        });
+                                    }
+                                    document.getElementById("demo").innerHTML = displayDate;
+                                }
 
                     // Função que monta Mês, Dia, e Ano para exibir no HTML
                     // Declaração de Variaveis que receberam os valores:
@@ -239,34 +239,34 @@
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
                     document.write(day + myweekday + month + " de " + year + " - ");
-                    </script>
-                    <div id="demo"></div>
-                </nav>
-                <!-- Fim da barra do topo  -->
+                </script>
+                <div id="demo"></div>
+            </nav>
+            <!-- Fim da barra do topo  -->
 
-                <!-- Comeco da pagina de conteudo-->
-                <div class="container-fluid">
+            <!-- Comeco da pagina de conteudo-->
+            <div class="container-fluid">
 
-                    <!-- DataTables -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Emprestimos</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Livro</th>
-                                            <th>Aluno</th>
-                                            <th>Retirada</th>
-                                            <th>Devolução</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php 
-                            $sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0");
-                            while($row = mysqli_fetch_array($sql)){ ?>
+                <!-- DataTables -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Emprestimos</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Livro</th>
+                                        <th>Aluno</th>
+                                        <th>Retirada</th>
+                                        <th>Devolução</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php 
+                                    $sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0");
+                                    while($row = mysqli_fetch_array($sql)){ ?>
 
                                         <tr>
                                             <td><?php echo $row['titulo_livro'];?></td>
@@ -275,57 +275,57 @@
                                             <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
                                         </tr>
 
-                                        <?php } ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <!-- /.container-fluid -->
             </div>
-            <!--  Fim do conteudo -->
-
-            <!-- Rodape -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- Fim do rodape -->
-
+            <!-- /.container-fluid -->
         </div>
-        <!-- End of Content Wrapper -->
+        <!--  Fim do conteudo -->
+
+        <!-- Rodape -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+                </div>
+            </div>
+        </footer>
+        <!-- Fim do rodape -->
 
     </div>
-    <!-- Fim do recorte do conteudo -->
+    <!-- End of Content Wrapper -->
 
-    <!-- Botao de voltar ao topo -->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+</div>
+<!-- Fim do recorte do conteudo -->
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Botao de voltar ao topo -->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+<!-- Page level plugins -->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-    <!-- Table translation to portuguese -->
-    <script src="js/portuguese.js"></script>
+<!-- Page level custom scripts -->
+<script src="js/demo/datatables-demo.js"></script>
+
+<!-- Table translation to portuguese -->
+<script src="js/portuguese.js"></script>
 
 </body>
 
