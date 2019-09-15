@@ -72,7 +72,7 @@
                         <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
                         <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
                         <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="interface_cad_outros.php">Outros</a>
+                        <a class="collapse-item" href="interface_cad_outros.php">Editora/Autor</a>
                     </div>
                 </div>
             </li>
@@ -273,13 +273,13 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="isbn">ISBN</label>
-                                        <input placeholder="Insira o ISBN" type="text" class="form-control"
-                                            name="isbn_livro" maxlength="13" required>
+                                        <input placeholder="Insira o ISBN..." type="text" class="form-control"
+                                            name="isbn_livro" maxlength="13" autocomplete="off" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="titulo">Titulo</label>
-                                        <input placeholder="Insira o titulo" type="text" class="form-control"
-                                            name="titulo_livro" required>
+                                        <input placeholder="Insira o titulo..." type="text" class="form-control"
+                                            name="titulo_livro" autocomplete="off" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -287,15 +287,14 @@
                                         <label for="autor">Autor</label>
                                         <input class="form-control" list="autor" name="autor" autocomplete="off" placeholder="Insira o autor..." required>
                                         <datalist id="autor">
-                                            <select class="form-control" name="autor">
+                                            <select class="form-control" name="autor" required>
                                                 <option disabled selected value>Selecione uma opção...</option>
                                                 <?php
                                         $result= "SELECT * FROM `autor`";
                                         $resultado = mysqli_query($conexao, $result);
-                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                                <option value="<?php echo $row['id_autor']; ?>">
-                                                    <?php echo $row['nome_autor']; ?></option> <?php
-                                            }
+                                        while($row = mysqli_fetch_array($resultado)){ ?>
+                                                <option value="<?php echo $row['id_autor'] . ' - ' . $row['nome_autor']; ?>"></option><?php
+                                        }
                                             ?>
                                             </select>
                                         </datalist>
@@ -304,14 +303,13 @@
                                         <label for="editora">Editora</label>
                                         <input class="form-control" list="editora" name="editora" autocomplete="off" placeholder="Insira a editora..." required>
                                         <datalist id="editora">
-                                            <select class="form-control" name="editora">
+                                            <select class="form-control" name="editora" required>
                                                 <option disabled selected value>Selecione uma opção...</option>
                                                 <?php
                                             $result= "SELECT * FROM `editora`";
                                             $resultado = mysqli_query($conexao, $result);
-                                            while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                                <option value="<?php echo $row['id_editora']; ?>">
-                                                    <?php echo $row['nome_editora']; ?></option> <?php
+                                            while($row = mysqli_fetch_array($resultado)){ ?>
+                                                <option value="<?php echo $row['id_editora'] . ' - ' . $row['nome_editora']; ?>"> </option> <?php
                                                 }
                                                 ?>
                                             </select>
@@ -321,14 +319,13 @@
                                         <label for="genero">Selecione o Genero</label>
                                         <input class="form-control" list="genero" name="genero" autocomplete="off" placeholder="Insira o genero..." required>
                                         <datalist id="genero">
-                                            <select class="form-control" name="genero">
+                                            <select class="form-control" name="genero" required>
                                                 <option disabled selected value>Selecione uma opção...</option>
                                                 <?php
                                                 $result= "SELECT * FROM `genero`";
                                                 $resultado = mysqli_query($conexao, $result);
-                                                while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                                <option value="<?php echo $row['id_genero']; ?>">Genero:
-                                                    <?php echo $row['desc_genero']; ?> </option> <?php
+                                                while($row = mysqli_fetch_array($resultado)){ ?>
+                                                <option value="<?php echo $row['id_genero'] . ' - ' . $row['desc_genero']; ?>"></option> <?php
                                                     }
                                                     ?>
                                             </select>
@@ -337,7 +334,7 @@
 
                                     <div class="form-group col-md-1">
                                         <label for="FormControlTextObs">Estoque</label>
-                                        <input class="form-control" id="form-control" name="estoque_livro" placeholder="Ex: 99" required>
+                                        <input class="form-control" id="form-control" name="estoque_livro" placeholder="Ex: 99" autocomplete="off" required>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn"
