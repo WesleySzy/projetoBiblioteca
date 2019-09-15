@@ -1,4 +1,4 @@
-<?php include "conexao_banco.php"; ?>
+<?php include "../control/conexao_banco.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,16 +13,16 @@
     <title>Bibliopar</title>
 
     <!-- Fontes para o template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    href="../https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
 
     <!-- Estilos customizados para o template -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Estilo customizado para a pagina -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -81,7 +81,7 @@
                             <span>Emprestimos</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sair.php">
+                            <a class="nav-link" href="../sair.php">
                                 <i class="fas fa-sign-out-alt"></i>
                                 <span>Sair</span></a>
                             </li>
@@ -308,24 +308,24 @@
 </a>
 
 <!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
+<script src="../js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="js/demo/datatables-demo.js"></script>
+<script src="../js/demo/datatables-demo.js"></script>
 
 <!-- Table translation to portuguese -->
-<script src="js/portuguese.js"></script>
+<script src="../js/portuguese.js"></script>
 
 </body>
 
