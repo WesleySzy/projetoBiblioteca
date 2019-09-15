@@ -46,7 +46,7 @@ session_start();
 									</div>
 									<form class="user" method="POST" action="valida.php">
 										<div class="form-group">
-											<input type="email" name="email" id="inputEmail" class="form-control form-control-user" placeholder="Digite seu usuário..." required autofocus>
+											<input type="email" name="email" id="inputEmail" class="form-control form-control-user" placeholder="Digite seu usuário..." autocomplete="off" required autofocus>
 										</div>
 										<div class="form-group">
 											<input type="password" name="senha" id="inputPassword" class="form-control form-control-user" placeholder="Digite sua senha..." required>
