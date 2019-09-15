@@ -1,6 +1,6 @@
-<?php include "conexao_banco.php"; ?>
+<?php include "control/conexao_banco.php"; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
 
@@ -35,7 +35,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3578E5">
 
             <!-- Barra Lateral marca -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
@@ -69,10 +69,10 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
-                        <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
-                        <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="interface_cad_outros.php">Editora/Autor</a>
+                        <a class="collapse-item" href="view/interface_cad_livro.php">Livros</a>
+                        <a class="collapse-item" href="view/interface_cad_aluno.php">Alunos</a>
+                        <a class="collapse-item" href="view/interface_cad_emprestimo.php">Emprestimos</a>
+                        <a class="collapse-item" href="view/interface_cad_outros.php">Editora/Autor</a>
                     </div>
                 </div>
             </li>
@@ -80,19 +80,19 @@
 
             <!-- Nav bar item - Tabela -->
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_livro.php">
+                <a class="nav-link" href="view/interface_rel_livro.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Livros</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_aluno.php">
+                <a class="nav-link" href="view/interface_rel_aluno.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Alunos</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_emprestimo.php">
+                <a class="nav-link" href="view/interface_rel_emprestimo.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Emprestimos</span></a>
             </li>

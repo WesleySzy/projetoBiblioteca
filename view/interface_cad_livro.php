@@ -1,4 +1,4 @@
-<?php include "conexao_banco.php"; ?>
+<?php include "../control/conexao_banco.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,16 +13,16 @@
     <title>Bibliopar</title>
 
     <!-- Fontes para o template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Estilos customizados para o template -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Estilo customizado para a pagina -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +35,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3578E5">
 
             <!-- Barra Lateral marca -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
@@ -47,7 +47,7 @@
 
             <!-- Nav bar pagina inicial -->
             <li class="nav-item">
-                <a class="nav-link" href="home.php">
+                <a class="nav-link" href="../home.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
             </li>
@@ -69,10 +69,10 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
-                        <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
-                        <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="interface_cad_outros.php">Editora/Autor</a>
+                        <a class="collapse-item" href="../view/interface_cad_livro.php">Livros</a>
+                        <a class="collapse-item" href="../view/interface_cad_aluno.php">Alunos</a>
+                        <a class="collapse-item" href="../view/interface_cad_emprestimo.php">Emprestimos</a>
+                        <a class="collapse-item" href="../view/interface_cad_outros.php">Editora/Autor</a>
                     </div>
                 </div>
             </li>
@@ -80,24 +80,24 @@
 
             <!-- Nav bar item - Tabela -->
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_livro.php">
+                <a class="nav-link" href="../view/interface_rel_livro.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Livros</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_aluno.php">
+                <a class="nav-link" href="../view/interface_rel_aluno.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Alunos</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_emprestimo.php">
+                <a class="nav-link" href="../view/interface_rel_emprestimo.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Emprestimos</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="sair.php">
+                <a class="nav-link" href="../sair.php">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Sair</span></a>
             </li>
@@ -269,7 +269,7 @@
                         </div>
                         <div class="card-body">
 
-                            <form name="cadastro_livro" method="post" action="formulario_cad_livro.php">
+                            <form name="cadastro_livro" method="post" action="../form/formulario_cad_livro.php">
                                 <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="isbn">ISBN</label>
@@ -370,21 +370,21 @@
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+    <script src="../js/demo/datatables-demo.js"></script>
     </div>
 </body>
 
