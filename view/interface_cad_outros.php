@@ -72,7 +72,7 @@
                         <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
                         <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
                         <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="interface_cad_outros.php">Outros</a>
+                        <a class="collapse-item" href="interface_cad_outros.php">Editora/Autor</a>
                     </div>
                 </div>
             </li>
@@ -274,7 +274,7 @@
                                     <div class="form-group col-md-4">
                                         <label for="isbn">Editora</label>
                                         <input placeholder="Insira o nome da Editora" type="text" class="form-control"
-                                            name="editora" required>
+                                            name="editora" autocomplete="off" required>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn"
@@ -295,7 +295,7 @@
                                     <div class="form-group col-md-4">
                                         <label for="isbn">Autor</label>
                                         <input placeholder="Insira o nome do Autor" type="text" class="form-control"
-                                            name="autor" required>
+                                            name="autor" autocomplete="off" required>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn"

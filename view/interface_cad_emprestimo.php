@@ -72,7 +72,7 @@
                         <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
                         <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
                         <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="interface_cad_outros.php">Outros</a>
+                        <a class="collapse-item" href="interface_cad_outros.php">Editora/Autor</a>
                     </div>
                 </div>
             </li>
@@ -300,7 +300,7 @@
                                             $result= "SELECT * FROM `alunos`";
                                             $resultado = mysqli_query($conexao, $result);
                                             while($row = mysqli_fetch_array($resultado)){ ?>
-                                                <option value="<?php echo $row['nome_aluno'] . " - " . $row['sala_aluno'] . "º" . $row['turma_aluno']; ?>"></option> <?php
+                                                <option value="<?php echo $row['id_aluno'] . " - " . $row['nome_aluno'] . " - " . $row['sala_aluno'] . "º" . $row['turma_aluno']; ?>"></option> <?php
                                             }
                                             ?>
                                         </select>                                        
