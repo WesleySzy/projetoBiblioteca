@@ -1,7 +1,7 @@
 <?php
 	session_start();	
 	//Incluindo a conexão com banco de dados
-	include_once "conexao_banco.php";	
+	include_once "control/conexao_banco.php";	
 	//O campo usuário e senha preenchido entra no if para validar
 	if((isset($_POST['email'])) && (isset($_POST['senha']))){
 		$usuario = mysqli_real_escape_string($conexao, $_POST['email']); //Escapar de caracteres especiais, como aspas, prevenindo SQL injection

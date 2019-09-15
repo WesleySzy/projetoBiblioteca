@@ -57,7 +57,7 @@ session_start();
 											Entrar
 										</button></a>
 										<hr>
-										<a href="aluno_view.php" class="btn btn-google btn-user btn-block">
+										<a href="view/aluno_view.php" class="btn btn-google btn-user btn-block">
 											<i class="fas fa-users"></i> Login como aluno
 										</a>
 									</form>
