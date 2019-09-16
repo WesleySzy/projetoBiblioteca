@@ -7,7 +7,7 @@ $verificar = mysqli_query($conexao, $procurar);
 
 if(mysqli_num_rows($verificar) > 0){
 
-echo"<script>window.location='interface_cad_outros.php';
+echo"<script>window.location='../view/interface_cad_outros.php';
 alert('Editora ja cadastrada!');
 </script>"; 
 
@@ -19,7 +19,7 @@ $sql=mysqli_query($conexao, "INSERT INTO editora (nome_editora) VALUES ('$editor
 
 mysqli_query($conexao, $sql);
 
-echo"<script>window.location='interface_cad_outros.php';
+echo"<script>window.location='../view/interface_cad_outros.php';
 alert('Gravado com Sucesso!');
 </script>"; 
 

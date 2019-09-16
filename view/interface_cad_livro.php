@@ -269,7 +269,7 @@
                         </div>
                         <div class="card-body">
 
-                            <form name="cadastro_livro" method="post" action="../form/formulario_cad_livro.php">
+                            <form name="cadastro_livro" method="post" action="../control/formulario_cad_livro.php">
                                 <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="isbn">ISBN</label>
