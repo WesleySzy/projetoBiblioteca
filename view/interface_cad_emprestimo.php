@@ -255,7 +255,7 @@
 
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
-                    document.write(day + myweekday + month + " de " + year + " - ");
+                    document.write(day + myweekday + month + " de " + year + "   ");
                 </script>
                 <div id="demo"></div>
             </nav>

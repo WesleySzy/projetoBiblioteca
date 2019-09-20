@@ -4,176 +4,183 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <title>Bibliopar</title>
+	<title>Bibliopar</title>
 
-    <!-- Fontes para o template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+	<!-- Fontes para o template -->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
 
-    <!-- Estilos customizados para o template -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+	<!-- Estilos customizados para o template -->
+	<link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Estilo customizado para a pagina -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+	<!-- Estilo customizado para a pagina -->
+	<link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <script language="javascript" type="text/javascript">
+        function windowClose() {
+            window.open('','_parent','');
+            window.close();
+        }
+    </script>
 
 </head>
 
 <body id="page-top">
 
-    <!-- Recorte Pagina -->
-    <div id="wrapper">
+	<!-- Recorte Pagina -->
+	<div id="wrapper">
 
-        <!-- Barra Lateral -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3578E5">
+		<!-- Barra Lateral -->
+		<ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3578E5">
 
-            <!-- Barra Lateral marca -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.php">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Biblioteca</div>
-            </a>
+			<!-- Barra Lateral marca -->
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.php">
+				<div class="sidebar-brand-icon rotate-n-15">
+					<i class="fas fa-book-open"></i>
+				</div>
+				<div class="sidebar-brand-text mx-3">Biblioteca</div>
+			</a>
 
-            <!-- Divisor -->
-            <hr class="sidebar-divider my-0">
+			<!-- Divisor -->
+			<hr class="sidebar-divider my-0">
 
-            <!-- Nav bar pagina inicial -->
-            <li class="nav-item active">
-                <a class="nav-link" href="home.php">
-                    <i class="fas fa-home"></i>
-                    <span>Página Inicial</span></a>
-                </li>
+			<!-- Nav bar pagina inicial -->
+			<li class="nav-item active">
+				<a class="nav-link" href="home.php">
+					<i class="fas fa-home"></i>
+					<span>Página Inicial</span></a>
+				</li>
 
-                <!-- Divisor -->
-                <hr class="sidebar-divider">
+				<!-- Divisor -->
+				<hr class="sidebar-divider">
 
-                <!-- Cabecalho -->
-                <div class="sidebar-heading">
-                    Menu
-                </div>
+				<!-- Cabecalho -->
+				<div class="sidebar-heading">
+					Menu
+				</div>
 
-                <!-- Itens Navbar - juncao de paginas do menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-edit"></i>
-                    <span>Cadastrar</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="view/interface_cad_livro.php">Livros</a>
-                        <a class="collapse-item" href="view/interface_cad_aluno.php">Alunos</a>
-                        <a class="collapse-item" href="view/interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="view/interface_cad_outros.php">Editora/Autor</a>
-                    </div>
-                </div>
-            </li>
-
-
-            <!-- Nav bar item - Tabela -->
-            <li class="nav-item">
-                <a class="nav-link" href="view/interface_rel_livro.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Livros</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="view/interface_rel_aluno.php">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Alunos</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="view/interface_rel_emprestimo.php">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Emprestimos</span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="sair.php">
-                                <i class="fas fa-sign-out-alt"></i>
-                                <span>Sair</span></a>
-                            </li>
+				<!-- Itens Navbar - juncao de paginas do menu -->
+				<li class="nav-item">
+					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+					aria-expanded="true" aria-controls="collapseTwo">
+					<i class="fas fa-edit"></i>
+					<span>Cadastrar</span>
+				</a>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" href="view/interface_cad_livro.php">Livros</a>
+						<a class="collapse-item" href="view/interface_cad_aluno.php">Alunos</a>
+						<a class="collapse-item" href="view/interface_cad_emprestimo.php">Emprestimos</a>
+						<a class="collapse-item" href="view/interface_cad_outros.php">Editora/Autor</a>
+					</div>
+				</div>
+			</li>
 
 
-                            <!-- Divisor -->
-                            <hr class="sidebar-divider d-none d-md-block">
+			<!-- Nav bar item - Tabela -->
+			<li class="nav-item">
+				<a class="nav-link" href="view/interface_rel_livro.php">
+					<i class="fas fa-fw fa-table"></i>
+					<span>Livros</span></a>
+				</li>
 
-                            <!-- Barra lateral ativador -->
-                            <div class="text-center d-none d-md-inline">
-                                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                            </div>
+				<li class="nav-item">
+					<a class="nav-link" href="view/interface_rel_aluno.php">
+						<i class="fas fa-fw fa-table"></i>
+						<span>Alunos</span></a>
+					</li>
 
-                        </ul>
-                        <!-- fim barra lateral -->
+					<li class="nav-item">
+						<a class="nav-link" href="view/interface_rel_emprestimo.php">
+							<i class="fas fa-fw fa-table"></i>
+							<span>Emprestimos</span></a>
+						</li>
 
-
-                        <!-- Recorte de conteudo -->
-                        <div id="content-wrapper" class="d-flex flex-column">
-
-                            <!-- Conteudo Principal -->
-                            <div id="content">
-
-                                <!-- Barra do topo -->
-                                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                                    <!-- Barra lateral ativador (topo) -->
-                                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                                        <i class="fa fa-bars"></i>
-                                    </button>
-
-                                    <!-- barra de navegacao do topo -->
-                                    <ul class="navbar-nav ml-auto">
-
-                                        <!-- barra de navegacao item - search dropdown -->
-                                        <li class="nav-item dropdown no-arrow d-sm-none">
-                                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-search fa-fw"></i>
-                                        </a>
-                                        <!-- Dropdown mensagem -->
-                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                        aria-labelledby="searchDropdown">
-                                        <form class="form-inline mr-auto w-100 navbar-search">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control bg-light border-0 small"
-                                                placeholder="Pesquise..." aria-label="Search"
-                                                aria-describedby="basic-addon2">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-primary" type="button">
-                                                        <i class="fas fa-search fa-sm"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </li>
+						<li class="nav-item">
+							<a class="nav-link" href="sair.php">
+								<i class="fas fa-sign-out-alt"></i>
+								<span>Sair</span></a>
+							</li>
 
 
-                            </ul>
-                            <script type="text/javascript">
-                                var myVar = setInterval(myTimer, 1000);
+							<!-- Divisor -->
+							<hr class="sidebar-divider d-none d-md-block">
 
-                                function myTimer() {
-                                    var d = new Date(),
-                                    displayDate;
-                                    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                                        displayDate = d.toLocaleTimeString('pt-BR');
-                                    } else {
-                                        displayDate = d.toLocaleTimeString('pt-BR', {
-                                            timeZone: 'America/Belem'
-                                        });
-                                    }
-                                    document.getElementById("demo").innerHTML = displayDate;
-                                }
+							<!-- Barra lateral ativador -->
+							<div class="text-center d-none d-md-inline">
+								<button class="rounded-circle border-0" id="sidebarToggle"></button>
+							</div>
+
+						</ul>
+						<!-- fim barra lateral -->
+
+
+						<!-- Recorte de conteudo -->
+						<div id="content-wrapper" class="d-flex flex-column">
+
+							<!-- Conteudo Principal -->
+							<div id="content">
+
+								<!-- Barra do topo -->
+								<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+									<!-- Barra lateral ativador (topo) -->
+									<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+										<i class="fa fa-bars"></i>
+									</button>
+
+									<!-- barra de navegacao do topo -->
+									<ul class="navbar-nav ml-auto">
+
+										<!-- barra de navegacao item - search dropdown -->
+										<li class="nav-item dropdown no-arrow d-sm-none">
+											<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="fas fa-search fa-fw"></i>
+										</a>
+										<!-- Dropdown mensagem -->
+										<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+										aria-labelledby="searchDropdown">
+										<form class="form-inline mr-auto w-100 navbar-search">
+											<div class="input-group">
+												<input type="text" class="form-control bg-light border-0 small"
+												placeholder="Pesquise..." aria-label="Search"
+												aria-describedby="basic-addon2">
+												<div class="input-group-append">
+													<button class="btn btn-primary" type="button">
+														<i class="fas fa-search fa-sm"></i>
+													</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</li>
+
+
+							</ul>
+							<script type="text/javascript">
+								var myVar = setInterval(myTimer, 1000);
+
+								function myTimer() {
+									var d = new Date(),
+									displayDate;
+									if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+										displayDate = d.toLocaleTimeString('pt-BR');
+									} else {
+										displayDate = d.toLocaleTimeString('pt-BR', {
+											timeZone: 'America/Belem'
+										});
+									}
+									document.getElementById("demo").innerHTML = displayDate;
+								}
 
                     // Função que monta Mês, Dia, e Ano para exibir no HTML
                     // Declaração de Variaveis que receberam os valores:
@@ -194,148 +201,230 @@
                     // Tratamento dos Dias da Semana
 
                     if (myday == 0)
-                        day = " Domingo, "
+                    	day = " Domingo, "
 
                     else if (myday == 1)
-                        day = " Segunda Feira, "
+                    	day = " Segunda Feira, "
 
                     else if (myday == 2)
-                        day = " Terça Feira, "
+                    	day = " Terça Feira, "
 
                     else if (myday == 3)
-                        day = " Quarta Feira, "
+                    	day = " Quarta Feira, "
 
                     else if (myday == 4)
-                        day = " Quinta Feira, "
+                    	day = " Quinta Feira, "
 
                     else if (myday == 5)
-                        day = " Sexta Feira, "
+                    	day = " Sexta Feira, "
 
                     else if (myday == 6)
-                        day = " Sábado, "
+                    	day = " Sábado, "
 
                     //Tratamento dos Meses
 
                     if (mymonth == 0)
-                        month = " de Janeiro  "
+                    	month = " de Janeiro  "
 
                     else if (mymonth == 1)
-                        month = " de Fevereiro  "
+                    	month = " de Fevereiro  "
 
                     else if (mymonth == 2)
-                        month = " de Março  "
+                    	month = " de Março  "
 
                     else if (mymonth == 3)
-                        month = " de April "
+                    	month = " de April "
 
                     else if (mymonth == 4)
-                        month = " de Maio "
+                    	month = " de Maio "
 
                     else if (mymonth == 5)
-                        month = " de Junho  "
+                    	month = " de Junho  "
 
                     else if (mymonth == 6)
-                        month = " de Julho "
+                    	month = " de Julho "
 
                     else if (mymonth == 7)
-                        month = " de Agosto  "
+                    	month = " de Agosto  "
 
                     else if (mymonth == 8)
-                        month = " de Setembro  "
+                    	month = " de Setembro  "
 
                     else if (mymonth == 9)
-                        month = " de Outubro  "
+                    	month = " de Outubro  "
 
                     else if (mymonth == 10)
-                        month = " de Novembro "
+                    	month = " de Novembro "
 
                     else if (mymonth == 11)
-                        month = " de Dezembro "
+                    	month = " de Dezembro "
 
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
-                    document.write(day + myweekday + month + " de " + year + " - ");
+                    document.write(day + myweekday + month + " de " + year + "   ");
                 </script>
-                <div id="demo"></div>
+                <div id="demo"><a href="blank_page.php" style="text-decoration: none;">   </a></div>
             </nav>
             <!-- Fim da barra do topo -->
 
             <!-- Comeco da pagina de conteudo -->
             <div class="container-fluid">
-                <!-- DataTables -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Alunos com entrega atrasada</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
+
+            	<!-- DataTables -->
+            	<div class="card shadow mb-4">
+
+            		<div class="card-header py-3">
+            			
+                        <div class="d-sm-flex align-items-center justify-content-between mb-0">
+                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Alunos com entrega atrasada</h6>
+                            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#editarModal"><i class="fas fa-cogs fa-sm text-white-50"></i> Editar</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                             <div class="modal-content">
+                              <div class="modal-header">
+                               <h5 class="modal-title" id="modal">Editar</h5>
+                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <form>
+                                        <label for="livro">Livro</label>
+                                        <input type="text" name="livro" class="form-control">
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <form>
+                                            <label for="livro">Autor</label>
+                                            <input type="text" name="autor" class="form-control">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <form>
+                                                <label for="livro">Editora</label>
+                                                <input type="text" name="editora" class="form-control">
+                                            </div>
+
+                                            <div class="form-group col-md-4">
+                                                <form>
+                                                    <label for="livro">Genero</label>
+                                                    <input type="text" name="genero" class="form-control">
+                                                </div>
+
+                                                <div class="form-group col-md-2">
+                                                    <form>
+                                                        <label for="livro">Quantidade</label>
+                                                        <input type="text" name="quantidade" class="form-control">
+                                                    </div>        
+                                                </div>
+                                            </form>
+                                            <button type="submit" class="btn"
+                                            style="background-color: #3578E5; color: white;">Alterar</button>
+                                            <button type="button" class="btn" data-dismiss="modal" style="background-color: #e74a3b; color: white;">Fechar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>Livro</th>
-                                        <th>Aluno</th>
-                                        <th>Retirada</th>
-                                        <th>Devolução</th>
-                                        <th>Tempo de atraso</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php 
-                                    $sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0 and dt_entrega < CURRENT_DATE");
-                                    while($row = mysqli_fetch_array($sql)){ ?>
-                                        <tr>
-                                            <td><?php echo $row['titulo_livro'];?></td>
-                                            <td><?php echo $row['nome_aluno'];?></td>
-                                            <td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
-                                            <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
-                                            <td><?php
-                                            date_default_timezone_set('America/Sao_Paulo'); 
-                                            $pega_data = date("d-m-Y", strtotime($row['dt_entrega']));
-                                            $data_sistema = date("d-m-Y");
+                               <thead>
+                                  <tr>
+                                     <th>Livro</th>
+                                     <th>Aluno</th>
+                                     <th>Retirada</th>
+                                     <th>Devolução</th>
+                                     <th>Tempo de atraso</th>
+                                     <th>Excluir</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                              <?php 
+                              $sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0 and dt_entrega < CURRENT_DATE");
+                              while($row = mysqli_fetch_array($sql)){ ?>
+                                 <tr>
+                                    <td><?php echo $row['titulo_livro'];?></td>
+                                    <td><?php echo $row['nome_aluno'];?></td>
+                                    <td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
+                                    <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
+                                    <td><?php
+                                    date_default_timezone_set('America/Sao_Paulo'); 
+                                    $pega_data = date("d-m-Y", strtotime($row['dt_entrega']));
+                                    $data_sistema = date("d-m-Y");
 
-                                            $pega_data_Time = new DateTime($pega_data);
-                                            $data_sistema_Time = new DateTime($data_sistema);
+                                    $pega_data_Time = new DateTime($pega_data);
+                                    $data_sistema_Time = new DateTime($data_sistema);
 
-                                            $pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
+                                    $pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
 
-                                            echo "Está atrasado em " . $pega_diferenca->m . " meses e " .  $pega_diferenca->d . " dias.";
-                                            ?></td>
-                                        </tr>
-
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                                    echo "Está atrasado em " . $pega_diferenca->m . " meses e " .  $pega_diferenca->d . " dias.";
+                                    ?></td>
+                                    <td><button class="d-none d-sm-inline-block btn btn-sm" data-toggle="modal" data-target="#excluirModal"><i class="fas fa-times-circle" style="color: red; align-items: center;"></i></button></td>
+                                </tr>
+                                <!-- Modal -->
+                                <div class="modal fade" id="excluirModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                     <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="modal">Excluir</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6>Deseja realmente excluir esse campo?!</h6>
+                                        <button type="submit" class="btn"
+                                        style="background-color: #3578E5; color: white;">Sim</button>
+                                        <button type="button" class="btn" data-dismiss="modal" style="background-color: #e74a3b; color: white;">Não
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- /.container-fluid -->
-            <!-- titulo da pagina -->
-
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- Fim do conteudo -->
-
-        <!-- Rodape -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-                </div>
-            </div>
-        </footer>
-        <!-- Fim do rodape -->
-
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
-    <!-- Fim do recorte do conteudo -->
+</div>
+</div>
+</div>
+<!-- /.container-fluid -->
+<!-- titulo da pagina -->
+
+<!-- /.container-fluid -->
+
+</div>
+<!-- Fim do conteudo -->
+
+<!-- Rodape -->
+<footer class="sticky-footer bg-white">
+   <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+         <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+     </div>
+ </div>
+</footer>
+<!-- Fim do rodape -->
+
+</div>
+<!-- Fim do recorte do conteudo -->
 
 </div>
 
 
 <!-- Botao de voltar ao topo -->
 <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
+   <i class="fas fa-angle-up"></i>
 </a>
 
 <!-- Bootstrap core JavaScript-->
