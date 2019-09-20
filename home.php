@@ -24,13 +24,6 @@
 	<!-- Estilo customizado para a pagina -->
 	<link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-    <script language="javascript" type="text/javascript">
-        function windowClose() {
-            window.open('','_parent','');
-            window.close();
-        }
-    </script>
-
 </head>
 
 <body id="page-top">
