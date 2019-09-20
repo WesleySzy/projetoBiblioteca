@@ -283,8 +283,8 @@
                                     </thead>
                                     <tbody>
                                         <?php 
-                                    $sql=mysqli_query($conexao, "SELECT * FROM livros JOIN genero ON livros.id_genero = genero.id_genero JOIN editora ON livros.id_editora = editora.id_editora JOIN autor ON livros.id_autor = autor.id_autor WHERE livros.id_livro <> 0");
-                                    while($row = mysqli_fetch_array($sql)){ ?>
+									$sql=mysqli_query($conexao, "SELECT * FROM livros JOIN genero ON livros.id_genero = genero.id_genero JOIN editora ON livros.id_editora = editora.id_editora JOIN autor ON livros.id_autor = autor.id_autor WHERE livros.id_livro <> 0");
+									while($row = mysqli_fetch_array($sql)){ ?>
 
                                         <tr>
                                             <td><?php echo $row['isbn'];?></td>
@@ -292,12 +292,34 @@
                                             <td><?php echo $row['nome_autor'];?></td>
                                             <td><?php echo $row['nome_editora'];?></td>
                                             <td><?php echo $row['desc_genero'];?></td>
-                                            <td><?php echo $row['qtd_disponivel'];?></td>
+                                            <td class="edit" data-show="quantidade">
+                                                <?php echo $row['qtd_disponivel'];?>&ensp;<button><i
+                                                        class="fas fa-pen-square"></i></button></td>
+
                                         </tr>
 
                                         <?php } ?>
                                     </tbody>
                                 </table>
+                                <div id="myModal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Editar Quantidade</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form method="POST">
+                                                    Quantidade
+                                                    <input name="quantidade" type="text">
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -352,6 +374,18 @@
 
     <!-- Table translation to portuguese -->
     <script src="../js/portuguese.js"></script>
+
+    <script type="text/javascript">
+    $('.edit').on('click', function() {
+        var dados = $(this).parent().children(); // selecionamos todos os irmãos ('td')
+        dados.each(function() {
+            console.log($(this).data('show'));
+            // relacionaos o valor de dada-show de cada um com o nome dos inputs do form e definimos o valor destes como sendo o texto dentro das ('td')
+            $('#myModal input[name="' + $(this).data('show') + '"]').val($(this).text());
+        });
+        $('#myModal').modal('show');
+    });
+    </script>
 
 </body>
 
