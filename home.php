@@ -256,7 +256,7 @@
 
                     document.write(day + myweekday + month + " de " + year + "   ");
                 </script>
-                <div id="demo"><a href="blank_page.php" style="text-decoration: none;">   </a></div>
+                <div id="demo"><a href="https://www.youtube.com/watch?v=4kae32uj7dA" style="text-decoration: none;">   </a></div>
             </nav>
             <!-- Fim da barra do topo -->
 
