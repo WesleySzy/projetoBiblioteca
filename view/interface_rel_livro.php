@@ -1,4 +1,4 @@
-<?php include "../control\conexao_banco.php"; ?>
+<?php include "../control/conexao_banco.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -285,113 +285,152 @@
                                         <?php 
 									$sql=mysqli_query($conexao, "SELECT * FROM livros JOIN genero ON livros.id_genero = genero.id_genero JOIN editora ON livros.id_editora = editora.id_editora JOIN autor ON livros.id_autor = autor.id_autor WHERE livros.id_livro <> 0");
 									while($row = mysqli_fetch_array($sql)){ ?>
-
-                                        <tr>
+                                       
+                                       <tr>
                                             <td><?php echo $row['isbn'];?></td>
                                             <td><?php echo $row['titulo_livro'];?></td>
                                             <td><?php echo $row['nome_autor'];?></td>
                                             <td><?php echo $row['nome_editora'];?></td>
                                             <td><?php echo $row['desc_genero'];?></td>
                                             <td class="edit" data-show="quantidade">
-                                                <?php echo $row['qtd_disponivel'];?><button
-                                                    class="d-none d-sm-inline-block btn"><i class="fas fa-pen-square"
-                                                        style="color: #3578E5; align-items: center;"></i></button></td>
+                                                <a href="#exampleModal<?php echo $row['id_livro'];?>"
+                                                    data-toggle="modal">
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                        data-target="#exampleModal"
+                                                        data-whateverid="<?php echo $row['id_livro'];?>"
+                                                        data-whatever="<?php echo $row['qtd_disponivel'];?>"><?php echo $row['qtd_disponivel'];?></button>
+                                                </a>
+                                            </td>
                                         </tr>
-
-                                        <?php } ?>
-                                    </tbody>
-                                </table>
-                                <div id="myModal" class="modal fade" role="dialog">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Gerenciar o estoque</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form name="update_qtd" method="post" action="../control/update.php">
-                                                    <div class="form-group col-md-4">
-                                                        <label>Quantidade</label>
-                                                        <input name="quantidade" type="text" class="form-control">
-
-                                                        <button type="submit" class="btn"
-                                                            style="background-color: #3578E5; color: white;">Alterar</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn" data-dismiss="modal"
-                                                    style="background-color: #e74a3b; color: white;">Fechar
-                                                </button>
-                                            </div>
+                                        
+                                        <div class="modal fade" id="exampleModal<?php echo $row['id_livro'];?>"
+                                            tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                            aria-hidden="true">
+                                            <form method="post" class="form-horizontal" role="form">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <input type="hidden" name="edit_item_id"
+                                                                value="<?php echo $row['id_livro'];?>">
+                                                            <h5 class="estoque_modal" id="exampleModalLabel">Nova
+                                                                mensagem
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Fechar">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label class="control-label col-sm-2"
+                                                                    for="titulo_livro">Nome Livro:</label>
+                                                                <div class="col-sm-4">
+                                                                    <input type="text" class="form-control"
+                                                                        id="titulo_livro" name="titulo_livro"
+                                                                        value="<?php echo $row['titulo_livro'];?>"
+                                                                        placeholder="Item Name" required autofocus>
+                                                                </div>
+                                                                <label class="control-label col-sm-2"
+                                                                    for="qtd_disponivel">Quantidade:</label>
+                                                                <div class="col-sm-4">
+                                                                    <input type="text" class="form-control"
+                                                                        id="qtd_disponivel" name="qtd_disponivel"
+                                                                        value="<?php echo $row['qtd_disponivel'];?>"
+                                                                        placeholder="Item Code" required>
+                                                                </div>
+                                                            </div>
+                                                            <button type="submit" name="update_item"
+                                                                class="btn btn-primary">Enviar</button>
+                                            </form>
                                         </div>
-                                    </div>
-                                </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fechar</button>
+
+                                        </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- End of Main Content -->
+                    <?php if(isset($_POST['update_item'])){
+                            $edit_item_id = $_POST['edit_item_id'];
+                            $titulo_livro = $_POST['titulo_livro'];
+                            $qtd_disponivel = $_POST['qtd_disponivel'];
+                            $sql = "UPDATE livros SET 
+                                titulo_livro='$titulo_livro',
+                                qtd_disponivel='$qtd_disponivel'
+                                WHERE id_livro ='$edit_item_id' ";
+                            if ($conexao->query($sql) === TRUE) {
+                                echo '<script>window.location.href="../view/interface_rel_livro.php"</script>';
+                            } else {
+                                echo "Error updating record: " . $conexao->error;
+                            }
+                        }
+                        ?>
+                    <?php } ?>
+                    </tbody>
+                    </table>
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-                    </div>
+                    <!-- /.container-fluid -->
                 </div>
-            </footer>
-            <!-- End of Footer -->
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
 
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- End of Page Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+        <!--script modal-->
+        <!-- Bootstrap core JavaScript-->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!--script modal-->
-    <script>
-    $('#meuModal').on('shown.bs.modal', function() {
-        $('#meuInput').trigger('focus')
-    })
-    </script>
-    <!-- Bootstrap core JavaScript-->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="../js/sb-admin-2.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="../js/sb-admin-2.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+        <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+        <!-- Page level custom scripts -->
+        <script src="../js/demo/datatables-demo.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="../js/demo/datatables-demo.js"></script>
+        <!-- Table translation to portuguese -->
+        <script src="../js/portuguese.js"></script>
 
-    <!-- Table translation to portuguese -->
-    <script src="../js/portuguese.js"></script>
+        <script type="text/javascript">
+        $('#exampleModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Botão que acionou o modal
+            var recipientid = button.data('whatever')
+            var recipientqtd = button.data('whateverid')
+            // Extrai informação dos atributos data-*
+            // Se necessário, você pode iniciar uma requisição AJAX aqui e, então, fazer a atualização em um callback.
+            // Atualiza o conteúdo do modal. Nós vamos usar jQuery, aqui. No entanto, você poderia usar uma biblioteca de data binding ou outros métodos.
+            var modal = $(this)
+            modal.find('.estoque_modal').text('Estoque Livros')
+            modal.find('#recipientid-name').val(recipientid)
+            modal.find('#recipientqtd-name').val(recipientqtd)
 
-    <script type="text/javascript">
-    $('.edit').on('click', function() {
-        var dados = $(this).parent().children(); // selecionamos todos os irmãos ('td')
-        dados.each(function() {
-            console.log($(this).data('show'));
-            // relacionaos o valor de dada-show de cada um com o nome dos inputs do form e definimos o valor destes como sendo o texto dentro das ('td')
-            $('#myModal input[name="' + $(this).data('show') + '"]').val($(this).text());
-        });
-        $('#myModal').modal('show');
-    });
-    </script>
+        })
+        </script>
 
 </body>
 
