@@ -295,10 +295,7 @@
                                             <td class="edit" data-show="quantidade">
                                                 <a href="#exampleModal<?php echo $row['id_livro'];?>"
                                                     data-toggle="modal">
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                        data-target="#exampleModal"
-                                                        data-whateverid="<?php echo $row['id_livro'];?>"
-                                                        data-whatever="<?php echo $row['qtd_disponivel'];?>"><?php echo $row['qtd_disponivel'];?></button>
+                                                    <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal"><?php echo $row['qtd_disponivel'];?></button>
                                                 </a>
                                             </td>
                                         </tr>
@@ -312,8 +309,7 @@
                                                         <div class="modal-header">
                                                             <input type="hidden" name="edit_item_id"
                                                                 value="<?php echo $row['id_livro'];?>">
-                                                            <h5 class="estoque_modal" id="exampleModalLabel">Nova
-                                                                mensagem
+                                                            <h5 class="estoque_modal" id="exampleModalLabel">Controle Estoque
                                                             </h5>
                                                             <button type="button" class="close" data-dismiss="modal"
                                                                 aria-label="Fechar">
@@ -322,29 +318,31 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label class="control-label col-sm-2"
+                                                                <label class="control-label col-sm-4"
                                                                     for="titulo_livro">Nome Livro:</label>
-                                                                <div class="col-sm-4">
+                                                                <div class="col-sm-6">
                                                                     <input type="text" class="form-control"
                                                                         id="titulo_livro" name="titulo_livro"
                                                                         value="<?php echo $row['titulo_livro'];?>"
                                                                         placeholder="Item Name" required autofocus>
                                                                 </div>
-                                                                <label class="control-label col-sm-2"
+                                                                <label class="control-label col-sm-4"
                                                                     for="qtd_disponivel">Quantidade:</label>
                                                                 <div class="col-sm-4">
                                                                     <input type="text" class="form-control"
                                                                         id="qtd_disponivel" name="qtd_disponivel"
                                                                         value="<?php echo $row['qtd_disponivel'];?>"
                                                                         placeholder="Item Code" required>
+                                                                        <br>
+                                                                        <button type="submit" name="update_item"
+                                                                class="btn btn-outline-success">Enviar</button>
                                                                 </div>
                                                             </div>
-                                                            <button type="submit" name="update_item"
-                                                                class="btn btn-primary">Enviar</button>
+                                                            
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
+                                            <button type="button" class="btn btn-danger"
                                                 data-dismiss="modal">Fechar</button>
 
                                         </div>
