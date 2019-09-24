@@ -299,8 +299,7 @@
             										<button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal"><?php echo $row['qtd_disponivel'];?></button>
             									</a>
             								</td>
-            								<td><button class="btn"><i class="far fa-edit">
-            											
+            								<td><button class="btn"><i class="far fa-edit" style="color: #3578E5;">			
             								</i></button></td>
             							</tr>
 
