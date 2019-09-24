@@ -268,146 +268,139 @@
 
             		<div class="card-header py-3">
             			
-                        <div class="d-sm-flex align-items-center justify-content-between mb-0">
-                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Alunos com entrega atrasada</h6>
-                            <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#editarModal"><i class="fas fa-cogs fa-sm text-white-50"></i> Editar</button>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                             <div class="modal-content">
-                              <div class="modal-header">
-                               <h5 class="modal-title" id="modal">Editar</h5>
-                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <form>
-                                        <label for="livro">Livro</label>
-                                        <input type="text" name="livro" class="form-control">
-                                    </div>
+            			<div class="d-sm-flex align-items-center justify-content-between mb-0">
+            				<h6 class="m-0 font-weight-bold" style="color: #3578E5;">Alunos com entrega atrasada</h6>
+            				<button type="button" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#editarModal"><i class="fas fa-cogs fa-sm text-white-50"></i> Editar</button>
+            			</div>
+            			<!-- Modal -->
+            			<div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+            				<div class="modal-dialog" role="document">
+            					<div class="modal-content">
+            						<div class="modal-header">
+            							<h5 class="modal-title" id="modal">Editar</h5>
+            							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            								<span aria-hidden="true">&times;</span>
+            							</button>
+            						</div>
+            						<div class="modal-body">
+            							<div class="form-row">
+            								<div class="form-group col-md-7">
+            									<form name="alterar_livro" method="post" action="../control/formulario_alt_livro">
+            										<label for="livro">Livro</label>
+            										<input class="form-control" list="livro" name="livro" autocomplete="off" placeholder="Pesquise o livro..." required>
+            										<datalist id="livro">
+            											<select class="form-control" name="livro" required>
+            												<option disabled selected value>Selecione uma opção...</option>
+            												<?php
+            												$result= "SELECT * FROM `livros`";
+            												$resultado = mysqli_query($conexao, $result);
+            												while($row = mysqli_fetch_array($resultado)){ ?>
+            													<option value="<?php echo $row['id_livro'] . ' - ' . $row['titulo_livro']; ?>"></option><?php
+            												}
+            												?>
+            											</select>
+            										</datalist>                                    
+            									</div>
 
-                                    <div class="form-group col-md-4">
-                                        <form>
-                                            <label for="livro">Autor</label>
-                                            <input type="text" name="autor" class="form-control">
-                                        </div>
+            									<div class="form-group col-md-4">
+            										<label for="livro">ISBN</label>
+            										<input type="text" name="isbn" class="form-control">
+            									</div>
 
-                                    </div>
+            								</div>
 
-                                    <div class="form-row">
-                                        <div class="form-group col-md-4">
-                                            <form>
-                                                <label for="livro">Editora</label>
-                                                <input type="text" name="editora" class="form-control">
-                                            </div>
+            								<div class="form-row">
 
-                                            <div class="form-group col-md-4">
-                                                <form>
-                                                    <label for="livro">Genero</label>
-                                                    <input type="text" name="genero" class="form-control">
-                                                </div>
+            									<div class="form-group col-md-3">
+            										<label for="livro">Autor</label>
+            										<input type="text" name="autor" class="form-control">
+            									</div>
 
-                                                <div class="form-group col-md-2">
-                                                    <form>
-                                                        <label for="livro">Quantidade</label>
-                                                        <input type="text" name="quantidade" class="form-control">
-                                                    </div>        
-                                                </div>
-                                            </form>
-                                            <button type="submit" class="btn"
-                                            style="background-color: #3578E5; color: white;">Alterar</button>
-                                            <button type="button" class="btn" data-dismiss="modal" style="background-color: #e74a3b; color: white;">Fechar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                         <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                               <thead>
-                                  <tr>
-                                     <th>Livro</th>
-                                     <th>Aluno</th>
-                                     <th>Retirada</th>
-                                     <th>Devolução</th>
-                                     <th>Tempo de atraso</th>
-                                     <th>Excluir</th>
-                                 </tr>
-                             </thead>
-                             <tbody>
-                              <?php 
-                              $sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0 and dt_entrega < CURRENT_DATE");
-                              while($row = mysqli_fetch_array($sql)){ ?>
-                                 <tr>
-                                    <td><?php echo $row['titulo_livro'];?></td>
-                                    <td><?php echo $row['nome_aluno'];?></td>
-                                    <td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
-                                    <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
-                                    <td><?php
-                                    date_default_timezone_set('America/Sao_Paulo'); 
-                                    $pega_data = date("d-m-Y", strtotime($row['dt_entrega']));
-                                    $data_sistema = date("d-m-Y");
+            									<div class="form-group col-md-3">
+            										<label for="livro">Editora</label>
+            										<input type="text" name="editora" class="form-control">
+            									</div>
 
-                                    $pega_data_Time = new DateTime($pega_data);
-                                    $data_sistema_Time = new DateTime($data_sistema);
+            									<div class="form-group col-md-3">
+            										<label for="livro">Genero</label>
+            										<input type="text" name="genero" class="form-control">
+            									</div>
+            									<div class="form-group col-md-2">
+            										<label for="livro">Quantidade</label>
+            										<input type="text" name="quantidade" class="form-control">
+            									</div>       
+            								</div>
+            							</form>
+            							<div class="modal-footer">
+            								<button type="submit" class="btn"
+            								style="background-color: #3578E5; color: white;">Alterar</button>
+            								<button type="button" class="btn" data-dismiss="modal" style="background-color: #e74a3b; color: white;">Fechar
+            								</button>
+            							</div>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="card-body">
+            			<div class="table-responsive">
+            				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            					<thead>
+            						<tr>
+            							<th>Livro</th>
+            							<th>Aluno</th>
+            							<th>Retirada</th>
+            							<th>Devolução</th>
+            							<th>Tempo de atraso</th>
+            						</tr>
+            					</thead>
+            					<tbody>
+            						<?php 
+            						$sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0 and dt_entrega < CURRENT_DATE");
+            						while($row = mysqli_fetch_array($sql)){ ?>
+            							<tr>
+            								<td><?php echo $row['titulo_livro'];?></td>
+            								<td><?php echo $row['nome_aluno'];?></td>
+            								<td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
+            								<td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
+            								<td><?php
+            								date_default_timezone_set('America/Sao_Paulo'); 
+            								$pega_data = date("d-m-Y", strtotime($row['dt_entrega']));
+            								$data_sistema = date("d-m-Y");
 
-                                    $pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
+            								$pega_data_Time = new DateTime($pega_data);
+            								$data_sistema_Time = new DateTime($data_sistema);
 
-                                    echo "Está atrasado em " . $pega_diferenca->m . " meses e " .  $pega_diferenca->d . " dias.";
-                                    ?></td>
-                                    <td><button class="d-none d-sm-inline-block btn btn-sm" data-toggle="modal" data-target="#excluirModal"><i class="fas fa-times-circle" style="color: red; align-items: center;"></i></button></td>
-                                </tr>
-                                <!-- Modal -->
-                                <div class="modal fade" id="excluirModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                     <div class="modal-content">
-                                      <div class="modal-header">
-                                        <h5 class="modal-title" id="modal">Excluir</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h6>Deseja realmente excluir esse campo?!</h6>
-                                        <button type="submit" class="btn"
-                                        style="background-color: #3578E5; color: white;">Sim</button>
-                                        <button type="button" class="btn" data-dismiss="modal" style="background-color: #e74a3b; color: white;">Não
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
-            </tbody>
-        </table>
+            								$pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
+
+            								echo "Está atrasado em " . $pega_diferenca->m . " meses e " .  $pega_diferenca->d . " dias.";
+            								?></td>
+            							</tr>
+            						</div>
+            					<?php } ?>
+            				</tbody>
+            			</table>
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+        <!-- titulo da pagina -->
+
+        <!-- /.container-fluid -->
+
     </div>
-</div>
-</div>
-</div>
-<!-- /.container-fluid -->
-<!-- titulo da pagina -->
+    <!-- Fim do conteudo -->
 
-<!-- /.container-fluid -->
-
-</div>
-<!-- Fim do conteudo -->
-
-<!-- Rodape -->
-<footer class="sticky-footer bg-white">
-   <div class="container my-auto">
-      <div class="copyright text-center my-auto">
-         <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-     </div>
- </div>
-</footer>
-<!-- Fim do rodape -->
+    <!-- Rodape -->
+    <footer class="sticky-footer bg-white">
+    	<div class="container my-auto">
+    		<div class="copyright text-center my-auto">
+    			<span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+    		</div>
+    	</div>
+    </footer>
+    <!-- Fim do rodape -->
 
 </div>
 <!-- Fim do recorte do conteudo -->
@@ -417,7 +410,7 @@
 
 <!-- Botao de voltar ao topo -->
 <a class="scroll-to-top rounded" href="#page-top">
-   <i class="fas fa-angle-up"></i>
+	<i class="fas fa-angle-up"></i>
 </a>
 
 <!-- Bootstrap core JavaScript-->
