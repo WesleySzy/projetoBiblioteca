@@ -351,8 +351,7 @@
                                    <?php if(isset($_POST['update_item'])){
             							$edit_item_id = $_POST['edit_item_id'];
             							$qtd_disponivel = $_POST['qtd_disponivel'];
-            							$sql = "UPDATE livros SET 
-            							titulo_livro='$titulo_livro',
+            							$sql = "UPDATE livros SET
             							qtd_disponivel='$qtd_disponivel'
             							WHERE id_livro ='$edit_item_id' ";
             							if ($conexao->query($sql) === TRUE) {
