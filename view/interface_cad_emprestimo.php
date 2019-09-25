@@ -307,10 +307,6 @@
                                     </div>
                                 </div>
                                  <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                        <label for="inputAddress2">Qtd Livros</label>
-                                        <input type="number" class="form-control" name="qtd_totemp" value="1" required>
-                                    </div>
                                     <div class="form-group col-md-3">
                                         <label for="inputAddress2">Retirada</label>
                                         <input type="date" class="form-control" name="dt_retirada" required>

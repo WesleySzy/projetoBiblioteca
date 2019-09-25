@@ -15,8 +15,8 @@
     <!-- Custom fonts for this template -->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
@@ -50,19 +50,19 @@
                 <a class="nav-link" href="../home.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
-            </li>
+                </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+                <!-- Divider -->
+                <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Menu
-            </div>
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Menu
+                </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-edit"></i>
                     <span>Cadastrar</span>
@@ -83,97 +83,97 @@
                 <a class="nav-link" href="../view/interface_rel_livro.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Livros</span></a>
-            </li>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="../view/interface_rel_aluno.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Alunos</span></a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../view/interface_rel_aluno.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Alunos</span></a>
+                    </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="../view/interface_rel_emprestimo.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Emprestimos</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../sair.php">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Sair</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
-
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Pesquise..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../view/interface_rel_emprestimo.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Emprestimos</span></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sair.php">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Sair</span></a>
+                            </li>
+
+                            <!-- Divider -->
+                            <hr class="sidebar-divider d-none d-md-block">
+
+                            <!-- Sidebar Toggler (Sidebar) -->
+                            <div class="text-center d-none d-md-inline">
+                                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                            </div>
+
+                        </ul>
+                        <!-- End of Sidebar -->
 
 
-                    </ul>
-                    <script type="text/javascript">
-                    var myVar = setInterval(myTimer, 1000);
+                        <!-- Content Wrapper -->
+                        <div id="content-wrapper" class="d-flex flex-column">
 
-                    function myTimer() {
-                        var d = new Date(),
-                            displayDate;
-                        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                            displayDate = d.toLocaleTimeString('pt-BR');
-                        } else {
-                            displayDate = d.toLocaleTimeString('pt-BR', {
-                                timeZone: 'America/Belem'
-                            });
-                        }
-                        document.getElementById("demo").innerHTML = displayDate;
-                    }
+                            <!-- Main Content -->
+                            <div id="content">
+
+                                <!-- Topbar -->
+                                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                                    <!-- Sidebar Toggle (Topbar) -->
+                                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+
+
+
+                                    <!-- Topbar Navbar -->
+                                    <ul class="navbar-nav ml-auto">
+
+                                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                                        <li class="nav-item dropdown no-arrow d-sm-none">
+                                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-search fa-fw"></i>
+                                        </a>
+                                        <!-- Dropdown - Messages -->
+                                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                        aria-labelledby="searchDropdown">
+                                        <form class="form-inline mr-auto w-100 navbar-search">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control bg-light border-0 small"
+                                                placeholder="Pesquise..." aria-label="Search"
+                                                aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="button">
+                                                        <i class="fas fa-search fa-sm"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                            <script type="text/javascript">
+                                var myVar = setInterval(myTimer, 1000);
+
+                                function myTimer() {
+                                    var d = new Date(),
+                                    displayDate;
+                                    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                                        displayDate = d.toLocaleTimeString('pt-BR');
+                                    } else {
+                                        displayDate = d.toLocaleTimeString('pt-BR', {
+                                            timeZone: 'America/Belem'
+                                        });
+                                    }
+                                    document.getElementById("demo").innerHTML = displayDate;
+                                }
 
                     // Função que monta Mês, Dia, e Ano para exibir no HTML
                     // Declaração de Variaveis que receberam os valores:
@@ -255,37 +255,37 @@
                     //Exibe na Pagina o Resultado concatenando(+) os valores
 
                     document.write(day + myweekday + month + " de " + year + "   ");
-                    </script>
-                    <div id="demo"></div>
-                </nav>
-                <!-- End of Topbar -->
+                </script>
+                <div id="demo"></div>
+            </nav>
+            <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-                    <!-- DataTables -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Livros</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>ISBN</th>
-                                            <th>Titulo</th>
-                                            <th>Autor</th>
-                                            <th>Editora</th>
-                                            <th>Genero</th>
-                                            <th>Estoque</th>
-                                            <th>Editar</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php 
-            						$sql=mysqli_query($conexao, "SELECT * FROM livros JOIN genero ON livros.id_genero = genero.id_genero JOIN editora ON livros.id_editora = editora.id_editora JOIN autor ON livros.id_autor = autor.id_autor WHERE livros.id_livro <> 0");
-            						while($row = mysqli_fetch_array($sql)){ ?>
+                <!-- DataTables -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Livros</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>ISBN</th>
+                                        <th>Titulo</th>
+                                        <th>Autor</th>
+                                        <th>Editora</th>
+                                        <th>Genero</th>
+                                        <th>Estoque</th>
+                                        <th>Editar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php 
+                                    $sql=mysqli_query($conexao, "SELECT * FROM livros JOIN genero ON livros.id_genero = genero.id_genero JOIN editora ON livros.id_editora = editora.id_editora JOIN autor ON livros.id_autor = autor.id_autor WHERE livros.id_livro <> 0");
+                                    while($row = mysqli_fetch_array($sql)){ ?>
 
                                         <tr>
                                             <td><?php echo $row['isbn'];?></td>
@@ -294,125 +294,122 @@
                                             <td><?php echo $row['nome_editora'];?></td>
                                             <td><?php echo $row['desc_genero'];?></td>
                                             <td class="edit" data-show="quantidade"><?php echo $row['qtd_disponivel'];?>
-                                            </td>
-                                            <td>
-                                                <a href="#exampleModal<?php echo $row['id_livro'];?>"
-                                                    data-toggle="modal">
-                                                    <button class="btn" type="button" data-toggle="modal"
-                                                        data-target="#exampleModal"><i class="far fa-edit"
-                                                            style="color: #3578E5;">
-                                                        </i>
-                                                    </button>
-                                                </a>
-                                            </td>
-                                        </tr>
+                                        </td>
+                                        <td>
+                                            <a href="#exampleModal<?php echo $row['id_livro'];?>"
+                                                data-toggle="modal">
+                                                <button class="btn" type="button" data-toggle="modal"
+                                                data-target="#exampleModal"><i class="far fa-edit"
+                                                style="color: #3578E5;">
+                                            </i>
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
 
-                                        <div class="modal fade" id="exampleModal<?php echo $row['id_livro'];?>"
-                                            tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                                            aria-hidden="true">
-                                            <form method="post" class="form-horizontal" role="form">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <input type="hidden" name="edit_item_id"
-                                                                value="<?php echo $row['id_livro'];?>">
-                                                            <h5 class="estoque_modal" id="exampleModalLabel">Controle
-                                                                Estoque
-                                                            </h5>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Fechar">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="form-group">
-															<label class="control-label col-sm-4"
-                                                                    for="qtd_disponivel">Quantidade:</label>
-                                                                <div class="col-sm-4">
-                                                                    <input type="text" class="form-control"
-                                                                        id="qtd_disponivel" name="qtd_disponivel"
-                                                                        value="<?php echo $row['qtd_disponivel'];?>"
-                                                                        placeholder="Item Code" required>
-																		<br>
-                                                                    <button type="submit" name="update_item"
-                                                                        class="btn btn-success">Enviar</button>
-                                                                </div>
-															</div>
-														 </form>
+                            <div class="modal fade" id="exampleModal<?php echo $row['id_livro'];?>"
+                                tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <form method="post" class="form-horizontal" role="form">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <input type="hidden" name="edit_item_id"
+                                                value="<?php echo $row['id_livro'];?>">
+                                                <h5 class="estoque_modal" id="exampleModalLabel">Controle de estoque
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                             <label class="control-label col-sm-4"
+                                             for="qtd_disponivel">Quantidade:</label>
+                                             <div class="col-sm-4">
+                                                <input type="text" class="form-control"
+                                                id="qtd_disponivel" name="qtd_disponivel"
+                                                value="<?php echo $row['qtd_disponivel'];?>"
+                                                placeholder="Quantidade..." required>
+                                                <br>
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger"
-                                                data-dismiss="modal">Fechar</button>
-
-                                        </div>
-                                      </div>
+                                            <button type="submit" name="update_item" class="btn btn-success">Enviar</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                                        </form>
                                     </div>
-                                  </div>
-                                   <?php if(isset($_POST['update_item'])){
-            							$edit_item_id = $_POST['edit_item_id'];
-            							$qtd_disponivel = $_POST['qtd_disponivel'];
-            							$sql = "UPDATE livros SET
-            							qtd_disponivel='$qtd_disponivel'
-            							WHERE id_livro ='$edit_item_id' ";
-            							if ($conexao->query($sql) === TRUE) {
-            								echo '<script>window.location.href="../view/interface_rel_livro.php"</script>';
-            							} else {
-            								echo "Error updating record: " . $conexao->error;
-            							}
-            						}
-            						?>
-                    <?php } ?>
-                    </tbody>
-                    </table>
 
-                    <!-- /.container-fluid -->
-                </div>
-                <!-- End of Main Content -->
-
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                    <?php if(isset($_POST['update_item'])){
+                     $edit_item_id = $_POST['edit_item_id'];
+                     $qtd_disponivel = $_POST['qtd_disponivel'];
+                     $sql = "UPDATE livros SET
+                     qtd_disponivel='$qtd_disponivel'
+                     WHERE id_livro ='$edit_item_id' ";
+                     if ($conexao->query($sql) === TRUE) {
+                        echo '<script>window.location.href="../view/interface_rel_livro.php"</script>';
+                    } else {
+                        echo "Error updating record: " . $conexao->error;
+                    }
+                }
+                ?>
+            <?php } ?>
+        </tbody>
+    </table>
 
-            </div>
-            <!-- End of Content Wrapper -->
+    <!-- /.container-fluid -->
+</div>
+<!-- End of Main Content -->
 
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
         </div>
-        <!-- End of Page Wrapper -->
+    </div>
+</footer>
+<!-- End of Footer -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+</div>
+<!-- End of Content Wrapper -->
 
-        <!--script modal-->
-        <!-- Bootstrap core JavaScript-->
-        <script src="../vendor/jquery/jquery.min.js"></script>
-        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</div>
+<!-- End of Page Wrapper -->
 
-        <!-- Core plugin JavaScript-->
-        <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 
-        <!-- Custom scripts for all pages-->
-        <script src="../js/sb-admin-2.min.js"></script>
+<!--script modal-->
+<!-- Bootstrap core JavaScript-->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-        <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="../js/demo/datatables-demo.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="../js/sb-admin-2.min.js"></script>
 
-        <!-- Table translation to portuguese -->
-        <script src="../js/portuguese.js"></script>
+<!-- Page level plugins -->
+<script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-        <script type="text/javascript">
-        $('#exampleModal').on('show.bs.modal', function(event) {
+<!-- Page level custom scripts -->
+<script src="../js/demo/datatables-demo.js"></script>
+
+<!-- Table translation to portuguese -->
+<script src="../js/portuguese.js"></script>
+
+<script type="text/javascript">
+    $('#exampleModal').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget) // Botão que acionou o modal
             var recipientid = button.data('whatever')
             var recipientqtd = button.data('whateverid')
@@ -425,7 +422,7 @@
             modal.find('#recipientqtd-name').val(recipientqtd)
 
         })
-        </script>
+    </script>
 
 </body>
 
