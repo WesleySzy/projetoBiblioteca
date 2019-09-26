@@ -270,96 +270,105 @@
             			
             			<div class="d-sm-flex align-items-center justify-content-between mb-0">
             				<h6 class="m-0 font-weight-bold" style="color: #3578E5;">Alunos com entrega atrasada</h6>
-            			</div>
-            			<!-- Modal -->
-            			<div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
-            				<div class="modal-dialog" role="document">
-            					<div class="modal-content">
-            						<div class="modal-header">
-            							<h7 class="modal-title" id="modal">Confirmar exclusão de emprestimo</h7>
-            							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            								<span aria-hidden="true">&times;</span>
-            							</button>
+            			</div>		
+            		</div>
+            		<div class="card-body">
+            			<div class="table-responsive">
+            				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            					<thead>
+            						<tr>
+            							<th>Livro</th>
+            							<th>Aluno</th>
+            							<th>Retirada</th>
+            							<th>Devolução</th>
+            							<th>Tempo de atraso</th>
+            							<th>Devolução</th>
+            						</tr>
+            					</thead>
+            					<tbody>
+            						<?php 
+            						$sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0 and dt_entrega < CURRENT_DATE and dt_devolucao = 0000-00-00");
+            						while($row = mysqli_fetch_array($sql)){ ?>
+            							<tr>
+            								<td><?php echo $row['titulo_livro'];?></td>
+            								<td><?php echo $row['nome_aluno'];?></td>
+            								<td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
+            								<td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
+            								<td><?php
+            								date_default_timezone_set('America/Sao_Paulo'); 
+            								$pega_data = date("d-m-Y", strtotime($row['dt_entrega']));
+            								$data_sistema = date("d-m-Y");
+
+            								$pega_data_Time = new DateTime($pega_data);
+            								$data_sistema_Time = new DateTime($data_sistema);
+
+            								$pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
+
+            								echo "Está atrasado em " . $pega_diferenca->m . " meses e " .  $pega_diferenca->d . " dias.";
+            								?></td>
+            								<td>
+            									<button type="button" class="btn" data-toggle="modal" data-target="#editarModal"><i class="fab fa-accessible-icon" style="color: green;"></i><br>Confirmar</button>
+            								</td>
+            							</tr>
             						</div>
-            						<div class="modal-body">
-                                        <h4 class="modal-dialog">Deseja mesmo excluir?!</h4>
-                                    </div>
-                                </form>
-                                <div class="modal-footer">
-                                    <button type="submit" class="btn btn-success" style="color: white;">Sim</button>
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Não
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                       <thead>
-                          <tr>
-                             <th>Livro</th>
-                             <th>Aluno</th>
-                             <th>Retirada</th>
-                             <th>Devolução</th>
-                             <th>Tempo de atraso</th>
-                             <th></th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                      <?php 
-                      $sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0 and dt_entrega < CURRENT_DATE");
-                      while($row = mysqli_fetch_array($sql)){ ?>
-                         <tr>
-                            <td><?php echo $row['titulo_livro'];?></td>
-                            <td><?php echo $row['nome_aluno'];?></td>
-                            <td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
-                            <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
-                            <td><?php
-                            date_default_timezone_set('America/Sao_Paulo'); 
-                            $pega_data = date("d-m-Y", strtotime($row['dt_entrega']));
-                            $data_sistema = date("d-m-Y");
+            						<div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+            							<div class="modal-dialog" role="document">
+            								<form method="post" class="form-horizontal" role="form">
+            									<div class="modal-content">
+            										<div class="modal-header">
+            											<input type="hidden" name="edit_item_id_emprestimo"value="<?php echo $row['id_emprestimo'];?>">
+            											<h5 class="modal-title" id="modal">Confirmação</h5>
+            											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            												<span aria-hidden="true">&times;</span>
+            											</button>
+            										</div>
+            										<div class="modal-body">
+            											<h7>Deseja mesmo confirmar a devolução?!</h7>
+            										</div>
+            										<div class="modal-footer">
+            											<button type="submit" class="btn btn-success" name="ocultar" style="color: white;">Sim</button>
+            											<button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+            										</form>
+            									</div>
+            								</div>
+            							</div>
+            							<?php if(isset($_POST['ocultar'])){
+                                        $edit_item_id_emprestimo = $_POST['edit_item_id_emprestimo'];
+                                        $sql = "UPDATE emprestimo SET
+                                        dt_devolucao=CURRENT_DATE
+                                        WHERE id_emprestimo ='$edit_item_id_emprestimo' ";
+                                        if ($conexao->query($sql) === TRUE) {
+                                            echo '<script>window.location.href="home.php"</script>';
+                                        }
+                                    }
+                                    ?>
+            						<?php } ?>
+            					</tbody>
+            				</table>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            <!-- /.container-fluid -->
+            <!-- titulo da pagina -->
 
-                            $pega_data_Time = new DateTime($pega_data);
-                            $data_sistema_Time = new DateTime($data_sistema);
+            <!-- /.container-fluid -->
 
-                            $pega_diferenca = $data_sistema_Time->diff($pega_data_Time);
+        </div>
+        <!-- Fim do conteudo -->
 
-                            echo "Está atrasado em " . $pega_diferenca->m . " meses e " .  $pega_diferenca->d . " dias.";
-                            ?></td>
-                            <td>
-                                <button type="button" class="btn" data-toggle="modal" data-target="#editarModal"><i class="fas fa-minus-circle" style="color: red;"></i>Excluir</button>
-                            </td>
-                        </tr>
-                    </div>
-                <?php } ?>
-            </tbody>
-        </table>
+        <!-- Rodape -->
+        <footer class="sticky-footer bg-white">
+        	<div class="container my-auto">
+        		<div class="copyright text-center my-auto">
+        			<span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+        		</div>
+        	</div>
+        </footer>
+        <!-- Fim do rodape -->
+
     </div>
-</div>
-</div>
-</div>
-<!-- /.container-fluid -->
-<!-- titulo da pagina -->
-
-<!-- /.container-fluid -->
-
-</div>
-<!-- Fim do conteudo -->
-
-<!-- Rodape -->
-<footer class="sticky-footer bg-white">
-   <div class="container my-auto">
-      <div class="copyright text-center my-auto">
-         <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
-     </div>
- </div>
-</footer>
-<!-- Fim do rodape -->
-
-</div>
-<!-- Fim do recorte do conteudo -->
+    <!-- Fim do recorte do conteudo -->
 
 </div>
 

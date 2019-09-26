@@ -7,6 +7,19 @@ if (empty($_POST["edit_item_id"])) {
     $edit_item_id = clean($_POST["edit_item_id"]);
 }
 
+if (empty($_POST["edit_item_id_emprestimo"])) {
+    $edit_item_id_emprestimo = "";
+} else {
+    $edit_item_id_emprestimo = clean($_POST["edit_item_id_emprestimo"]);
+}
+
+if (empty($_POST["ocultar"])) {
+    $item_nameErr = "Item Name is required";
+} else {
+    $item_name = clean($_POST["ocultar"]);
+}
+
+
 if (empty($_POST["item_name"])) {
     $item_nameErr = "Item Name is required";
 } else {

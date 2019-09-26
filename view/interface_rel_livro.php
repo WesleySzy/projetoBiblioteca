@@ -279,7 +279,7 @@
                                         <th>Editora</th>
                                         <th>Genero</th>
                                         <th>Estoque</th>
-                                        <th>Editar</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -296,88 +296,83 @@
                                             <td class="edit" data-show="quantidade"><?php echo $row['qtd_disponivel'];?>
                                         </td>
                                         <td>
-                                            <a href="#exampleModal<?php echo $row['id_livro'];?>"
-                                                data-toggle="modal">
-                                                <button class="btn" type="button" data-toggle="modal"
-                                                data-target="#exampleModal"><i class="far fa-edit"
-                                                style="color: #3578E5;">
-                                            </i>
-                                        </button>
-                                    </a>
-                                </td>
-                            </tr>
+                                            <a href="#exampleModal<?php echo $row['id_livro'];?>"data-toggle="modal">
+                                                <button class="btn" type="button" data-toggle="modal" data-target="#exampleModal"><i class="far fa-edit"style="color: #3578E5;"> </i><br> Editar</button>
+                                            </a>
+                                        </td>
+                                    </tr>
 
-                            <div class="modal fade" id="exampleModal<?php echo $row['id_livro'];?>"
-                                tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <form method="post" class="form-horizontal" role="form">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <input type="hidden" name="edit_item_id"
-                                                value="<?php echo $row['id_livro'];?>">
-                                                <h5 class="estoque_modal" id="exampleModalLabel">Controle de estoque
-                                                </h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                aria-label="Fechar">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="form-group">
-                                             <label class="control-label col-sm-4"
-                                             for="qtd_disponivel">Quantidade:</label>
-                                             <div class="col-sm-4">
-                                                <input type="text" class="form-control"
-                                                id="qtd_disponivel" name="qtd_disponivel"
-                                                value="<?php echo $row['qtd_disponivel'];?>"
-                                                placeholder="Quantidade..." required>
-                                                <br>
+                                    <div class="modal fade" id="exampleModal<?php echo $row['id_livro'];?>"
+                                        tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                        aria-hidden="true">
+                                        <form method="post" class="form-horizontal" role="form">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <input type="hidden" name="edit_item_id"
+                                                        value="<?php echo $row['id_livro'];?>">
+                                                        <h5 class="estoque_modal" id="exampleModalLabel">Controle de estoque
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Fechar">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                       <label class="control-label col-sm-4"
+                                                       for="qtd_disponivel">Quantidade:</label>
+                                                       <div class="col-sm-4">
+                                                        <input type="text" class="form-control"
+                                                        id="qtd_disponivel" name="qtd_disponivel"
+                                                        value="<?php echo $row['qtd_disponivel'];?>"
+                                                        placeholder="Quantidade..." required>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" name="update_item" class="btn btn-success">Enviar</button>
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                                                </form>
                                             </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="submit" name="update_item" class="btn btn-success">Enviar</button>
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                                        </form>
-                                    </div>
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <?php if(isset($_POST['update_item'])){
-                     $edit_item_id = $_POST['edit_item_id'];
-                     $qtd_disponivel = $_POST['qtd_disponivel'];
-                     $sql = "UPDATE livros SET
-                     qtd_disponivel='$qtd_disponivel'
-                     WHERE id_livro ='$edit_item_id' ";
-                     if ($conexao->query($sql) === TRUE) {
-                        echo '<script>window.location.href="../view/interface_rel_livro.php"</script>';
-                    } else {
-                        echo "Error updating record: " . $conexao->error;
-                    }
-                }
-                ?>
-            <?php } ?>
-        </tbody>
-    </table>
+                            <?php if(isset($_POST['update_item'])){
+                               $edit_item_id = $_POST['edit_item_id'];
+                               $qtd_disponivel = $_POST['qtd_disponivel'];
+                               $sql = "UPDATE livros SET
+                               qtd_disponivel='$qtd_disponivel'
+                               WHERE id_livro ='$edit_item_id' ";
+                               if ($conexao->query($sql) === TRUE) {
+                                echo '<script>window.location.href="../view/interface_rel_livro.php"</script>';
+                            } else {
+                                echo "Error updating record: " . $conexao->error;
+                            }
+                        }
+                        ?>
+                    <?php } ?>
+                </tbody>
+            </table>
 
-    <!-- /.container-fluid -->
-</div>
-<!-- End of Main Content -->
-
-<!-- Footer -->
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+            <!-- /.container-fluid -->
         </div>
-    </div>
-</footer>
-<!-- End of Footer -->
+        <!-- End of Main Content -->
 
-</div>
-<!-- End of Content Wrapper -->
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
 
 </div>
 <!-- End of Page Wrapper -->
