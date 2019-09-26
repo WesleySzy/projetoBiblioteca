@@ -278,6 +278,7 @@
                                         <th>Livro</th>
                                         <th>Aluno</th>
                                         <th>Retirada</th>
+                                        <th>Entrega</th>
                                         <th>Devolução</th>
                                     </tr>
                                 </thead>
@@ -291,8 +292,14 @@
                                             <td><?php echo $row['nome_aluno'];?></td>
                                             <td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
                                             <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
+                                            <td><?php 
+                                            if ($row['dt_devolucao'] == 0000-00-00){
+                                                echo "Não devolveu";
+                                            }else{
+                                                echo date('d/m/Y', strtotime($row['dt_devolucao']));
+                                            }
+                                            ?></td>
                                         </tr>
-
                                     <?php } ?>
                                 </tbody>
                             </table>
