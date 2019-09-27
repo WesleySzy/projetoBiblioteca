@@ -81,7 +81,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="sair.php">
+                            <a class="nav-link" href="../sair.php">
                                 <i class="fas fa-sign-out-alt"></i>
                                 <span>Sair</span></a>
                             </li>
