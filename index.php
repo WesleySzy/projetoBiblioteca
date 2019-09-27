@@ -42,7 +42,7 @@ session_start();
 							<div class="col-lg-6">
 								<div class="p-5">
 									<div class="text-center">
-										<h1 class="h4 text-gray-900 mb-4">Bem vindo!</h1>
+										<h1 class="h4 text-gray-900 mb-4">Bem-vindo!</h1>
 									</div>
 									<form class="user" method="POST" action="valida.php">
 										<div class="form-group">
