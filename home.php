@@ -307,7 +307,7 @@
             								echo "Está atrasado em " . $pega_diferenca->m . " meses e " .  $pega_diferenca->d . " dias.";
             								?></td>
             								<td>
-            									<button type="button" class="btn" data-toggle="modal" data-target="#editarModal"><i class="fab fa-accessible-icon" style="color: green;"></i><br>Confirmar</button>
+            									<button type="button" class="btn" data-toggle="modal" data-target="#editarModal"><i class="fas fa-check" style="color: green;"></i><br>Confirmar</button>
             								</td>
             							</tr>
             						</div>
