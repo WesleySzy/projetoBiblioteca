@@ -2,7 +2,7 @@
 <?php
 $nivel_necessario = "admin@admin";
 session_start();
-if(!$_SESSION["usuarioEmail"] != $nivel_necessario){
+if(!$_SESSION["usuarioEmail"]){
 header("location: ../index.php");
 exit;
 }
@@ -273,7 +273,7 @@ exit;
             <!-- Comeco da pagina de conteudo-->
             <div class="container-fluid">
 
-                <!-- DataTables -->
+                                <!-- DataTables -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Emprestimos</h6>
@@ -286,7 +286,9 @@ exit;
                                         <th>Livro</th>
                                         <th>Aluno</th>
                                         <th>Retirada</th>
+                                        <th>Entrega</th>
                                         <th>Devolução</th>
+                                        <th>Confirmação</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -299,13 +301,61 @@ exit;
                                             <td><?php echo $row['nome_aluno'];?></td>
                                             <td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
                                             <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
+                                            <td><?php 
+                                            if ($row['dt_devolucao'] == 0000-00-00){
+                                                echo "Não devolveu";
+                                            }else{
+                                                echo date('d/m/Y', strtotime($row['dt_devolucao']));
+                                            }
+                                            ?></td>
+                                            <td><a href="#exampleModal<?php echo $row['id_emprestimo'];?>"data-toggle="modal">
+                                                <button class="btn" type="button" data-toggle="modal" data-target="#exampleModal"><i class="far fa-calendar-check" style="color: green;"> </i><br> Confirmar</button></a>
+                                            </td>
                                         </tr>
 
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                                        <div class="modal fade" id="exampleModal<?php echo $row['id_emprestimo'];?>"
+                                            tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                            aria-hidden="true">
+                                            <form method="post" class="form-horizontal" role="form">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <input type="hidden" name="edit_item_id"
+                                                            value="<?php echo $row['id_emprestimo'];?>">
+                                                            <h5 class="estoque_modal" id="exampleModalLabel">Controle de devolução
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Fechar">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h7>Deseja realmente confirmar a devolução?!</h7>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" name="update_item" class="btn btn-success">Sim</button>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php if(isset($_POST['update_item'])){
+                                    $edit_item_id = $_POST['edit_item_id'];
+                                    $sql = "UPDATE emprestimo SET
+                                    dt_devolucao = CURRENT_DATE
+                                    WHERE id_emprestimo ='$edit_item_id' ";
+                                    if ($conexao->query($sql) === TRUE) {
+                                        echo '<script>window.location.href="interface_rel_emprestimo.php"</script>';
+                                    } else {
+                                        echo "Error updating record: " . $conexao->error;
+                                    }
+                                }
+                                ?>
+                            <?php } ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!-- /.container-fluid -->
