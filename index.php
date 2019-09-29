@@ -39,7 +39,7 @@ session_start();
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block">
-                                <img src="unopar2.jpg" style="width: 478px; height: 670px">
+                                <img src="img/unopar.jpg" style="width: 478px; height: 670px">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">

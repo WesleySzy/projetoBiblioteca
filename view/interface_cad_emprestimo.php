@@ -2,8 +2,8 @@
 <?php
 session_start();
 if(!$_SESSION["usuarioEmail"]){
-header("location: ../index.php");
-exit;
+    header("location: ../index.php");
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -130,7 +130,7 @@ exit;
 
                                 <!-- Barra do topo -->
                                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+                                    <span><i class="fas fa-key"></i> Usuário: <?php echo $_SESSION['usuarioNome']?></span>
                                     <!-- Barra lateral ativador (topo) -->
                                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                                         <i class="fa fa-bars"></i>
@@ -313,7 +313,7 @@ exit;
                                         </select>                                        
                                     </div>
                                 </div>
-                                 <div class="form-row">
+                                <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label for="inputAddress2">Retirada</label>
                                         <input type="date" class="form-control" name="dt_retirada" required>
@@ -340,7 +340,6 @@ exit;
                     <div class="copyright text-center my-auto">
                         <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                     </div>
-                    <p class="text-right"> <i class="fas fa-key"></i> Usuário: <?php echo $_SESSION['usuarioNome']?></p>
                 </div>
             </footer>
             <!-- Fim do Rodape-->

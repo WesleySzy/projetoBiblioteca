@@ -130,7 +130,7 @@ exit;
 
                                 <!-- Barra do topo -->
                                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+<span><i class="fas fa-key"></i> Usuário: <?php echo $_SESSION['usuarioNome']?></span>
                                     <!-- Barra lateral ativador (topo) -->
                                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                                         <i class="fa fa-bars"></i>
@@ -318,7 +318,7 @@ exit;
                 <div class="copyright text-center my-auto">
                     <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                 </div>
-                <p class="text-right"> <i class="fas fa-key"></i> Usuário: <?php echo $_SESSION['usuarioNome']?></p>
+
             </div>
         </footer>
         <!-- Fim do rodape-->

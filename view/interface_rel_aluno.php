@@ -7,7 +7,7 @@ exit;
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
 
@@ -19,29 +19,29 @@ exit;
 
     <title>Bibliopar</title>
 
-    <!-- Fontes para o template -->
+    <!-- Custom fonts for this template -->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-        href="../https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Estilos customizados para o template -->
+    <!-- Custom styles for this template -->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Estilo customizado para a pagina -->
+    <!-- Custom styles for this page -->
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-    <!-- Recorte Pagina -->
+    <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Barra lateral -->
+        <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3578E5">
 
-            <!-- Barra lateral- marca -->
+            <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
@@ -49,25 +49,25 @@ exit;
                 <div class="sidebar-brand-text mx-3">Biblioteca</div>
             </a>
 
-            <!-- Divisor -->
+            <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav bar pagina inicial -->
+            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="../home.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
             </li>
 
-            <!-- Divisor -->
+            <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Cabecalho -->
+            <!-- Heading -->
             <div class="sidebar-heading">
                 Menu
             </div>
 
-            <!-- Itens Navbar - juncao de paginas do menu -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -76,30 +76,30 @@ exit;
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
-                        <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
-                        <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="interface_cad_outros.php">Editora/Autor</a>
+                        <a class="collapse-item" href="../view/interface_cad_livro.php">Livros</a>
+                        <a class="collapse-item" href="../view/interface_cad_aluno.php">Alunos</a>
+                        <a class="collapse-item" href="../view/interface_cad_emprestimo.php">Emprestimos</a>
+                        <a class="collapse-item" href="../view/interface_cad_outros.php">Editora/Autor</a>
                     </div>
                 </div>
             </li>
 
 
-            <!-- Nav bar item - Tabela -->
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_livro.php">
+                <a class="nav-link" href="../view/interface_rel_livro.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Livros</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="interface_rel_aluno.php">
+                <a class="nav-link" href="../view/interface_rel_aluno.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Alunos</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_emprestimo.php">
+                <a class="nav-link" href="../view/interface_rel_emprestimo.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Emprestimos</span></a>
             </li>
@@ -109,46 +109,45 @@ exit;
                     <span>Sair</span></a>
             </li>
 
-
-
-            <!-- Divisor -->
+            <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Barra lateral ativador -->
+            <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
         </ul>
-        <!-- fim barra lateral -->
+        <!-- End of Sidebar -->
 
 
-        <!-- Recorte de conteudo -->
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Conteudo Principal -->
+            <!-- Main Content -->
             <div id="content">
 
-                <!-- Barra do topo -->
+                <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+<span><i class="fas fa-key"></i> Usuário: <?php echo $_SESSION['usuarioNome']?></span>
 
-                    <!-- Barra lateral ativador (topo) -->
+                    <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
 
 
-                    <!-- barra de navegacao do topo -->
+                    <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- barra de navegacao item - search dropdown -->
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                            <!-- Dropdown mensagem -->
+                            <!-- Dropdown - Messages -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
@@ -267,7 +266,7 @@ exit;
                     </script>
                     <div id="demo"></div>
                 </nav>
-                <!-- Fim da barra do topo -->
+                <!-- End of Topbar -->
 
                 <!-- Comeco conteudo da pagina -->
                 <div class="container-fluid">
@@ -317,7 +316,6 @@ exit;
                     <div class="copyright text-center my-auto">
                         <span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
                     </div>
-                    <p class="text-right"> <i class="fas fa-key"></i> Usuário: <?php echo $_SESSION['usuarioNome']?></p>
                 </div>
             </footer>
             <!-- Fim do rodape -->

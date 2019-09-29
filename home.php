@@ -2,8 +2,8 @@
 <?php
 session_start();
 if(!$_SESSION["usuarioEmail"]){
-header("location: index.php");
-exit;
+    header("location: index.php");
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -64,123 +64,99 @@ exit;
 
 				<!-- Cabecalho -->
 				<div class="sidebar-heading">
-					Menu
-				</div>
+					<span>Menu</span>
+                </div>
 
-				<!-- Itens Navbar - juncao de paginas do menu -->
-				<li class="nav-item">
-					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-					aria-expanded="true" aria-controls="collapseTwo">
-					<i class="fas fa-edit"></i>
-					<span>Cadastrar</span>
-				</a>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="view/interface_cad_livro.php">Livros</a>
-						<a class="collapse-item" href="view/interface_cad_aluno.php">Alunos</a>
-						<a class="collapse-item" href="view/interface_cad_emprestimo.php">Emprestimos</a>
-						<a class="collapse-item" href="view/interface_cad_outros.php">Editora/Autor</a>
-					</div>
-				</div>
-			</li>
-
-
-			<!-- Nav bar item - Tabela -->
-			<li class="nav-item">
-				<a class="nav-link" href="view/interface_rel_livro.php">
-					<i class="fas fa-fw fa-table"></i>
-					<span>Livros</span></a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link" href="view/interface_rel_aluno.php">
-						<i class="fas fa-fw fa-table"></i>
-						<span>Alunos</span></a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="view/interface_rel_emprestimo.php">
-							<i class="fas fa-fw fa-table"></i>
-							<span>Emprestimos</span></a>
-						</li>
-
-						<li class="nav-item">
-							<a class="nav-link" href="sair.php">
-								<i class="fas fa-sign-out-alt"></i>
-								<span>Sair</span></a>
-							</li>
+                <!-- Itens Navbar - juncao de paginas do menu -->
+                <li class="nav-item">
+                   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                   <i class="fas fa-edit"></i>
+                   <span>Cadastrar</span>
+               </a>
+               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                   <div class="bg-white py-2 collapse-inner rounded">
+                      <a class="collapse-item" href="view/interface_cad_livro.php">Livros</a>
+                      <a class="collapse-item" href="view/interface_cad_aluno.php">Alunos</a>
+                      <a class="collapse-item" href="view/interface_cad_emprestimo.php">Emprestimos</a>
+                      <a class="collapse-item" href="view/interface_cad_outros.php">Editora/Autor</a>
+                  </div>
+              </div>
+          </li>
 
 
-							<!-- Divisor -->
-							<hr class="sidebar-divider d-none d-md-block">
+          <!-- Nav bar item - Tabela -->
+          <li class="nav-item">
+            <a class="nav-link" href="view/interface_rel_livro.php">
+               <i class="fas fa-fw fa-table"></i>
+               <span>Livros</span></a>
+           </li>
 
-							<!-- Barra lateral ativador -->
-							<div class="text-center d-none d-md-inline">
-								<button class="rounded-circle border-0" id="sidebarToggle"></button>
-							</div>
+           <li class="nav-item">
+               <a class="nav-link" href="view/interface_rel_aluno.php">
+                  <i class="fas fa-fw fa-table"></i>
+                  <span>Alunos</span></a>
+              </li>
 
-						</ul>
-						<!-- fim barra lateral -->
+              <li class="nav-item">
+                  <a class="nav-link" href="view/interface_rel_emprestimo.php">
+                     <i class="fas fa-fw fa-table"></i>
+                     <span>Emprestimos</span></a>
+                 </li>
 
-
-						<!-- Recorte de conteudo -->
-						<div id="content-wrapper" class="d-flex flex-column">
-
-							<!-- Conteudo Principal -->
-							<div id="content">
-
-								<!-- Barra do topo -->
-								<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-									<!-- Barra lateral ativador (topo) -->
-									<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-										<i class="fa fa-bars"></i>
-									</button>
-
-									<!-- barra de navegacao do topo -->
-									<ul class="navbar-nav ml-auto">
-
-										<!-- barra de navegacao item - search dropdown -->
-										<li class="nav-item dropdown no-arrow d-sm-none">
-											<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="fas fa-search fa-fw"></i>
-										</a>
-										<!-- Dropdown mensagem -->
-										<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-										aria-labelledby="searchDropdown">
-										<form class="form-inline mr-auto w-100 navbar-search">
-											<div class="input-group">
-												<input type="text" class="form-control bg-light border-0 small"
-												placeholder="Pesquise..." aria-label="Search"
-												aria-describedby="basic-addon2">
-												<div class="input-group-append">
-													<button class="btn btn-primary" type="button">
-														<i class="fas fa-search fa-sm"></i>
-													</button>
-												</div>
-											</div>
-										</form>
-									</div>
-								</li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="sair.php">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sair</span></a>
+                    </li>
 
 
-							</ul>
-							<script type="text/javascript">
-								var myVar = setInterval(myTimer, 1000);
+                    <!-- Divisor -->
+                    <hr class="sidebar-divider d-none d-md-block">
 
-								function myTimer() {
-									var d = new Date(),
-									displayDate;
-									if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-										displayDate = d.toLocaleTimeString('pt-BR');
-									} else {
-										displayDate = d.toLocaleTimeString('pt-BR', {
-											timeZone: 'America/Belem'
-										});
-									}
-									document.getElementById("demo").innerHTML = displayDate;
-								}
+                    <!-- Barra lateral ativador -->
+                    <div class="text-center d-none d-md-inline">
+                        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                    </div>
+
+                </ul>
+                <!-- fim barra lateral -->
+
+
+                <!-- Recorte de conteudo -->
+                <div id="content-wrapper" class="d-flex flex-column">
+
+                 <!-- Conteudo Principal -->
+                 <div id="content">
+
+                    <!-- Barra do topo -->
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                        <span><i class="fas fa-key"></i> Usuário: <?php echo $_SESSION['usuarioNome']?></span>
+                        
+
+                        <!-- Barra lateral ativador (topo) -->
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                          <i class="fa fa-bars"></i>
+                      </button>
+
+                      <!-- barra de navegacao do topo -->
+                      <ul class="navbar-nav ml-auto">
+                      </ul>
+                      <script type="text/javascript">
+                        var myVar = setInterval(myTimer, 1000);
+
+                        function myTimer() {
+                           var d = new Date(),
+                           displayDate;
+                           if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                              displayDate = d.toLocaleTimeString('pt-BR');
+                          } else {
+                              displayDate = d.toLocaleTimeString('pt-BR', {
+                                 timeZone: 'America/Belem'
+                             });
+                          }
+                          document.getElementById("demo").innerHTML = displayDate;
+                      }
 
                     // Função que monta Mês, Dia, e Ano para exibir no HTML
                     // Declaração de Variaveis que receberam os valores:
@@ -340,21 +316,21 @@ exit;
             								</div>
             							</div>
             							<?php if(isset($_POST['ocultar'])){
-                                        $edit_item_id_emprestimo = $_POST['edit_item_id_emprestimo'];
-                                        $sql = "UPDATE emprestimo SET
-                                        dt_devolucao=CURRENT_DATE
-                                        WHERE id_emprestimo ='$edit_item_id_emprestimo' ";
-                                        if ($conexao->query($sql) === TRUE) {
-                                            echo '<script>window.location.href="home.php"</script>';
+                                            $edit_item_id_emprestimo = $_POST['edit_item_id_emprestimo'];
+                                            $sql = "UPDATE emprestimo SET
+                                            dt_devolucao=CURRENT_DATE
+                                            WHERE id_emprestimo ='$edit_item_id_emprestimo' ";
+                                            if ($conexao->query($sql) === TRUE) {
+                                                echo '<script>window.location.href="home.php"</script>';
+                                            }
                                         }
-                                    }
-                                    ?>
-            						<?php } ?>
-            					</tbody>
-            				</table>
-            			</div>
-            		</div>
-            	</div>
+                                        ?>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /.container-fluid -->
             <!-- titulo da pagina -->
@@ -370,7 +346,6 @@ exit;
         		<div class="copyright text-center my-auto">
         			<span>Todos os direitos reservados &copy; Unopar Arapongas 2019</span>
         		</div>
-				<p class="text-right"> <i class="fas fa-key"></i> Usuário: <?php echo $_SESSION['usuarioNome']?></p>
         	</div>
         </footer>
         <!-- Fim do rodape -->
