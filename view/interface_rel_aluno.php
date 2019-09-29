@@ -1,11 +1,4 @@
 <?php include "../control/conexao_banco.php"; ?>
-<?php
-session_start();
-if(!$_SESSION["usuarioEmail"]){
-header("location: ../index.php");
-exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -285,7 +278,6 @@ exit;
                                             <th>Nome</th>
                                             <th>Ano Letivo</th>
                                             <th>Sala</th>
-                                            <th>Turma</th>
                                             <th>Periodo</th>
                                         </tr>
                                     </thead>
@@ -297,8 +289,7 @@ exit;
                                         <tr>
                                             <td><?php echo $row['nome_aluno'];?></td>
                                             <td><?php echo $row['ano_letivo'];?></td>
-                                            <td><?php echo $row['sala_aluno'];?></td>
-                                            <td><?php echo $row['turma_aluno'];?></td>
+                                            <td><?php echo $row['sala_aluno'],"º ", $row['turma_aluno']; ?></td>
                                             <td><?php echo $row['desc_periodo'];?></td>
                                         </tr>
 

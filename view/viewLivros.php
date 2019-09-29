@@ -12,87 +12,68 @@
 
     <title>Bibliopar</title>
 
-    <!-- Fontes para o template -->
+    <!-- Custom fonts for this template -->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        href="../https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Estilos customizados para o template -->
+    <!-- Custom styles for this template -->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Estilo customizado para a pagina -->
+    <!-- Custom styles for this page -->
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-    <!-- Recorte Pagina -->
+    <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Barra Lateral -->
+        <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3578E5">
 
-            <!-- Barra Lateral marca -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home.php">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="view_aluno.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Biblioteca</div>
             </a>
 
-            <!-- Divisor -->
+            <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav bar pagina inicial -->
+            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="../home.php">
+                <a class="nav-link" href="aluno_view.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
             </li>
 
-            <!-- Divisor -->
+            <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Cabecalho -->
+            <!-- Heading -->
             <div class="sidebar-heading">
                 Menu
             </div>
 
-            <!-- Itens Navbar - juncao de paginas do menu -->
+            <!-- Nav Item - Pages Collapse Menu -->
+
+
+            <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-edit"></i>
-                    <span>Cadastrar</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
-                        <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
-                        <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="interface_cad_outros.php">Editora/Autor</a>
-                    </div>
-                </div>
-            </li>
-
-
-            <!-- Nav bar item - Tabela -->
-            <li class="nav-item">
-                <a class="nav-link" href="interface_rel_livro.php">
+                <a class="nav-link" href="viewLivros.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Livros</span></a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="interface_rel_aluno.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Alunos</span></a>
-            </li>
+
 
             <li class="nav-item">
-                <a class="nav-link" href="interface_rel_emprestimo.php">
+                <a class="nav-link" href="viewEmprestimos.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Emprestimos</span></a>
             </li>
@@ -102,44 +83,44 @@
                     <span>Sair</span></a>
             </li>
 
-            <!-- Divisor -->
+            <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Barra lateral ativador -->
+            <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
         </ul>
-        <!-- fim barra lateral -->
+        <!-- End of Sidebar -->
 
 
-        <!-- Recorte de conteudo -->
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Conteudo Principal -->
+            <!-- Main Content -->
             <div id="content">
 
-                <!-- Barra do topo -->
+                <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <!-- Barra lateral ativador (topo) -->
+                    <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
 
 
-                    <!-- barra de navegacao do topo -->
+                    <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- barra de navegacao item - search dropdown -->
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                            <!-- Dropdown mensagem -->
+                            <!-- Dropdown - Messages -->
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
@@ -258,72 +239,55 @@
                     </script>
                     <div id="demo"></div>
                 </nav>
-                <!-- Fim da barra do topo -->
+                <!-- End of Topbar -->
 
-
-                <!-- Comeco conteudo da pagina -->
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                    <!-- DataTables -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de Alunos</h6>
+                            <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Livros</h6>
                         </div>
                         <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ISBN</th>
+                                            <th>Titulo</th>
+                                            <th>Autor</th>
+                                            <th>Editora</th>
+                                            <th>Genero</th>
+                                            <th>Estoque</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php 
+                                    $sql=mysqli_query($conexao, "SELECT * FROM livros JOIN genero ON livros.id_genero = genero.id_genero JOIN editora ON livros.id_editora = editora.id_editora JOIN autor ON livros.id_autor = autor.id_autor WHERE livros.id_livro <> 0");
+                                    while($row = mysqli_fetch_array($sql)){ ?>
 
-                            <form name="formulario_cad_aluno" method="post" action="../control/formulario_cad_aluno.php">
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="nome">Nome</label>
-                                        <input placeholder="Insira o nome do aluno..." type="text" class="form-control"
-                                            name="nome_aluno" maxlength="40" autocomplete="off" required>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="ano_letivo">Ano Letivo</label>
-                                        <input placeholder="Insira o ano letivo do aluno..." type="text"
-                                            class="form-control" name="ano_letivo" maxlength="4" autocomplete="off" required>
-                                    </div>
-                                </div>
+                                        <tr>
+                                            <td><?php echo $row['isbn'];?></td>
+                                            <td><?php echo $row['titulo_livro'];?></td>
+                                            <td><?php echo $row['nome_autor'];?></td>
+                                            <td><?php echo $row['nome_editora'];?></td>
+                                            <td><?php echo $row['desc_genero'];?></td>
+                                            <td><?php echo $row['qtd_disponivel'];?></td>
+                                        </tr>
 
-
-
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <label for="sala_aluno">Sala do Aluno</label>
-                                        <input placeholder="Insira a sala do aluno..." type="text" class="form-control"
-                                            name="sala_aluno" maxlength="20" autocomplete="off" required>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="sala_aluno">Turma do Aluno</label>
-                                        <input placeholder="Insira a turma do aluno..." type="text" class="form-control"
-                                            name="turma_aluno" maxlength="1" autocomplete="off" required>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="periodo">Periodo</label>
-                                        <select class="form-control" name="periodo" required>
-                                            <option disabled selected value>Selecione uma opção</option>
-                                            <?php
-                                        $result= "SELECT * FROM `periodo`";
-                                        $resultado = mysqli_query($conexao, $result);
-                                        while($row = mysqli_fetch_assoc($resultado)){ ?>
-                                            <option value="<?php echo $row['id_periodo']; ?>">
-                                                <?php echo $row['desc_periodo']; ?></option> <?php
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn"
-                                    style="background-color: #3578E5; color: white;">Cadastrar</button>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    </form>
                 </div>
+                <!-- /.container-fluid -->
             </div>
+            <!-- End of Main Content -->
 
-            <!-- Fim do conteudo da Pagina-->
-
-            <!-- Rodape -->
+            <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -331,21 +295,25 @@
                     </div>
                 </div>
             </footer>
-            <!-- Fim do rodape-->
+            <!-- End of Footer -->
 
         </div>
-        <!-- Fim do recorte do conteudo -->
+        <!-- End of Content Wrapper -->
 
     </div>
+    <!-- End of Page Wrapper -->
 
-
-    <!-- Botao Voltar ao topo-->
+    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
-
-
+    <!--script modal-->
+    <script>
+    $('#meuModal').on('shown.bs.modal', function() {
+        $('#meuInput').trigger('focus')
+    })
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -362,7 +330,10 @@
 
     <!-- Page level custom scripts -->
     <script src="../js/demo/datatables-demo.js"></script>
-    </div>
+
+    <!-- Table translation to portuguese -->
+    <script src="../js/portuguese.js"></script>
+
 </body>
 
 </html>

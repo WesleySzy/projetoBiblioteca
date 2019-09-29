@@ -15,7 +15,7 @@
     <!-- Fontes para o template -->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    href="../https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
 
     <!-- Estilos customizados para o template -->
@@ -35,19 +35,19 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #3578E5">
 
             <!-- Barra Lateral marca -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="view_aluno.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-book-open"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Biblioteca</div>
             </a>
 
-            <!-- Divisor -->
+            <!-- Divisor-->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav bar pagina inicial -->
             <li class="nav-item">
-                <a class="nav-link" href="../home.php">
+                <a class="nav-link" href="aluno_view.php">
                     <i class="fas fa-home"></i>
                     <span>Página Inicial</span></a>
                 </li>
@@ -61,38 +61,22 @@
                 </div>
 
                 <!-- Itens Navbar - juncao de paginas do menu -->
-                <li class="nav-item active">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-edit"></i>
-                    <span>Cadastrar</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="interface_cad_livro.php">Livros</a>
-                        <a class="collapse-item" href="interface_cad_aluno.php">Alunos</a>
-                        <a class="collapse-item" href="interface_cad_emprestimo.php">Emprestimos</a>
-                        <a class="collapse-item" href="interface_cad_outros.php">Editora/Autor</a>
-                    </div>
-                </div>
-            </li>
 
 
-            <!-- Nav bar item - Tabela -->
-            <li class="nav-item">
-                <a class="nav-link" href="interface_rel_livro.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Livros</span></a>
-                </li>
+
+                <!-- Nav bar item - Tabela -->
+
 
                 <li class="nav-item">
-                    <a class="nav-link" href="interface_rel_aluno.php">
+                    <a class="nav-link" href="viewLivros.php">
                         <i class="fas fa-fw fa-table"></i>
-                        <span>Alunos</span></a>
+                        <span>Livros</span></a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="interface_rel_emprestimo.php">
+
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="viewEmprestimos.php">
                             <i class="fas fa-fw fa-table"></i>
                             <span>Emprestimos</span></a>
                         </li>
@@ -101,7 +85,6 @@
                                 <i class="fas fa-sign-out-alt"></i>
                                 <span>Sair</span></a>
                             </li>
-
 
                             <!-- Divisor -->
                             <hr class="sidebar-divider d-none d-md-block">
@@ -118,29 +101,29 @@
                         <!-- Recorte de conteudo -->
                         <div id="content-wrapper" class="d-flex flex-column">
 
-                            <!-- Conteudo Principal -->
+                            <!-- Conteudo Principal  -->
                             <div id="content">
 
                                 <!-- Barra do topo -->
                                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                                    <!-- Barra lateral ativador (topo) -->
+                                    <!-- barra de navegacao do topo -->
                                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                                         <i class="fa fa-bars"></i>
                                     </button>
 
 
 
-                                    <!-- barra de navegacao do topo -->
+                                    <!-- Topbar Navbar -->
                                     <ul class="navbar-nav ml-auto">
 
-                                        <!-- barra de navegacao item - search dropdown -->
+                                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                                         <li class="nav-item dropdown no-arrow d-sm-none">
                                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-search fa-fw"></i>
                                         </a>
-                                        <!-- Dropdown mensagem -->
+                                        <!-- Dropdown - Messages -->
                                         <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                         aria-labelledby="searchDropdown">
                                         <form class="form-inline mr-auto w-100 navbar-search">
@@ -259,51 +242,49 @@
                 </script>
                 <div id="demo"></div>
             </nav>
-            <!-- Fim da barra do topo -->
+            <!-- Fim da barra do topo  -->
 
-            <!-- Comeco conteudo da pagina -->
+            <!-- Comeco da pagina de conteudo-->
             <div class="container-fluid">
+
+                <!-- DataTables -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de Editora</h6>
+                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Emprestimos</h6>
                     </div>
                     <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Livro</th>
+                                        <th>Aluno</th>
+                                        <th>Retirada</th>
+                                        <th>Devolução</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php 
+                                    $sql=mysqli_query($conexao, "SELECT * FROM emprestimo JOIN livros ON emprestimo.id_livro = livros.id_livro JOIN alunos ON emprestimo.id_aluno = alunos.id_aluno WHERE id_emprestimo <> 0");
+                                    while($row = mysqli_fetch_array($sql)){ ?>
 
-                        <form name="cadastro_editora" method="post" action="../control/formulario_cad_editora.php">
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="isbn">Editora</label>
-                                    <input placeholder="Insira o nome da Editora" type="text" class="form-control"
-                                    name="editora" autocomplete="off" required>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn" style="background-color: #3578E5; color: white;">Cadastrar</button>
+                                        <tr>
+                                            <td><?php echo $row['titulo_livro'];?></td>
+                                            <td><?php echo $row['nome_aluno'];?></td>
+                                            <td><?php echo date('d/m/Y', strtotime($row['dt_retirada'])); ?></td>
+                                            <td><?php echo date('d/m/Y', strtotime($row['dt_entrega'])); ?></td>
+                                        </tr>
+
+                                    <?php } ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-            <div class="container-fluid">
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold" style="color: #3578E5;">Registro de Autor</h6>
-                    </div>
-                    <div class="card-body">
-
-                        <form name="cadastro_autor" method="post" action="../control/formulario_cad_autor.php">
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="isbn">Autor</label>
-                                    <input placeholder="Insira o nome do Autor" type="text" class="form-control"
-                                    name="autor" autocomplete="off" required>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn" style="background-color: #3578E5; color: white;">Cadastrar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <!-- /.container-fluid -->
         </div>
-        <!-- Fim do conteudo da Pagina-->
+        <!--  Fim do conteudo -->
 
         <!-- Rodape -->
         <footer class="sticky-footer bg-white">
@@ -313,20 +294,18 @@
                 </div>
             </div>
         </footer>
-        <!-- Fim do rodape-->
+        <!-- Fim do rodape -->
 
     </div>
-    <!-- Fim do recorte do conteudo -->
+    <!-- End of Content Wrapper -->
 
 </div>
+<!-- Fim do recorte do conteudo -->
 
-
-<!-- Botao Voltar ao topo-->
+<!-- Botao de voltar ao topo -->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
-
 
 <!-- Bootstrap core JavaScript-->
 <script src="../vendor/jquery/jquery.min.js"></script>
@@ -344,7 +323,10 @@
 
 <!-- Page level custom scripts -->
 <script src="../js/demo/datatables-demo.js"></script>
-</div>
+
+<!-- Table translation to portuguese -->
+<script src="../js/portuguese.js"></script>
+
 </body>
 
 </html>

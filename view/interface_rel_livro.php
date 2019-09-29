@@ -1,11 +1,4 @@
 <?php include "../control/conexao_banco.php"; ?>
-<?php
-session_start();
-if(!$_SESSION["usuarioEmail"]){
-header("location: ../index.php");
-exit;
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 

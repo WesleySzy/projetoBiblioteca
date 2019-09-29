@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 21-Set-2019 às 02:22
--- Versão do servidor: 10.1.40-MariaDB
--- versão do PHP: 7.1.29
+-- Tempo de geração: 26-Set-2019 às 15:43
+-- Versão do servidor: 10.4.6-MariaDB
+-- versão do PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bibliopar`
+-- Banco de dados: `bibliopar`
 --
 CREATE DATABASE IF NOT EXISTS `bibliopar` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `bibliopar`;
@@ -30,28 +30,17 @@ USE `bibliopar`;
 -- Estrutura da tabela `alunos`
 --
 
-CREATE TABLE `alunos` (
-  `id_aluno` int(5) NOT NULL,
+CREATE TABLE IF NOT EXISTS `alunos` (
+  `id_aluno` int(5) NOT NULL AUTO_INCREMENT,
   `nome_aluno` varchar(40) NOT NULL,
   `sala_aluno` varchar(5) NOT NULL,
   `turma_aluno` varchar(5) NOT NULL,
   `ano_letivo` varchar(4) NOT NULL,
-  `id_periodo` int(5) NOT NULL
+  `id_periodo` int(5) NOT NULL,
+  PRIMARY KEY (`id_aluno`),
+  UNIQUE KEY `nome_aluno` (`nome_aluno`),
+  KEY `id_periodo` (`id_periodo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `alunos`
---
-
-INSERT INTO `alunos` (`id_aluno`, `nome_aluno`, `sala_aluno`, `turma_aluno`, `ano_letivo`, `id_periodo`) VALUES
-(1, 'BRUCE', '3 A', '', '2019', 1),
-(8, 'tavin', 'szytk', 'a', '2019', 1),
-(9, '321321', 'szytk', 'a', '3213', 2),
-(10, 'jao', 'gome', '3', '2019', 1),
-(11, '3321', '321', '3', '3213', 1),
-(12, 'pedro', '32132', '3', '2019', 1),
-(13, 'fjgdishf', 'dsad', 'a', 'dsad', 1),
-(14, 'sadasd', 'asd', 'a', 'dasd', 1);
 
 -- --------------------------------------------------------
 
@@ -59,17 +48,11 @@ INSERT INTO `alunos` (`id_aluno`, `nome_aluno`, `sala_aluno`, `turma_aluno`, `an
 -- Estrutura da tabela `autor`
 --
 
-CREATE TABLE `autor` (
-  `id_autor` int(5) NOT NULL,
-  `nome_autor` varchar(20) NOT NULL
+CREATE TABLE IF NOT EXISTS `autor` (
+  `id_autor` int(5) NOT NULL AUTO_INCREMENT,
+  `nome_autor` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_autor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `autor`
---
-
-INSERT INTO `autor` (`id_autor`, `nome_autor`) VALUES
-(1, 'batata');
 
 -- --------------------------------------------------------
 
@@ -77,17 +60,11 @@ INSERT INTO `autor` (`id_autor`, `nome_autor`) VALUES
 -- Estrutura da tabela `editora`
 --
 
-CREATE TABLE `editora` (
-  `id_editora` int(5) NOT NULL,
-  `nome_editora` varchar(25) NOT NULL
+CREATE TABLE IF NOT EXISTS `editora` (
+  `id_editora` int(5) NOT NULL AUTO_INCREMENT,
+  `nome_editora` varchar(25) NOT NULL,
+  PRIMARY KEY (`id_editora`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `editora`
---
-
-INSERT INTO `editora` (`id_editora`, `nome_editora`) VALUES
-(1, 'batata');
 
 -- --------------------------------------------------------
 
@@ -95,22 +72,17 @@ INSERT INTO `editora` (`id_editora`, `nome_editora`) VALUES
 -- Estrutura da tabela `emprestimo`
 --
 
-CREATE TABLE `emprestimo` (
-  `id_emprestimo` int(5) NOT NULL,
+CREATE TABLE IF NOT EXISTS `emprestimo` (
+  `id_emprestimo` int(5) NOT NULL AUTO_INCREMENT,
   `id_livro` int(5) NOT NULL,
   `id_aluno` int(5) NOT NULL,
-  `qtd_totemp` int(5) NOT NULL,
   `dt_retirada` date NOT NULL,
-  `dt_entrega` date NOT NULL
+  `dt_entrega` date NOT NULL,
+  `dt_devolucao` date NOT NULL,
+  PRIMARY KEY (`id_emprestimo`),
+  KEY `id_aluno` (`id_aluno`),
+  KEY `id_livro` (`id_livro`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `emprestimo`
---
-
-INSERT INTO `emprestimo` (`id_emprestimo`, `id_livro`, `id_aluno`, `qtd_totemp`, `dt_retirada`, `dt_entrega`) VALUES
-(1, 7, 1, 5, '2019-09-20', '2019-09-27'),
-(3, 7, 12, 6, '2019-09-20', '2019-09-25');
 
 -- --------------------------------------------------------
 
@@ -118,29 +90,30 @@ INSERT INTO `emprestimo` (`id_emprestimo`, `id_livro`, `id_aluno`, `qtd_totemp`,
 -- Estrutura da tabela `genero`
 --
 
-CREATE TABLE `genero` (
-  `id_genero` int(5) NOT NULL,
-  `desc_genero` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `genero` (
+  `id_genero` int(5) NOT NULL AUTO_INCREMENT,
+  `desc_genero` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_genero`)
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `genero`
 --
 
 INSERT INTO `genero` (`id_genero`, `desc_genero`) VALUES
-(2, 'Infantil'),
-(3, 'Cientifico'),
-(4, 'Conto'),
-(5, 'Cronica'),
-(6, 'Didatico'),
-(7, 'Fantasia'),
-(8, 'Ficcao Cientifica'),
-(9, 'Ficcao Historica'),
-(10, 'Terror'),
-(11, 'Drama'),
-(12, 'Poesia'),
-(13, 'Politica'),
-(14, 'Romance');
+(1, 'Infantil'),
+(2, 'Cientifico'),
+(3, 'Conto'),
+(4, 'Cronica'),
+(5, 'Didatico'),
+(6, 'Fantasia'),
+(7, 'Ficcao Cientifica'),
+(8, 'Ficcao Historica'),
+(9, 'Terror'),
+(10, 'Drama'),
+(11, 'Poesia'),
+(12, 'Politica'),
+(13, 'Romance');
 
 -- --------------------------------------------------------
 
@@ -148,26 +121,19 @@ INSERT INTO `genero` (`id_genero`, `desc_genero`) VALUES
 -- Estrutura da tabela `livros`
 --
 
-CREATE TABLE `livros` (
-  `id_livro` int(5) NOT NULL,
+CREATE TABLE IF NOT EXISTS `livros` (
+  `id_livro` int(5) NOT NULL AUTO_INCREMENT,
   `isbn` varchar(20) NOT NULL,
   `titulo_livro` varchar(50) NOT NULL,
   `id_autor` int(5) NOT NULL,
   `id_editora` int(5) NOT NULL,
   `id_genero` int(5) NOT NULL,
-  `qtd_disponivel` int(5) NOT NULL
+  `qtd_disponivel` int(5) NOT NULL,
+  PRIMARY KEY (`id_livro`),
+  KEY `id_autor` (`id_autor`),
+  KEY `id_editora` (`id_editora`),
+  KEY `id_genero` (`id_genero`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `livros`
---
-
-INSERT INTO `livros` (`id_livro`, `isbn`, `titulo_livro`, `id_autor`, `id_editora`, `id_genero`, `qtd_disponivel`) VALUES
-(3, '321321321321', 'batra', 1, 1, 11, 4),
-(4, '1111', 'Xadrez', 1, 1, 3, 3),
-(5, '2123132132132', 'fdisoafjiasjf', 1, 1, 2, 5),
-(7, '1256145641565', 'fdsjifhdsiuhfdsiu', 1, 1, 7, 24),
-(8, '2123132132135', 'sadasdasd', 1, 1, 11, 3);
 
 -- --------------------------------------------------------
 
@@ -175,12 +141,13 @@ INSERT INTO `livros` (`id_livro`, `isbn`, `titulo_livro`, `id_autor`, `id_editor
 -- Estrutura da tabela `niveis_acessos`
 --
 
-CREATE TABLE `niveis_acessos` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `niveis_acessos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
   `created` datetime NOT NULL,
-  `modified` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `niveis_acessos`
@@ -196,10 +163,11 @@ INSERT INTO `niveis_acessos` (`id`, `nome`, `created`, `modified`) VALUES
 -- Estrutura da tabela `periodo`
 --
 
-CREATE TABLE `periodo` (
-  `id_periodo` int(5) NOT NULL,
-  `desc_periodo` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `periodo` (
+  `id_periodo` int(5) NOT NULL AUTO_INCREMENT,
+  `desc_periodo` varchar(15) NOT NULL,
+  PRIMARY KEY (`id_periodo`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `periodo`
@@ -216,150 +184,28 @@ INSERT INTO `periodo` (`id_periodo`, `desc_periodo`) VALUES
 -- Estrutura da tabela `usuarios`
 --
 
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(220) NOT NULL,
   `email` varchar(520) NOT NULL,
   `senha` varchar(50) NOT NULL,
-  `situacoe_id` int(11) NOT NULL DEFAULT '0',
+  `situacoe_id` int(11) NOT NULL DEFAULT 0,
   `niveis_acesso_id` int(11) NOT NULL,
   `created` datetime NOT NULL,
-  `modified` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `situacoe_id`, `niveis_acesso_id`, `created`, `modified`) VALUES
-(13, 'Jao', 'aluno@aluno', 'aluno', 0, 2, '2019-09-16 00:00:00', '2019-09-25 00:00:00'),
-(15, 'admin', 'admin@admin', 'admin', 0, 1, '2019-09-17 11:00:00', '2019-09-07 00:10:10');
+(1, 'Jao', 'aluno@aluno', 'aluno', 0, 2, '2019-09-16 00:00:00', '2019-09-25 00:00:00'),
+(2, 'admin', 'admin@admin', 'admin', 0, 1, '2019-09-17 11:00:00', '2019-09-07 00:10:10');
 
 --
--- Indexes for dumped tables
---
-
---
--- Indexes for table `alunos`
---
-ALTER TABLE `alunos`
-  ADD PRIMARY KEY (`id_aluno`),
-  ADD UNIQUE KEY `nome_aluno` (`nome_aluno`),
-  ADD KEY `id_periodo` (`id_periodo`);
-
---
--- Indexes for table `autor`
---
-ALTER TABLE `autor`
-  ADD PRIMARY KEY (`id_autor`);
-
---
--- Indexes for table `editora`
---
-ALTER TABLE `editora`
-  ADD PRIMARY KEY (`id_editora`);
-
---
--- Indexes for table `emprestimo`
---
-ALTER TABLE `emprestimo`
-  ADD PRIMARY KEY (`id_emprestimo`),
-  ADD KEY `id_aluno` (`id_aluno`),
-  ADD KEY `id_livro` (`id_livro`);
-
---
--- Indexes for table `genero`
---
-ALTER TABLE `genero`
-  ADD PRIMARY KEY (`id_genero`);
-
---
--- Indexes for table `livros`
---
-ALTER TABLE `livros`
-  ADD PRIMARY KEY (`id_livro`),
-  ADD KEY `id_autor` (`id_autor`),
-  ADD KEY `id_editora` (`id_editora`),
-  ADD KEY `id_genero` (`id_genero`);
-
---
--- Indexes for table `niveis_acessos`
---
-ALTER TABLE `niveis_acessos`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `periodo`
---
-ALTER TABLE `periodo`
-  ADD PRIMARY KEY (`id_periodo`);
-
---
--- Indexes for table `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `alunos`
---
-ALTER TABLE `alunos`
-  MODIFY `id_aluno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `autor`
---
-ALTER TABLE `autor`
-  MODIFY `id_autor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `editora`
---
-ALTER TABLE `editora`
-  MODIFY `id_editora` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `emprestimo`
---
-ALTER TABLE `emprestimo`
-  MODIFY `id_emprestimo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `genero`
---
-ALTER TABLE `genero`
-  MODIFY `id_genero` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `livros`
---
-ALTER TABLE `livros`
-  MODIFY `id_livro` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `niveis_acessos`
---
-ALTER TABLE `niveis_acessos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `periodo`
---
-ALTER TABLE `periodo`
-  MODIFY `id_periodo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- Constraints for dumped tables
+-- Restrições para despejos de tabelas
 --
 
 --
