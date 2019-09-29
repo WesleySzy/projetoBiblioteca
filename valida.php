@@ -22,7 +22,7 @@
 			if($_SESSION['usuarioNiveisAcessoId'] == "1"){
 				header("Location: home.php");
 			}elseif($_SESSION['usuarioNiveisAcessoId'] == "2"){
-				header("Location: aluno_view.php");
+				header("Location: view/aluno_view.php");
 			}else{
 				header("Location: home.php");
 			}
