@@ -24,7 +24,7 @@
 			}elseif($_SESSION['usuarioNiveisAcessoId'] == "2"){
 				header("Location: aluno_view.php");
 			}else{
-				header("Location: home.php");
+				header("Location: index.php");
 			}
 		//Não foi encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
 		//redireciona o usuario para a página de login
