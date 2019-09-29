@@ -1,6 +1,5 @@
 <?php include "control/conexao_banco.php"; ?>
 <?php
-$nivel_necessario = "admin@admin";
 session_start();
 if(!$_SESSION["usuarioEmail"]){
 header("location: index.php");
